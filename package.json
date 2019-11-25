@@ -1,0 +1,20 @@
+{
+  "name": "stomatlen71-dev3",
+  "version": "1.0.0",
+  "description": "Сайт стоматологии Салус",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@g2.onmaster.ru:AlinaMandms/stomatlen71-dev3.git"
+  },
+  "author": "Alina from onmaster.ru",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.26.7",
+    "gulp": "^4.0.2",
+    "gulp-less": "^4.0.1"
+  }
+}
