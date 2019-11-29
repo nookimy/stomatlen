@@ -304,6 +304,17 @@ template {
 [hidden] {
   display: none;
 }
+.visually-hidden:not(:focus):not(:active) {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: rect(0 0 0 0);
+  overflow: hidden;
+}
 html {
   box-sizing: border-box;
 }
@@ -320,4 +331,45 @@ body {
 img {
   max-width: 100%;
   height: auto;
+}
+.page {
+  position: relative;
+  margin: 0 auto;
+  /*padding-bottom: 20px;*/
+  font-size: 14px;
+  line-height: 1.25;
+  font-weight: 400;
+  font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-style: normal;
+  background: url("../img/page/background_main-100.jpg");
+  scroll-behavior: smooth;
+  /*хз что это, но нужно*/
+}
+.main-header {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 18px 4.79vw 40px 4.79vw;
+  background: url("../img/main-header/lines.svg") no-repeat bottom;
+  background-size: 1500px;
+}
+.main-header__content {
+  max-width: 290px;
+  margin: 0 auto;
+}
+.companies {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.companies__title {
+  margin: 0;
+  padding: 0 0 0 35px;
+  vertical-align: top;
+  color: #000000;
+  font-size: 14px;
+  line-height: 1.25;
+  font-weight: 400;
+  font-family: "Roboto Slab", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-style: normal;
+  text-transform: uppercase;
 }

@@ -1,0 +1,76 @@
+.normal-font (@normal-font-size: 14px; @normal-font-height: 1.25; @normal-font-weight: 400; @normal-font-family: "Roboto Slab", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu,
+    Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif) {
+  font-size: @normal-font-size;
+  line-height: @normal-font-height;
+  font-weight: @normal-font-weight;
+  font-family: @normal-font-family;
+  font-style: normal;
+}
+
+.normal-font2 (@normal-font-size: 14px; @normal-font-height: 1.25; @normal-font-weight: 400; @normal-font-family: "Roboto Condensed", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu,
+    Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif) {
+  font-size: @normal-font-size;
+  line-height: @normal-font-height;
+  font-weight: @normal-font-weight;
+  font-family: @normal-font-family;
+  font-style: normal;
+}
+
+.normal-font3 (@normal-font-size: 14px; @normal-font-height: 1.25; @normal-font-weight: 400; @normal-font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu,
+    Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif) {
+  font-size: @normal-font-size;
+  line-height: @normal-font-height;
+  font-weight: @normal-font-weight;
+  font-family: @normal-font-family;
+  font-style: normal;
+}
+
+.no-outline() {
+  outline: none;
+  background: transparent;
+
+  &::before {
+    display: none;
+  }
+}
+
+.visually-hidden:not(:focus):not(:active) {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.mp(@list-margin: 0; @list-padding: 0;) {
+  margin: @list-margin;
+  padding: @list-padding;
+}
+
+.list(@list-margin: 0; @list-padding: 0; @list-style: none) {
+  margin: @list-margin;
+  padding: @list-padding;
+  list-style: @list-style;
+}
+
+.center-margin(@margin-c: 0 auto;) {
+  margin: @margin-c;
+}
+
+.retina2-bg (@bg-img: url(""); @bs-width: auto; @bs-height: auto; @dppx: 2) {
+  @media (min-resolution: unit((96 * (@dppx - 0.98) ),dpi)), (min-resolution: unit((@dppx - 0.98),dppx)) {
+    background-image: @bg-img;
+    background-size: @bs-width @bs-height;
+  }
+}
+
+.retina3-bg (@bg-img: url(""); @bs-width: auto; @bs-height: auto; @dppx: 3) {
+  @media (min-resolution: unit((96 * (@dppx - 0.98) ),dpi)), (min-resolution: unit((@dppx - 0.98),dppx)) {
+    background-image: @bg-img;
+    background-size: @bs-width @bs-height;
+  }
+}
