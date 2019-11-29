@@ -2,9 +2,278 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <title>Title</title>
-  <link rel="stylesheet" href="css/style.css"> <!-- Подключаем CSS -->
+  <title>Стоматология в Йошкар-Оле</title>
+  <link rel="stylesheet" href="css/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
-<body>
+<body class="page">
+  <header class="main-header">
+    <div class="main-header__content">
+      <h1 class="main-header__title">Стоматология на Ленинском и Медцентр на Советской</h1>
+      <ul class="main-header__companies companies">
+        <li class="companies__item">
+          <h2 class="companies__subtitle">Зубной на Ленинском, 71 <span>многопрофильная стоматологическая клиника</span></h2>
+        </li>
+        <li class="companies__item">
+          <h2 class="companies__subtitle">Медцентр на Советской, 173 <span>многопрофильный медицинский центр</span></h2>
+        </li>
+      </ul>
+      <div class="main-header__contacts">
+        <p class="main-header__phone">+7 (8362) 39-67-00</p>
+        <a class="main-header__callback" href="#">Закажите обратный звонок</a>
+      </div>
+      <a class="btn" href="#">Записаться на прием</a>
+      <a class="btn" href="#">Задать вопрос специалисту</a>
+      <a class="btn" href="#">Версия для слабовидящих</a>
+      <form class="main-header__search search">
+        <input class="main-header__search-input search__input" type="text" name="search" id="search" value="" placeholder="Поиск по сайту">
+        <button class="search__btn" type="submit">Найти</button>
+      </form>
+      <nav class="main-header__nav main-nav">
+        <ul class="main-nav__list">
+          <li class="main-nav__item">
+            <a href="#">Главная</a>
+          </li>
+          <li class="main-nav__item">
+            <a href="#">Услуги и цены</a>
+          </li>
+          <li class="main-nav__item">
+            <a href="#">Акции</a>
+          </li>
+          <li class="main-nav__item">
+            <a href="#">Специалисты</a>
+          </li>
+          <li class="main-nav__item">
+            <a href="#">Документы</a>
+          </li>
+          <li class="main-nav__item">
+            <a href="#">Контакты</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <section class="slider">
+    <h2 class="slider__title">Слайдер</h2>
+    <div class="slider__wrap">
+      <div class="slider__controls">
+        <i class="slider__control active"></i>
+        <i class="slider__control"></i>
+        <i class="slider__control"></i>
+      </div>
+      <ul class="slider__list">
+        <li class="slider__item slide">
+          <h3 class="slide__title">Стоматология для беременных</h3>
+          <p class="slide__subtitle">Особое внимание, индивидуальный подход</p>
+        </li>
+        <li class="slider__item slide">
+          <h3 class="slide__title">Заголовок слайда 2</h3>
+          <p class="slide__subtitle">Подзаголовок слайда 2</p>
+        </li>
+        <li class="slider__item slide">
+          <h3 class="slide__title">Заголовок слайда 3</h3>
+          <p class="slide__subtitle">Подзаголовок слайда 3</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+  <section class="services">
+    <h2 class="services__title">Услуги</h2>
+    <ul class="services__list">
+      <li class="services__item service">
+        <h3 class="service__title">
+          <a class="service__link service__link--therapy">Терапия</a>
+        </h3>
+      </li>
+      <li class="services__item service">
+        <h3 class="service__title">
+          <a class="service__link service__link--orthopedics">Ортопедия</a>
+        </h3>
+      </li>
+      <li class="services__item service">
+        <h3 class="service__title">
+          <a class="service__link service__link--surgery">Хирургия</a>
+        </h3>
+      </li>
+      <li class="services__item service">
+        <h3 class="service__title">
+          <a class="service__link service__link--implantology">Имплантология</a>
+        </h3>
+      </li>
+      <li class="services__item service">
+        <h3 class="service__title">
+          <a class="service__link service__link--orthodontics">Ортодонтия</a>
+        </h3>
+      </li>
+      <li class="services__item service">
+        <h3 class="service__title">
+          <a class="service__link service__link--childrens-dentistry">Детская стоматология</a>
+        </h3>
+      </li>
+      <li class="services__item service">
+        <h3 class="service__title">
+          <a class="service__link service__link--bleach">Отбеливание</a>
+        </h3>
+      </li>
+      <li class="services__item service">
+        <h3 class="service__title">
+          <a class="service__link service__link--other">Другие услуги</a>
+        </h3>
+      </li>
+    </ul>
+  </section>
+  <section class="about">
+    <h2 class="about__title">О клинике</h2>
+    <p class="about__text">Созданная 10 лет назад стоматологическая клиника «Зубной на Ленинском, 71» сейчас занимает
+      место среди ведущих клиник города Йошкар-Ола, специализирующихся на оказании услуг из области стоматологии. В
+      нашем центре работают специалисты с профессиональной подготовкой, которые способны на высоком уровне оказывать
+      пациентам полный комплекс терапевтических, ортопедических, пародонтологических, хирургических и любых других
+      стоматологических услуг. Большое внимание в нашем центре уделяется вопросу максимального комфорта для пациентов во
+      время проведения процедур. Нам хорошо известно, что стоматология вполне может обходиться без болезненных ощущений
+      и мы с радостью докажем это любому из вас!</p>
+    <picture>
+      <img class="about__image" src="/img/about/collage-big-290x242.jpg" alt="О клинике">
+    </picture>
+    <p class="about__text about__text--full">Наш коллектив состоит только из специалистов ,имеющих высокую
+      квалификацию. В нашей клиники работают врачи, которые являются профессионалами самого высокого уровня. Их
+      практический опыт был приобретен у ведущих Российских и зарубежных специалистов Израиля, США, Германии и
+      Швейцарии. При этом они постоянно совершенствуют свою квалификацию и проходят обучение на самых передовых курсах,
+      симпозиумах и конгрессах, что подтверждается наличием многочисленных дипломов и сертификатов.</p>
+    <p class="about__text about__text--full">Инновационные технологии – это неотъемлемая составляющая успешной работы нашей клиники. В своей работе наши врачи
+      используя максимально современное профессиональное оборудование, произведенное ведущими зарубежными
+      компаниями.</p>
+    <p class="about__text about__text--full">Индивидуальный подход ко всем пациентам без исключения также является для нас невероятно важным моментом.
+      Специально для вас в нашей клинике разработают индивидуальный комплексный план лечения, его осуществление
+      предполагает работу по эксклюзивные методикам, подходящим именно вам. План лечения составляется индивидуально,
+      учитывая пожелания пациента,состояние здоровья и финансовые возможности пациента.</p>
+    <p class="about__text about__text--full">Каждый наш посетитель имеет возможность воспользоваться радушием и вниманием нашего персонала, который
+      гарантирует профессиональный подход и максимально высокий уровень сервиса.</p>
+    <a class="about__more-link" href="#">Весь текст</a>
+  </section>
+  <section class="reviews">
+    <h2 reviews__title>Отзывы</h2>
+    <ul class="reviews__list">
+      <li class="reviews__item review">
+        <blockquote class="review__description">
+          <p class="rewiew__text">В "Зубном на Ленинском" делают чистку бережно, но эффективно, результат сразу налицо. У
+            меня вообще зубы ооочень склонны к образованию зубного камня сами по себе, да еще и я сама курю как паровоз, не
+            могу пока бросить...</p>
+          <cite class="rewiew__autor">Иринка</cite>, <time datetime="2017-04-23"> 23.04.2017</time>
+        </blockquote>
+      </li>
+      <li class="reviews__item review">
+        <blockquote class="review__description">
+          <p class="rewiew__text">В "Зубном на Ленинском" делают чистку бережно, но эффективно, результат сразу налицо. У
+            меня вообще зубы ооочень склонны к образованию зубного камня сами по себе, да еще и я сама курю как паровоз, не
+            могу пока бросить...</p>
+          <cite class="rewiew__autor">Иринка</cite>, <time datetime="2017-04-23"> 23.04.2017</time>
+        </blockquote>
+      </li>
+      <li class="reviews__item review">
+        <blockquote class="review__description">
+          <p class="rewiew__text">В "Зубном на Ленинском" делают чистку бережно, но эффективно, результат сразу налицо. У
+            меня вообще зубы ооочень склонны к образованию зубного камня сами по себе, да еще и я сама курю как паровоз, не
+            могу пока бросить...</p>
+          <cite class="rewiew__autor">Иринка</cite>, <time datetime="2017-04-23"> 23.04.2017</time>
+        </blockquote>
+      </li>
+    </ul>
+  </section>
+  <section class="news">
+    <h2 class="news__title">Новости</h2>
+    <ul class="news__list">
+      <li class="news__item event">
+        <h3 class="event__title">Медцентр Приглашает на работу</h3>
+        <picture>
+          <img src="img/news/vacancy-x141.jpg" alt="МедЦентр Приглашает на работу">
+        </picture>
+      </li>
+      <li class="news__item event">
+        <h3 class="event__title">Имплантация под ключ</h3>
+        <picture>
+          <img src="img/news/turnkey_implantation-235.jpg" alt="Имплантация под ключ">
+        </picture>
+      </li>
+      <li class="news__item event">
+        <h3 class="event__title">Протезирование зубов</h3>
+        <picture>
+          <img src="img/news/prosthetic_dentistry.jpg" alt="Протезирование зубов">
+        </picture>
+      </li>
+      <li class="news__item event">
+        <h3 class="event__title">Ортодонтия</h3>
+        <picture>
+          <img src="img/news/ortodont-235.jpg" alt="Ортодонтия">
+        </picture>
+      </li>
+    </ul>
+    <a class="news__more-link" href="#">Все новости</a>
+  </section>
+  <section class="leader-words">
+    <h2 class="leader-words__title">Павловская Елена Николаевна, <span>директор ООО «Салус»</span></h2>
+    <picture>
+      <img src="img/leader-words/director_quote-141.png">
+    </picture>
+    <blockquote class="leader-words__item">Специально для вас в нашей клинике разработают индивидуальный комплексный план
+      лечения, его осуществление предполагает работу по эксклюзивные методикам, подходящим именно вам.
+      Безусловно, огромное внимание наши специалисты уделят эстетической стороне вопроса, что по окончании любого вида
+      лечения даст вам потрясающую улыбку!
+    </blockquote>
+  </section>
+  <div class="footnote">
+    <p class="footnote__contraindications">Имеются противопоказания</p>
+    <p class="footnote__consultation">Необходима консультация специалиста</p>
+  </div>
+  <div class="main-nav ">
+
+  </div>
 </body>
+<footer class="main-footer">
+  <section class="main-footer__nav main-nav">
+    <ul class="main-nav__list">
+      <li class="main-nav__item">
+        <a href="#">Главная</a>
+      </li>
+      <li class="main-nav__item">
+        <a href="#">Услуги и цены</a>
+      </li>
+      <li class="main-nav__item">
+        <a href="#">Акции</a>
+      </li>
+      <li class="main-nav__item">
+        <a href="#">Специалисты</a>
+      </li>
+      <li class="main-nav__item">
+        <a href="#">Документы</a>
+      </li>
+      <li class="main-nav__item">
+        <a href="#">Контакты</a>
+      </li>
+    </ul>
+  </section>
+  <p class="main-footer__copyright">Copyright © 2015-2018 ООО «Салус»</p>
+  <address class="main-footer__address">Зубной на Ленинском 71</address>
+  <address class="main-footer__address">Медцентр на Советской 173</address>
+  <section class="main-footer__social social">
+    <h2 class="social__title">Мы в соц. сетях:</h2>
+    <ul class="social__list">
+      <li class="social__item">
+        <a class="social__link social__link--instagram" href="#">Инстаграм</a>
+      </li>
+      <li class="social__item">
+        <a class="social__link social__link--vk" href="#">Вконтакте</a>
+      </li>
+      <li class="social__item">
+        <a class="social__link social__link--fb" href="#">Фейсбук</a>
+      </li>
+      <li class="social__item">
+        <a class="social__link social__link--ok" href="#">Одноклассники</a>
+      </li>
+    </ul>
+  </section>
+  <p class="main-footer__developer developer">
+    <a class="developer__link" href=https://onmaster.ru">Сайт для стоматологии</a> от onmaster.ru
+  </p>
+  <button class="btn">Наверх</button>
+</footer>
 </html>
