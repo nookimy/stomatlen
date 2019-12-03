@@ -1,0 +1,52 @@
+.btn {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  .normal-font2(18px);
+  border: none;
+
+  &--small {
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+
+  &--big {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  &--company-color-light,
+  &--company-color-light-transform {
+    color: @light;
+    background-color: @company-color-light;
+    transition: 0.4s;
+  }
+
+  &--company-color-light:hover,
+  &--company-color-light:focus {
+    background-color: @company-color-dark;
+  }
+
+  &--light {
+    width: 210px;
+    color: @dark;
+    border: 1px solid @border-image;
+    background-color: @light;
+    transition: 0.4s;
+  }
+
+  &--light:hover,
+  &--light:focus {
+    border: 1px dashed @border-image;
+  }
+
+  &--make-an-appointment {
+    display: none;
+  }
+
+  &--question-to-specialist {
+    display: none;
+  }
+}

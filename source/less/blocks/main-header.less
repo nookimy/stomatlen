@@ -2,11 +2,102 @@
   display: flex;
   flex-wrap: wrap;
   padding: 18px @wrapper-m 40px @wrapper-m;
-  background: url("../img/main-header/lines.svg") no-repeat bottom;
+  background: url("../img/main-header/lines.svg") no-repeat 25% bottom;
   background-size: 1500px;
 
-  &__content {
+  @media (min-width: 580px) {
+    padding-left: 17vw;
+    padding-right: 17vw;
+  }
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+    padding: unset;
+  }
+
+  @media (min-width: @desktop-width) {
+    background-position-y: 120%;
+    background-size: 2000px;
+  }
+
+  &__companies {
     max-width: @mobile-content-width;
     .center-margin();
+    padding: 0;
+
+    @media (min-width: @tablet-width) {
+      box-sizing: border-box;
+      width: 500px;
+      max-width: unset;
+      flex-grow: 1;
+      margin-left: 0;
+      padding-top: 18px;
+      padding-bottom: 55px;
+      padding-left: 16%;
+      background: url("../img/main-header/girl-x222.png") no-repeat bottom;
+      background-size: contain;
+      background-position: right 340px top 0;
+    }
+
+    @media (min-width: @desktop-width) {
+      width: 660px;
+      padding-top: 20px;
+      padding-left: 1px;
+      padding-bottom: 0;
+      background-position: right 540px top 0;
+    }
+  }
+
+  &__contacts {
+    width: 250px;
+    margin-left: auto;
+  }
+
+  &__phone {
+    display: flex;
+    align-items: center;
+    margin: 0 0 5px 0;
+    padding: 0;
+    .normal-font3(14px; 17px);
+
+    &::before {
+      content: "";
+      display: inline-block;
+      width: 16px;
+      height: 17px;
+      margin-right: 5px;
+      background: url("../img/main-header/phone.svg") no-repeat;
+    }
+  }
+
+  &__callback {
+    width: 145px;
+    .normal-font2(12px);
+  }
+
+  &__callback-text {
+    margin: 0;
+    padding: 0;
+
+    &:hover,
+    &:focus {
+      @media (min-width: @tablet-width) {
+        color: @company-color-dark;
+        border-bottom: 2px dotted transparent;
+      }
+    }
+
+    &::first-letter {
+      text-transform: uppercase;
+    }
+  }
+
+  &__search {
+    display: none;
+  }
+
+  &__nav {
+
   }
 }

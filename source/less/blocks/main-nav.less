@@ -1,0 +1,140 @@
+.main-nav {
+  position: relative;
+
+  &--nojs {
+    display: block;
+    width: 320px;
+    .center-margin();
+
+    @media (min-width: @tablet-width) {
+      width: 100%;
+    }
+  }
+
+  &--nojs &__list {
+    position: static;
+    margin-top: 10px;
+  }
+
+  &--opened {
+    position: absolute;
+    width: 320px;
+    top: 120px;
+    left: calc(~"50% - 160px");
+    z-index: 3;
+  }
+
+  &--sticky {
+    position: fixed;
+    top: 5px;
+    width: 100vw;
+    z-index: 3;
+  }
+
+  &--footer {
+    display: none;
+
+    @media (min-width: @tablet-width) {
+      display: flex;
+    }
+
+    @media (min-width: @desktop-width) {
+      width: 100%;
+      background-color: @company-color-light;
+    }
+  }
+
+  &__list {
+    .list();
+    position: absolute;
+    left: 0;
+    right: 0;
+    padding: 0;
+    background-color: @company-color-light;
+    z-index: 2;
+
+    @media (min-width: @tablet-width) {
+      display: flex;
+      position: unset;
+      max-width: @desktop-content-width;
+      min-height: 50px;
+      .center-margin();
+    }
+  }
+
+  &__toggle { //menu button "hamburger" --
+    position: absolute;
+    width: 38px;
+    height: 38px;
+    background-color: @company-color-dark;
+    border: none;
+    cursor: pointer;
+    z-index: 3;
+
+    @media (min-width: @tablet-width) {
+      display: none;
+    }
+  }
+
+  &__toggle--closed {
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 10px;
+      left: 9px;
+      width: 20px;
+      height: 3px;
+      background-color: @light;
+      box-shadow: 0 8px 0 0 @light,
+        0 16px 0 0 @light;
+    }
+
+    &:active::before {
+      background-color: fade(@light, 30%);
+      box-shadow: 0 8px 0 0 fade(@light, 30%),
+      0 16px 0 0 fade(@light, 30%);
+    }
+  }
+  //--menu button "hamburger"
+
+  &__toggle--opened { //close button for menu "cross" --
+    right: 0;
+    z-index: 4;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      top: 17px;
+      left: 4px;
+      width: 30px;
+      height: 2px;
+      background-color: @light;
+    }
+
+    &::before {
+      transform: rotate(45deg);
+    }
+
+    &::after {
+      transform: rotate(-45deg);
+    }
+
+    &:active::before,
+    &:active::after {
+      background-color: fade(@light, 30%);
+    }
+  }
+
+  &__toggle--nojs {
+    background: transparent;
+    display: none;
+
+    &::before,
+    &::after {
+      display: none;
+    }
+  }
+  //--close button for menu "cross"
+}

@@ -1,5 +1,32 @@
 .companies {
-  .list();
+  list-style: none;
+
+  &__item {
+    position: relative;
+
+    &:before {
+      content: "";
+      position: absolute;
+      background-size: cover;
+    }
+
+    &--stomat {
+      &:before {
+        width: 25px;
+        height: 24px;
+        background: url("../img/main-header/logo1.png") no-repeat;
+        background-size: cover;
+      }
+    }
+    &--medcentr {
+      &:before {
+        width: 25px;
+        height: 23px;
+        background: url("../img/main-header/logo2.png") no-repeat;
+        background-size: cover;
+      }
+    }
+  }
 
   &__title {
     margin: 0;
@@ -8,5 +35,13 @@
     color: @dark;
     .normal-font(14px);
     text-transform: uppercase;
+
+    & span {
+      display: block;
+      padding: 0 0 15px 0;
+      color: @company-color-light;
+      .normal-font(10px; 12px; 700);
+      text-transform: uppercase;
+    }
   }
 }
