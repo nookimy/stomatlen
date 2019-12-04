@@ -449,8 +449,57 @@ img {
 .btn--make-an-appointment {
   display: none;
 }
+@media (min-width: 750px) {
+  .btn--make-an-appointment {
+    display: flex;
+    width: 190px;
+    margin-bottom: 10px;
+    padding-left: 20px;
+    font-size: 16px;
+    line-height: 1.25;
+    font-weight: 400;
+    font-family: "Roboto Condensed", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-style: normal;
+    background-image: url("../img/btn/pen.svg");
+    background-size: 15px 15px;
+    background-repeat: no-repeat;
+    background-position: 10px center;
+  }
+}
+@media (min-width: 1200px) {
+  .btn--make-an-appointment {
+    width: 210px;
+    font-size: 18px;
+  }
+}
 .btn--question-to-specialist {
   display: none;
+}
+@media (min-width: 750px) {
+  .btn--question-to-specialist {
+    display: flex;
+    width: 190px;
+    height: 40px;
+    font-size: 16px;
+    line-height: 1.25;
+    font-weight: 400;
+    font-family: "Roboto Condensed", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-style: normal;
+    padding-left: 15px;
+    text-align: center;
+    background-image: url("../img/btn/doctor.svg");
+    background-size: 18px 18px;
+    background-repeat: no-repeat;
+    background-position: 10px center;
+  }
+}
+@media (min-width: 1200px) {
+  .btn--question-to-specialist {
+    width: 210px;
+    height: 50px;
+    margin-left: 220px;
+    font-size: 18px;
+  }
 }
 .visually-impaired {
   display: none;
@@ -538,6 +587,18 @@ img {
   font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-style: normal;
 }
+@media (min-width: 750px) {
+  .main-header__phone {
+    margin: 0;
+    font-size: 20px;
+    line-height: 27px;
+  }
+}
+@media (min-width: 1200px) {
+  .main-header__phone {
+    width: 220px;
+  }
+}
 .main-header__phone::before {
   content: "";
   display: inline-block;
@@ -554,9 +615,35 @@ img {
   font-family: "Roboto Condensed", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-style: normal;
 }
+@media (min-width: 750px) {
+  .main-header__callback {
+    display: flex;
+    justify-content: left;
+    width: 100%;
+    margin-bottom: 9px;
+    color: #b10005;
+    font-size: 16.5px;
+    line-height: 24px;
+    font-weight: 400;
+    font-family: "Roboto Condensed", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-style: normal;
+    background: none;
+  }
+}
 .main-header__callback-text {
   margin: 0;
   padding: 0;
+}
+@media (min-width: 750px) {
+  .main-header__callback-text {
+    color: #cf2023;
+    border-bottom: 2px dotted #cf2023;
+  }
+}
+@media (min-width: 750px) {
+  .main-header__callback-text::before {
+    content: "Закажите ";
+  }
 }
 @media (min-width: 750px) {
   .main-header__callback-text:hover,
@@ -568,19 +655,33 @@ img {
 .main-header__callback-text::first-letter {
   text-transform: uppercase;
 }
-.main-header__search {
-  display: none;
-}
 .companies {
   list-style: none;
 }
-.companies__item {
-  position: relative;
+@media (min-width: 750px) {
+  .companies__item {
+    width: 365px;
+    margin-left: auto;
+    padding-left: unset;
+    padding-right: unset;
+  }
+}
+@media (min-width: 1200px) {
+  .companies__item {
+    width: 570px;
+  }
 }
 .companies__item:before {
   content: "";
   position: absolute;
-  background-size: cover;
+}
+@media (min-width: 750px) {
+  .companies__item:before {
+    width: 365px;
+    margin-left: auto;
+    padding-left: unset;
+    padding-right: unset;
+  }
 }
 .companies__item--stomat:before {
   width: 25px;
@@ -588,11 +689,35 @@ img {
   background: url("../img/main-header/logo1.png") no-repeat;
   background-size: cover;
 }
+@media (min-width: 750px) {
+  .companies__item--stomat:before {
+    width: 62px;
+    height: 58px;
+  }
+}
+@media (min-width: 1200px) {
+  .companies__item--stomat:before {
+    width: 70px;
+    height: 66px;
+  }
+}
 .companies__item--medcentr:before {
   width: 25px;
   height: 23px;
   background: url("../img/main-header/logo2.png") no-repeat;
   background-size: cover;
+}
+@media (min-width: 750px) {
+  .companies__item--medcentr:before {
+    width: 62px;
+    height: 54px;
+  }
+}
+@media (min-width: 1200px) {
+  .companies__item--medcentr:before {
+    width: 70px;
+    height: 61px;
+  }
 }
 .companies__title {
   margin: 0;
@@ -606,6 +731,19 @@ img {
   font-style: normal;
   text-transform: uppercase;
 }
+@media (min-width: 750px) {
+  .companies__title {
+    padding: 0 0 8px 70px;
+    font-size: 18px;
+  }
+}
+@media (min-width: 1200px) {
+  .companies__title {
+    padding-left: 80px;
+    font-size: 22px;
+    line-height: 27px;
+  }
+}
 .companies__title span {
   display: block;
   padding: 0 0 15px 0;
@@ -616,6 +754,20 @@ img {
   font-family: "Roboto Slab", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-style: normal;
   text-transform: uppercase;
+}
+@media (min-width: 750px) {
+  .companies__title span {
+    max-width: 300px;
+    margin-bottom: 10px;
+    font-size: 12px;
+  }
+}
+@media (min-width: 1200px) {
+  .companies__title span {
+    padding-left: 10px;
+    font-size: 14px;
+    line-height: 17px;
+  }
 }
 .main-nav {
   position: relative;

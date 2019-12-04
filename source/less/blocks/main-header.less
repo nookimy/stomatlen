@@ -61,6 +61,16 @@
     padding: 0;
     .normal-font3(14px; 17px);
 
+    @media (min-width: @tablet-width) {
+      margin: 0;
+      font-size: 20px;
+      line-height: 27px;
+    }
+
+    @media (min-width: @desktop-width) {
+      width: 220px;
+    }
+
     &::before {
       content: "";
       display: inline-block;
@@ -74,11 +84,32 @@
   &__callback {
     width: 145px;
     .normal-font2(12px);
+
+    @media (min-width: @tablet-width) {
+      display: flex;
+      justify-content: left;
+      width: 100%;
+      margin-bottom: 9px;
+      color: @company-color-dark;
+      .normal-font2(16.5px; 24px);
+      background: none;
+    }
   }
 
   &__callback-text {
     margin: 0;
     padding: 0;
+
+    @media (min-width: @tablet-width) {
+      color: @company-color-light;
+      border-bottom: 2px dotted @company-color-light;
+    }
+
+    &::before {
+      @media (min-width: @tablet-width) {
+        content: "Закажите ";
+      }
+    }
 
     &:hover,
     &:focus {
@@ -91,13 +122,5 @@
     &::first-letter {
       text-transform: uppercase;
     }
-  }
-
-  &__search {
-    display: none;
-  }
-
-  &__nav {
-
   }
 }
