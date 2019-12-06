@@ -52,6 +52,25 @@
   &__contacts {
     width: 250px;
     margin-left: auto;
+
+    @media (min-width: @tablet-width) {
+      box-sizing: border-box;
+      width: 220px;
+      max-width: unset;
+      flex-grow: 1;
+      padding-left: 10px;
+      margin-left: 13px;
+      margin-right: auto;
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+
+    @media (min-width: @desktop-width) {
+      display: flex;
+      flex-wrap: wrap;
+      width: 430px;
+      padding-top: 20px;
+    }
   }
 
   &__phone {
@@ -121,6 +140,50 @@
 
     &::first-letter {
       text-transform: uppercase;
+    }
+  }
+
+  &__wrapper {
+    display: none;
+
+    @media (min-width: @tablet-width) {
+      box-sizing: border-box;
+      display: flex;
+      flex-grow: 0;
+      flex-shrink: 0;
+      padding-left: 133px;
+      width: @tablet-content-width;
+      .center-margin();
+      margin-top: -45px;
+    }
+
+    @media (min-width: @desktop-width) {
+      width: @desktop-content-width;
+      padding-left: unset;
+      justify-content: flex-end;
+    }
+  }
+
+  &__nav {
+    width: 38px;
+    margin-right: auto;
+    background-color: transparent;
+
+    @media (min-width: @tablet-width) {
+      width: 100%;
+      flex-shrink: 0;
+      margin-top: 0;
+      background-color: @company-color-light;
+    }
+  }
+
+  &__search-input {
+    @media (min-width: @tablet-width) {
+      margin-left: 10px;
+    }
+
+    @media (min-width: @desktop-width) {
+      margin-left: 5px;
     }
   }
 }

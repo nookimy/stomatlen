@@ -1,0 +1,20 @@
+.services {
+  &__title {
+    .mp();
+    color: @company-color-dark;
+    .normal-font2(18px);
+
+    @media (min-width: @tablet-width) {
+      font-size: 20px;
+    }
+
+    @media (min-width: @desktop-width) {
+      font-size: 24px;
+      line-height: 48px;
+    }
+  }
+
+  &__list {
+    .list();
+  }
+}
