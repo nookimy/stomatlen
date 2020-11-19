@@ -1,4 +1,4 @@
-.normal-font (@normal-font-size: 14px; @normal-font-height: 1.25; @normal-font-weight: 400; @normal-font-family: "Roboto Slab", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu,
+.normal-font (@normal-font-size: 1.4rem; @normal-font-height: 1.25; @normal-font-weight: 300; @normal-font-family: "Rubik", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu,
     Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif) {
   font-size: @normal-font-size;
   line-height: @normal-font-height;
@@ -7,22 +7,21 @@
   font-style: normal;
 }
 
-.normal-font2 (@normal-font-size: 14px; @normal-font-height: 1.25; @normal-font-weight: 400; @normal-font-family: "Roboto Condensed", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu,
+.title-font (@normal-font-size: 1.4rem; @normal-font-height: 1.25; @normal-font-weight: bold; @normal-font-family: "BerlingskeSansCn-Bold", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu,
     Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif) {
   font-size: @normal-font-size;
   line-height: @normal-font-height;
   font-weight: @normal-font-weight;
   font-family: @normal-font-family;
-  font-style: normal;
+  font-style: italic;
 }
 
-.normal-font3 (@normal-font-size: 14px; @normal-font-height: 1.25; @normal-font-weight: 400; @normal-font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu,
-    Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif) {
-  font-size: @normal-font-size;
-  line-height: @normal-font-height;
-  font-weight: @normal-font-weight;
-  font-family: @normal-font-family;
-  font-style: normal;
+.container {
+  width: 100%;
+  max-width: @xl-width;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 .no-outline() {
@@ -32,18 +31,6 @@
   &::before {
     display: none;
   }
-}
-
-.visually-hidden:not(:focus):not(:active) {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  white-space: nowrap;
-  clip-path: rect(0 0 0 0);
-  overflow: hidden;
 }
 
 .mp(@list-margin: 0; @list-padding: 0;) {
@@ -73,4 +60,14 @@
     background-image: @bg-img;
     background-size: @bs-width @bs-height;
   }
+}
+
+.btn-reset() {
+  padding: 0;
+  border: none;
+  font: inherit;
+  color: inherit;
+  text-decoration: none;
+  background-color: transparent;
+  cursor: pointer;
 }

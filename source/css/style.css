@@ -304,17 +304,6 @@ template {
 [hidden] {
   display: none;
 }
-.visually-hidden:not(:focus):not(:active) {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  white-space: nowrap;
-  clip-path: rect(0 0 0 0);
-  overflow: hidden;
-}
 html {
   box-sizing: border-box;
 }
@@ -324,955 +313,292 @@ html {
   box-sizing: inherit;
 }
 body {
+  font-family: "TT Norms";
   min-width: 320px;
   margin: 0;
   padding: 0;
+  font-size: 16px;
 }
 img {
   max-width: 100%;
   height: auto;
 }
+/*Доп.*/
 @font-face {
-  font-family: "Roboto";
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: local("Roboto"), local("Roboto-Regular"), url(../fonts/Roboto-Regular-subset.woff2) format("woff2"), url(../fonts/Roboto-Regular-subset.woff) format("woff");
-  unicode-range: U+A, U+20-22, U+25, U+28-3A, U+3D-45, U+48, U+49, U+4C-50, U+52-56, U+58, U+59, U+5F, U+61-69, U+6B, U+6D-70, U+72-74, U+76, U+AB, U+BB, U+401, U+410-44F, U+451, U+2014;
-}
-@font-face {
-  font-family: "Roboto";
-  font-style: italic;
-  font-weight: 300;
-  font-display: swap;
-  src: local("Roboto Light Italic"), local("Roboto-LightItalic"), url(../fonts/Roboto-Light-Italic.woff2) format("woff2"), url(../fonts/Roboto-Light-Italic.woff) format("woff");
-  unicode-range: U+A, U+20-22, U+25, U+28-3A, U+3D-45, U+48, U+49, U+4C-50, U+52-56, U+58, U+59, U+5F, U+61-69, U+6B, U+6D-70, U+72-74, U+76, U+AB, U+BB, U+401, U+410-44F, U+451, U+2014;
-}
-@font-face {
-  font-family: "Roboto Slab";
+  font-family: "TT Norms";
   font-style: normal;
   font-weight: 300;
   font-display: swap;
-  src: local("Roboto Slab Light"), local("RobotoSlab-Light"), url(../fonts/RobotoSlab-Light-subset.woff2) format("woff2"), url(../fonts/RobotoSlab-Light-subset.woff) format("woff");
+  src: local("TT Norms Light"), local('TTNorms-Light'), url(../fonts/TTNorms-Light-subset.woff2) format("woff2"), url(../fonts/TTNorms-Light-subset.woff) format("woff");
   unicode-range: U+A, U+20-22, U+25, U+28-3A, U+3D-45, U+48, U+49, U+4C-50, U+52-56, U+58, U+59, U+5F, U+61-69, U+6B, U+6D-70, U+72-74, U+76, U+AB, U+BB, U+401, U+410-44F, U+451, U+2014;
 }
 @font-face {
-  font-family: "Roboto Slab";
+  font-family: "TT Norms";
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: local("Roboto Slab Regular"), local("RobotoSlab-Regular"), url(../fonts/RobotoSlab-Regular-subset.woff2) format("woff2"), url(../fonts/RobotoSlab-Regular-subset.woff) format("woff");
+  src: local("TT Norms Regular"), local("TTNorms-Regular"), url(../fonts/TTNorms-Regular-subset.woff2) format("woff2"), url(../fonts/TTNorms-Regular-subset.woff) format("woff");
   unicode-range: U+A, U+20-22, U+25, U+28-3A, U+3D-45, U+48, U+49, U+4C-50, U+52-56, U+58, U+59, U+5F, U+61-69, U+6B, U+6D-70, U+72-74, U+76, U+AB, U+BB, U+401, U+410-44F, U+451, U+2014;
 }
 @font-face {
-  font-family: "Roboto Condensed";
+  font-family: "TT Norms";
   font-style: normal;
-  font-weight: 400;
+  font-weight: 500;
   font-display: swap;
-  src: local("Roboto Condensed"), local("RobotoCondensed-Regular"), url(../fonts/RobotoCondensed-Regular-subset.woff2) format("woff2"), url(../fonts/RobotoCondensed-Regular-subset.woff) format("woff");
+  src: local("TT Norms Medium"), local("TTNorms-Medium"), url(../fonts/TTNorms-Medium-subset.woff2) format("woff2"), url(../fonts/TTNorms-Medium-subset.woff) format("woff");
   unicode-range: U+A, U+20-22, U+25, U+28-3A, U+3D-45, U+48, U+49, U+4C-50, U+52-56, U+58, U+59, U+5F, U+61-69, U+6B, U+6D-70, U+72-74, U+76, U+AB, U+BB, U+401, U+410-44F, U+451, U+2014;
 }
 @font-face {
-  font-family: "PT Sans";
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: local("PT Sans"), local("PTSans-Regular"), url(../fonts/PT_Sans-Web-Regular-subset.woff2) format("woff2"), url(../fonts/PT_Sans-Web-Regular-subset.woff) format("woff");
-  unicode-range: U+A, U+20-22, U+25, U+28-3A, U+3D-45, U+48, U+49, U+4C-50, U+52-56, U+58, U+59, U+5F, U+61-69, U+6B, U+6D-70, U+72-74, U+76, U+AB, U+BB, U+401, U+410-44F, U+451, U+2014;
-}
-@font-face {
-  font-family: "PT Sans";
-  font-style: italic;
-  font-weight: 400;
-  font-display: swap;
-  src: local("PT Sans Italic"), local("PTSans-Italic"), url(../fonts/PT_Sans-Web-Italic-subset.woff2) format("woff2"), url(../fonts/PT_Sans-Web-Italic-subset.woff) format("woff");
-  unicode-range: U+A, U+20-22, U+25, U+28-3A, U+3D-45, U+48, U+49, U+4C-50, U+52-56, U+58, U+59, U+5F, U+61-69, U+6B, U+6D-70, U+72-74, U+76, U+AB, U+BB, U+401, U+410-44F, U+451, U+2014;
-}
-@font-face {
-  font-family: "PT Sans";
+  font-family: "TT Norms";
   font-style: normal;
   font-weight: 700;
   font-display: swap;
-  src: local("PT Sans Bold"), local("PTSans-Bold"), url(../fonts/PT_Sans-Web-Bold-subset.woff2) format("woff2"), url(../fonts/PT_Sans-Web-Bold-subset.woff) format("woff");
+  src: local("TT Norms Bold"), local("TTNorms-Bold"), url(../fonts/TTNorms-Bold-subset.woff2) format("woff2"), url(../fonts/TTNorms-Bold-subset.woff) format("woff");
   unicode-range: U+A, U+20-22, U+25, U+28-3A, U+3D-45, U+48, U+49, U+4C-50, U+52-56, U+58, U+59, U+5F, U+61-69, U+6B, U+6D-70, U+72-74, U+76, U+AB, U+BB, U+401, U+410-44F, U+451, U+2014;
 }
 @font-face {
-  font-family: "MyriadPro";
+  font-family: "TT Norms";
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: local("TT Norms ExtraBold"), local("TTNorms-ExtraBold"), url(../fonts/TTNorms-ExtraBold-subset.woff2) format("woff2"), url(../fonts/TTNorms-ExtraBold-subset.woff) format("woff");
+  unicode-range: U+A, U+20-22, U+25, U+28-3A, U+3D-45, U+48, U+49, U+4C-50, U+52-56, U+58, U+59, U+5F, U+61-69, U+6B, U+6D-70, U+72-74, U+76, U+AB, U+BB, U+401, U+410-44F, U+451, U+2014;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Lobster';
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: local("Myriad Pro Regular"), local("Myriad-Pro"), url(../fonts/MyriadPro-Regular-subset.woff2) format("woff2"), url(../fonts/MyriadPro-Regular-subset.woff) format("woff");
-  unicode-range: U+A, U+20-22, U+25, U+28-3A, U+3D-45, U+48, U+49, U+4C-50, U+52-56, U+58, U+59, U+5F, U+61-69, U+6B, U+6D-70, U+72-74, U+76, U+AB, U+BB, U+401, U+410-44F, U+451, U+2014;
+  src: local('Lobster Regular'), local('Lobster-Regular'), url(https://fonts.gstatic.com/s/lobster/v22/neILzCirqoswsqX9zo-mM5Ez.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Lobster';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Lobster Regular'), local('Lobster-Regular'), url(https://fonts.gstatic.com/s/lobster/v22/neILzCirqoswsqX9zoamM5Ez.woff2) format('woff2');
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Lobster';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Lobster Regular'), local('Lobster-Regular'), url(https://fonts.gstatic.com/s/lobster/v22/neILzCirqoswsqX9zo2mM5Ez.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Lobster';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Lobster Regular'), local('Lobster-Regular'), url(https://fonts.gstatic.com/s/lobster/v22/neILzCirqoswsqX9zoymM5Ez.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Lobster';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Lobster Regular'), local('Lobster-Regular'), url(https://fonts.gstatic.com/s/lobster/v22/neILzCirqoswsqX9zoKmMw.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 .btn {
+  padding: 0;
+  border: none;
+  font: inherit;
+  color: inherit;
+  text-decoration: none;
+  background-color: transparent;
   box-sizing: border-box;
-  display: flex;
+  display: inline-flex;
   justify-content: center;
   align-items: center;
-  text-decoration: none;
-  font-size: 18px;
-  line-height: 1.25;
-  font-weight: 400;
-  font-family: "Roboto Condensed", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-style: normal;
-  border: none;
-}
-.btn--small {
-  padding-top: 5px;
-  padding-bottom: 5px;
-}
-.btn--big {
-  padding-top: 10px;
-  padding-bottom: 10px;
-}
-.btn--company-color-light,
-.btn--company-color-light-transform {
-  color: #ffffff;
-  background-color: #cf2023;
-  transition: 0.4s;
-}
-.btn--company-color-light:hover,
-.btn--company-color-light:focus {
-  background-color: #b10005;
-}
-.btn--light {
-  width: 210px;
-  color: #000000;
-  border: 1px solid #d0d0d0;
-  background-color: #ffffff;
-  transition: 0.4s;
-}
-.btn--light:hover,
-.btn--light:focus {
-  border: 1px dashed #d0d0d0;
-}
-.btn--make-an-appointment {
-  display: none;
-}
-@media (min-width: 750px) {
-  .btn--make-an-appointment {
-    display: flex;
-    width: 190px;
-    margin-bottom: 10px;
-    padding-left: 20px;
-    font-size: 16px;
-    line-height: 1.25;
-    font-weight: 400;
-    font-family: "Roboto Condensed", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-style: normal;
-    background-image: url("../img/btn/pen.svg");
-    background-size: 15px 15px;
-    background-repeat: no-repeat;
-    background-position: 10px center;
-  }
-}
-@media (min-width: 1200px) {
-  .btn--make-an-appointment {
-    width: 210px;
-    font-size: 18px;
-  }
-}
-.btn--question-to-specialist {
-  display: none;
-}
-@media (min-width: 750px) {
-  .btn--question-to-specialist {
-    display: flex;
-    width: 190px;
-    height: 40px;
-    font-size: 16px;
-    line-height: 1.25;
-    font-weight: 400;
-    font-family: "Roboto Condensed", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-style: normal;
-    padding-left: 15px;
-    text-align: center;
-    background-image: url("../img/btn/doctor.svg");
-    background-size: 18px 18px;
-    background-repeat: no-repeat;
-    background-position: 10px center;
-  }
-}
-@media (min-width: 1200px) {
-  .btn--question-to-specialist {
-    width: 210px;
-    height: 50px;
-    margin-left: 220px;
-    font-size: 18px;
-  }
-}
-.visually-impaired {
-  display: block;
-  width: 50px;
-  height: 35px;
-  background-color: #000000;
-  background-image: url("../img/visually-impaired/eye.svg");
-  background-repeat: no-repeat;
-  background-size: 25px;
-  background-position: center;
-}
-@media (min-width: 1200px) {
-  .visually-impaired {
-    display: flex;
-    align-items: center;
-    width: unset;
-    text-decoration: none;
-    background-position: 10px;
-  }
-}
-.visually-impaired__text {
-  display: none;
-}
-@media (min-width: 1200px) {
-  .visually-impaired__text {
-    display: inline;
-    padding-left: 45px;
-    padding-right: 15px;
-    color: #ffffff;
-    font-size: 15px;
-    line-height: 15px;
-    font-weight: 400;
-    font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-style: normal;
-  }
-}
-.page {
-  position: relative;
   margin: 0 auto;
-  /*padding-bottom: 20px;*/
+  padding: 0.5em 1em;
+  color: #ffffff;
   font-size: 14px;
   line-height: 1.25;
-  font-weight: 400;
-  font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  font-family: "TT Norms", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-style: normal;
-  background: url("../img/page/background_main-100.jpg");
-  scroll-behavior: smooth;
-  /*хз что это, но нужно*/
+  background: #1d3d4e;
+  cursor: pointer;
+  outline: none;
 }
-.main-header {
-  display: flex;
-  flex-wrap: wrap;
-  padding: 18px 4.79vw 40px 4.79vw;
-  background: url("../img/main-header/lines.svg") no-repeat 25% bottom;
-  background-size: 1500px;
+.btn:hover,
+.btn:focus {
+  background: #215b77;
 }
-@media (min-width: 580px) {
-  .main-header {
-    padding-left: 17vw;
-    padding-right: 17vw;
-  }
+.btn:active {
+  background: #227ba2;
 }
-@media (min-width: 750px) {
-  .main-header {
-    display: flex;
-    flex-wrap: wrap;
-    padding: unset;
-  }
+.btn:disabled {
+  background: #808080;
+  opacity: 0.6;
 }
-@media (min-width: 1200px) {
-  .main-header {
-    background-position-y: 120%;
-    background-size: 2000px;
-  }
+.form {
+  font-size: 14px;
+  line-height: 1.25;
+  font-weight: 300;
+  font-family: "TT Norms", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-style: normal;
+  width: 500px;
 }
-.main-header__companies {
-  max-width: 290px;
-  margin: 0 auto;
+.form__title {
+  margin: 0;
   padding: 0;
+  margin-bottom: 25px;
 }
-@media (min-width: 750px) {
-  .main-header__companies {
-    box-sizing: border-box;
-    width: 500px;
-    max-width: unset;
-    flex-grow: 1;
-    margin-left: 0;
-    padding-top: 18px;
-    padding-bottom: 55px;
-    padding-left: 16%;
-    background: url("../img/main-header/girl-x222.png") no-repeat bottom;
-    background-size: contain;
-    background-position: right 340px top 0;
-  }
+.form__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
-@media (min-width: 1200px) {
-  .main-header__companies {
-    width: 660px;
-    padding-top: 20px;
-    padding-left: 1px;
-    padding-bottom: 0;
-    background-position: right 540px top 0;
-  }
+.form__item {
+  margin-bottom: 15px;
 }
-.main-header__contacts {
-  width: 250px;
-  margin-left: auto;
+.form__item input,
+.form__item textarea {
+  padding: 5px 0 5px 10px;
+  border: 1px solid;
+  background: transparent;
+  outline: none;
 }
-@media (min-width: 750px) {
-  .main-header__contacts {
-    box-sizing: border-box;
-    width: 220px;
-    max-width: unset;
-    flex-grow: 1;
-    padding-left: 10px;
-    margin-left: 13px;
-    margin-right: auto;
-    padding-top: 10px;
-    padding-bottom: 10px;
-  }
+.form__item input:focus,
+.form__item textarea:focus {
+  border-color: red;
 }
-@media (min-width: 1200px) {
-  .main-header__contacts {
-    display: flex;
-    flex-wrap: wrap;
-    width: 430px;
-    padding-top: 20px;
-  }
+.form__item input:focus + label,
+.form__item textarea:focus + label {
+  color: red;
 }
-.main-header__phone {
+.checkbox {
+  /*Прячем галку по умолчанию*/
+  /*Показываем галку по состоянию checked*/
+  /*Добавляем фокус к внешнему блоку поддельного чекбокса*/
+}
+.checkbox input[type="checkbox"] {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+.checkbox label {
+  position: relative;
   display: flex;
   align-items: center;
-  margin: 0 0 5px 0;
-  padding: 0;
-  font-size: 14px;
-  line-height: 17px;
-  font-weight: 400;
-  font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-style: normal;
+  cursor: pointer;
 }
-@media (min-width: 750px) {
-  .main-header__phone {
-    margin: 0;
-    font-size: 20px;
-    line-height: 27px;
-  }
-}
-@media (min-width: 1200px) {
-  .main-header__phone {
-    width: 220px;
-  }
-}
-.main-header__phone::before {
+.checkbox label::before {
+  box-sizing: border-box;
+  flex-shrink: 0;
+  margin-right: 10px;
   content: "";
   display: inline-block;
+  height: 16px;
   width: 16px;
-  height: 17px;
-  margin-right: 5px;
-  background: url("../img/main-header/phone.svg") no-repeat;
+  border: 1px solid;
 }
-.main-header__callback {
-  width: 145px;
-  font-size: 12px;
-  line-height: 1.25;
-  font-weight: 400;
-  font-family: "Roboto Condensed", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-style: normal;
-}
-@media (min-width: 750px) {
-  .main-header__callback {
-    display: flex;
-    justify-content: left;
-    width: 100%;
-    margin-bottom: 9px;
-    color: #b10005;
-    font-size: 16.5px;
-    line-height: 24px;
-    font-weight: 400;
-    font-family: "Roboto Condensed", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-style: normal;
-    background: none;
-  }
-}
-.main-header__callback-text {
-  margin: 0;
-  padding: 0;
-}
-@media (min-width: 750px) {
-  .main-header__callback-text {
-    color: #cf2023;
-    border-bottom: 2px dotted #cf2023;
-  }
-}
-@media (min-width: 750px) {
-  .main-header__callback-text::before {
-    content: "Закажите ";
-  }
-}
-@media (min-width: 750px) {
-  .main-header__callback-text:hover,
-  .main-header__callback-text:focus {
-    color: #b10005;
-    border-bottom: 2px dotted transparent;
-  }
-}
-.main-header__callback-text::first-letter {
-  text-transform: uppercase;
-}
-.main-header__wrapper {
-  display: none;
-}
-@media (min-width: 750px) {
-  .main-header__wrapper {
-    box-sizing: border-box;
-    display: flex;
-    flex-grow: 0;
-    flex-shrink: 0;
-    padding-left: 133px;
-    width: 720px;
-    margin: 0 auto;
-    margin-top: -45px;
-  }
-}
-@media (min-width: 1200px) {
-  .main-header__wrapper {
-    width: 1120px;
-    padding-left: unset;
-    justify-content: flex-end;
-  }
-}
-.main-header__nav {
-  width: 38px;
-  margin-right: auto;
-  background-color: transparent;
-}
-@media (min-width: 750px) {
-  .main-header__nav {
-    width: 100%;
-    flex-shrink: 0;
-    margin-top: 0;
-    background-color: #cf2023;
-  }
-}
-@media (min-width: 750px) {
-  .main-header__search-input {
-    margin-left: 10px;
-  }
-}
-@media (min-width: 1200px) {
-  .main-header__search-input {
-    margin-left: 5px;
-  }
-}
-.companies {
-  list-style: none;
-}
-@media (min-width: 750px) {
-  .companies__item {
-    width: 365px;
-    margin-left: auto;
-    padding-left: unset;
-    padding-right: unset;
-  }
-}
-@media (min-width: 1200px) {
-  .companies__item {
-    width: 570px;
-  }
-}
-.companies__item:before {
-  content: "";
+.checkbox label::after {
   position: absolute;
-}
-@media (min-width: 750px) {
-  .companies__item:before {
-    width: 365px;
-    margin-left: auto;
-    padding-left: unset;
-    padding-right: unset;
-  }
-}
-.companies__item--stomat:before {
-  width: 25px;
-  height: 24px;
-  background: url("../img/main-header/logo1.png") no-repeat;
-  background-size: cover;
-}
-@media (min-width: 750px) {
-  .companies__item--stomat:before {
-    width: 62px;
-    height: 58px;
-  }
-}
-@media (min-width: 1200px) {
-  .companies__item--stomat:before {
-    width: 70px;
-    height: 66px;
-  }
-}
-.companies__item--medcentr:before {
-  width: 25px;
-  height: 23px;
-  background: url("../img/main-header/logo2.png") no-repeat;
-  background-size: cover;
-}
-@media (min-width: 750px) {
-  .companies__item--medcentr:before {
-    width: 62px;
-    height: 54px;
-  }
-}
-@media (min-width: 1200px) {
-  .companies__item--medcentr:before {
-    width: 70px;
-    height: 61px;
-  }
-}
-.companies__title {
-  margin: 0;
-  padding: 0 0 0 35px;
-  vertical-align: top;
-  color: #000000;
-  font-size: 14px;
-  line-height: 1.25;
-  font-weight: 400;
-  font-family: "Roboto Slab", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-style: normal;
-  text-transform: uppercase;
-}
-@media (min-width: 750px) {
-  .companies__title {
-    padding: 0 0 8px 70px;
-    font-size: 18px;
-  }
-}
-@media (min-width: 1200px) {
-  .companies__title {
-    padding-left: 80px;
-    font-size: 22px;
-    line-height: 27px;
-  }
-}
-.companies__title span {
-  display: block;
-  padding: 0 0 15px 0;
-  color: #cf2023;
-  font-size: 10px;
-  line-height: 12px;
-  font-weight: 700;
-  font-family: "Roboto Slab", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-style: normal;
-  text-transform: uppercase;
-}
-@media (min-width: 750px) {
-  .companies__title span {
-    max-width: 300px;
-    margin-bottom: 10px;
-    font-size: 12px;
-  }
-}
-@media (min-width: 1200px) {
-  .companies__title span {
-    padding-left: 10px;
-    font-size: 14px;
-    line-height: 17px;
-  }
-}
-.main-nav {
-  position: relative;
-}
-.main-nav--nojs {
-  display: block;
-  width: 320px;
-  margin: 0 auto;
-}
-@media (min-width: 750px) {
-  .main-nav--nojs {
-    width: 100%;
-  }
-}
-.main-nav--nojs .main-nav__list {
-  position: static;
-  margin-top: 10px;
-}
-.main-nav--opened {
-  position: absolute;
-  width: 320px;
-  top: 120px;
-  left: calc(50% - 160px);
-  z-index: 3;
-}
-.main-nav--sticky {
-  position: fixed;
+  left: 3px;
   top: 5px;
-  width: 100vw;
-  z-index: 3;
-}
-.main-nav--footer {
-  display: none;
-}
-@media (min-width: 750px) {
-  .main-nav--footer {
-    display: flex;
-  }
-}
-@media (min-width: 1200px) {
-  .main-nav--footer {
-    width: 100%;
-    background-color: #cf2023;
-  }
-}
-.main-nav__list {
-  margin: 0;
-  list-style: none;
-  position: absolute;
-  left: 0;
-  right: 0;
-  padding: 0;
-  background-color: #cf2023;
-  z-index: 2;
-}
-@media (min-width: 750px) {
-  .main-nav__list {
-    display: flex;
-    flex-grow: 1;
-    position: unset;
-    max-width: 1120px;
-    min-height: 50px;
-    margin: 0 auto;
-  }
-}
-.main-nav__toggle {
-  position: absolute;
-  width: 38px;
-  height: 38px;
-  background-color: #b10005;
-  border: none;
-  cursor: pointer;
-  z-index: 3;
-}
-@media (min-width: 750px) {
-  .main-nav__toggle {
-    display: none;
-  }
-}
-.main-nav__toggle--closed::before {
   content: "";
-  position: absolute;
-  top: 10px;
-  left: 9px;
-  width: 20px;
-  height: 3px;
-  background-color: #ffffff;
-  box-shadow: 0 8px 0 0 #ffffff, 0 16px 0 0 #ffffff;
-}
-.main-nav__toggle--closed:active::before {
-  background-color: rgba(255, 255, 255, 0.3);
-  box-shadow: 0 8px 0 0 rgba(255, 255, 255, 0.3), 0 16px 0 0 rgba(255, 255, 255, 0.3);
-}
-.main-nav__toggle__toggle--opened {
-  right: 0;
-  z-index: 4;
-}
-.main-nav__toggle__toggle--opened::before,
-.main-nav__toggle__toggle--opened::after {
-  content: "";
-  position: absolute;
-  top: 17px;
-  left: 4px;
-  width: 30px;
-  height: 2px;
-  background-color: #ffffff;
-}
-.main-nav__toggle__toggle--opened::before {
-  transform: rotate(45deg);
-}
-.main-nav__toggle__toggle--opened::after {
+  display: inline-block;
+  height: 6px;
+  width: 10px;
+  border-left: 2px solid;
+  border-bottom: 2px solid;
   transform: rotate(-45deg);
 }
-.main-nav__toggle__toggle--opened:active::before,
-.main-nav__toggle__toggle--opened:active::after {
-  background-color: rgba(255, 255, 255, 0.3);
+.checkbox input[type="checkbox"] + label::after {
+  content: none;
 }
-.main-nav__toggle__toggle--nojs {
-  background: transparent;
-  display: none;
+.checkbox input[type="checkbox"]:checked + label::after {
+  content: "";
 }
-.main-nav__toggle__toggle--nojs::before,
-.main-nav__toggle__toggle--nojs::after {
-  display: none;
+.checkbox input[type="checkbox"]:disabled + label {
+  color: gray;
 }
-@media (min-width: 750px) {
-  .menu-list {
-    flex-grow: 1;
-  }
+.checkbox input[type="checkbox"]:focus + label::before {
+  border: 1px red solid;
 }
-.menu-list__item {
-  margin: 0;
-  padding: 0;
-  list-style: none;
+.checkbox input[type="checkbox"]:focus + label {
+  color: red;
 }
-@media (max-width: 749px) {
-  .menu-list__item {
-    display: none;
-    justify-content: left;
-    position: relative;
-  }
+.radio {
+  /*Прячем галку по умолчанию*/
+  /*Показываем галку по состоянию checked*/
+  /*Добавляем фокус к внешнему блоку поддельного чекбокса*/
 }
-@media (min-width: 750px) {
-  .menu-list__item {
-    flex-grow: 1;
-  }
-}
-@media (max-width: 749px) {
-  .menu-list--nojs .menu-list__item {
-    display: block;
-  }
-}
-@media (max-width: 749px) {
-  .menu-list--opened .menu-list__item {
-    display: block;
-  }
-}
-.menu-list__link {
-  display: block;
-  text-decoration: none;
-  padding: 4px  4px 3px 40px;
-  color: #ffffff;
-  text-transform: uppercase;
-  font-size: 14px;
-  line-height: 32px;
-  font-weight: 400;
-  font-family: "Roboto Slab", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-style: normal;
-  transition: 0.4s;
-}
-@media (min-width: 750px) {
-  .menu-list__link {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    padding: 0 10px;
-  }
-}
-.menu-list__link:hover,
-.menu-list__link:focus {
-  background-color: #b10005;
-}
-.menu-list__link:active[href] {
-  color: rgba(255, 255, 255, 0.3);
-  background-color: #b10005;
-}
-.search {
-  position: relative;
-}
-.search__input {
-  box-sizing: border-box;
-  width: 285px;
-  height: 35px;
-  padding-left: 5px;
-  border: 1px solid #d2d2d2;
-  background-color: #ffffff;
-}
-.search__btn {
+.radio input[type="radio"] {
   position: absolute;
-  width: 20px;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+.radio label {
+  position: relative;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.radio label::before {
+  box-sizing: border-box;
+  flex-shrink: 0;
+  margin-right: 10px;
+  content: "";
+  display: inline-block;
   height: 16px;
-  right: 9px;
-  top: calc(50% - 12px);
-  border: none;
-  background: url("../img/search/search.svg") no-repeat;
-  background-size: contain;
+  width: 16px;
+  border: 1px solid;
+  border-radius: 50%;
 }
-.slider__list {
-  margin: 0;
-  padding: 0;
-  list-style: none;
+.radio label::after {
+  position: absolute;
+  left: 4px;
+  top: 5px;
+  content: "";
+  display: inline-block;
+  height: 8px;
+  width: 8px;
+  border-radius: 50%;
+  background-color: black;
 }
-.slide__title {
-  margin: 0;
-  padding: 0;
-  color: #b10005;
-  font-size: 24px;
-  line-height: 28px;
-  font-weight: 400;
-  font-family: "Roboto Condensed", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-style: normal;
-  text-transform: uppercase;
+.radio input[type="radio"] + label::after {
+  content: none;
 }
-@media (min-width: 750px) {
-  .slide__title {
-    font-size: 35px;
-    line-height: 40px;
-  }
+.radio input[type="radio"]:checked + label::after {
+  content: "";
 }
-@media (min-width: 1200px) {
-  .slide__title {
-    font-size: 48px;
-    line-height: 58px;
-  }
+.radio input[type="radio"]:disabled + label {
+  color: gray;
 }
-.slide__description {
-  margin: 0;
-  padding: 0;
-  color: #000000;
-  font-size: 14px;
-  line-height: 18px;
-  font-weight: 600;
-  font-family: "Roboto Condensed", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-style: normal;
+.radio input[type="radio"]:focus + label::before {
+  border: 1px red solid;
 }
-@media (min-width: 750px) {
-  .slide__description {
-    font-size: 20px;
-    line-height: 25px;
-  }
+.radio input[type="radio"]:focus + label::after {
+  background-color: red;
 }
-@media (min-width: 1200px) {
-  .slide__description {
-    font-size: 24px;
-    line-height: 30px;
-  }
-}
-.services__title {
-  margin: 0;
-  padding: 0;
-  color: #b10005;
-  font-size: 18px;
-  line-height: 1.25;
-  font-weight: 400;
-  font-family: "Roboto Condensed", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-style: normal;
-}
-@media (min-width: 750px) {
-  .services__title {
-    font-size: 20px;
-  }
-}
-@media (min-width: 1200px) {
-  .services__title {
-    font-size: 24px;
-    line-height: 48px;
-  }
-}
-.services__list {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-.service__title {
-  margin: 0;
-  padding: 0;
-  color: #ffffff;
-  font-size: 14px;
-  line-height: 15px;
-  font-weight: 300;
-  font-family: "Roboto Slab", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-style: normal;
-  background-color: #cf2023;
-}
-@media (min-width: 1200px) {
-  .service__title {
-    font-size: 20px;
-    line-height: 36px;
-  }
-}
-.about__title {
-  margin: 0;
-  padding: 0;
-  color: #b10005;
-  font-size: 18px;
-  line-height: 1.25;
-  font-weight: 400;
-  font-family: "Roboto Condensed", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-style: normal;
-}
-@media (min-width: 750px) {
-  .about__title {
-    font-size: 20px;
-  }
-}
-@media (min-width: 1200px) {
-  .about__title {
-    font-size: 24px;
-    line-height: 48px;
-  }
-}
-.about__text {
-  margin: 0;
-  padding: 0;
-  color: #323232;
-  font-size: 14px;
-  line-height: 1.25;
-  font-weight: 400;
-  font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-style: normal;
-}
-.about__text--full {
-  display: none;
-}
-@media (min-width: 750px) {
-  .about__text--full {
-    display: block;
-  }
-}
-.reviews__title {
-  margin: 0;
-  padding: 0;
-  color: #b10005;
-  font-size: 18px;
-  line-height: 1.25;
-  font-weight: 400;
-  font-family: "Roboto Condensed", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-style: normal;
-}
-@media (min-width: 750px) {
-  .reviews__title {
-    font-size: 20px;
-  }
-}
-@media (min-width: 1200px) {
-  .reviews__title {
-    font-size: 24px;
-    line-height: 48px;
-  }
-}
-.reviews__list {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-.review__description {
-  margin: 0;
-  padding: 0;
-}
-.review__text {
-  margin: 0;
-  padding: 0;
-}
-.news__title {
-  margin: 0;
-  padding: 0;
-  color: #b10005;
-  font-size: 18px;
-  line-height: 1.25;
-  font-weight: 400;
-  font-family: "Roboto Condensed", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-style: normal;
-}
-@media (min-width: 750px) {
-  .news__title {
-    font-size: 20px;
-  }
-}
-@media (min-width: 1200px) {
-  .news__title {
-    font-size: 24px;
-    line-height: 48px;
-  }
-}
-.news__list {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-.event__title {
-  margin: 0;
-  padding: 0;
-  font-size: 14px;
-  line-height: 17px;
-  font-weight: 700;
-  font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-style: normal;
-  text-transform: uppercase;
+.radio input[type="radio"]:focus + label {
+  color: red;
 }

@@ -1,0 +1,99 @@
+.main-nav {
+  position: relative;
+
+  &__toggle {
+    .btn-reset();
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    z-index: 10;
+    background-color: #b10005;
+
+    @media(min-width: @lg-width) {
+      display: none;
+    }
+
+    & > span {
+      display: inline-block;
+      position: relative;
+      vertical-align: bottom;
+      width: 26px;
+      height: 2px;
+      background: @dark;
+      transition: background .3s .5s;
+
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        width: 26px;
+        height: 2px;
+        background: @dark;
+        border-radius: 0.15rem;
+        transform-origin: 50% 50%;
+        transition: top .3s .6s, transform .3s;
+      }
+
+      &::before {
+        top: 6px;
+      }
+
+      &::after {
+        top: -6px;
+      }
+    }
+
+    &--close {
+      & > span {
+        transition: background .3s 0;
+        background: transparent;
+
+        &::before,
+        &::after {
+          transition: top .3s, transform .3s .5s;
+          top: 0;
+        }
+
+        &::before {
+          transform: rotate3d(0, 0, 1, 45deg);
+        }
+
+        &::after {
+          transform: rotate3d(0, 0, 1, -45deg);
+        }
+      }
+    }
+  }
+
+  &__menu {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    transform: translateX(-100%);
+    transition: top .3s .6s, transform .3s;
+    background-color: rgba(@light, 0.7);
+    padding: 15px;
+
+    @media(min-width: @md-width) {
+      top: 80px;
+    }
+
+    &--vertical {
+      transform: translateX(0);
+    }
+
+    @media(min-width: @lg-width) {
+      position: static;
+      padding: 0;
+      transition: none;
+      transform: none;
+      order: 10;
+      z-index: 1;
+      margin-top: 25px;
+    }
+  }
+}
