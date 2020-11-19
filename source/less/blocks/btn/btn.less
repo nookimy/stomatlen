@@ -1,0 +1,24 @@
+.btn {
+  .btn-reset();
+  box-sizing: border-box;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 10px;
+  margin: 0 auto;
+  border: 1px solid;
+  transition: @transition;
+
+  &--color {
+    background-color: @company-color;
+    border-color: @company-color;
+    color: @light;
+
+    &:hover,
+    &:focus {
+      background-color: transparent;
+      color: @company-color;
+    }
+  }
+}
+
