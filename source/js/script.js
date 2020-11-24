@@ -1,4 +1,4 @@
-let toggle = document.querySelector(".main-nav__toggle");
+/*let toggle = document.querySelector(".main-nav__toggle");
 let menu = document.querySelector(".main-nav__menu");
 let menuButtons = document.querySelectorAll(".site-nav__item > a");
 
@@ -15,4 +15,21 @@ for (const button of menuButtons) {
       menu.classList.toggle("main-nav__menu--vertical");
     }
   })
-}
+}*/
+
+
+/* Карусели */
+$(document).ready(function () {
+  $(".main-slider .owl-carousel").owlCarousel({
+    dots: true,
+    nav: false,
+    margin: 20,
+    autoplay: true,
+    autoplayTimeout: 5000,
+    responsive: {
+      0: {
+        items: 1
+      }
+    }
+  });
+});

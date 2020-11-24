@@ -1,11 +1,16 @@
-.slide {
+.main-slider .slide {
   position: relative;
   width: 100%;
+  max-height: 700px;
 
   &::before {
     content: "";
     display: block;
-    padding-top: 50%;
+    padding-top: 85%;
+
+    @media(min-width: @md-width) {
+      padding-top: 50%;
+    }
   }
 
   &__img-wrap {
@@ -20,7 +25,11 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center;
+    object-position: 25% 50%;
+
+    @media(min-width: @md-width) {
+      object-position: center;
+    }
   }
 
   &__content-wrap {
@@ -30,17 +39,65 @@
     bottom: 0;
     right: 0;
     .container();
+    padding-top: 15px;
+    padding-bottom: 25px;
     display: flex;
-    align-items: center;
+
+    @media(min-width: @md-width) {
+      align-items: center;
+    }
   }
 
   &__content {
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+
+    @media(min-width: @md-width) {
+      width: 60%;
+      height: 250px;
+    }
+
+    @media(min-width: @lg-width) {
+      height: 310px;
+    }
   }
 
   &__title {
-    .title-font(5rem);
+    .mp();
+    .title-font(2.5rem);
     color: @dark-grey;
+    margin-bottom: auto;
+    margin-right: 80px;
+
+    @media(min-width: @md-width) {
+      font-size: 3.6rem;
+
+    }
+
+    @media(min-width: @lg-width) {
+      font-size: 5rem;
+      margin-bottom: 1.2em;
+    }
+  }
+
+  &__btn {
+    font-size: 1.4rem;
+
+    &--appointment {
+      margin-bottom: 12px;
+
+      @media(min-width: @md-width) {
+        margin-bottom: 25px;
+      }
+    }
+
+    & + .btn--color {
+      padding-top: calc(1rem + 1px);
+      padding-right: calc(1.5rem + 1px);
+      padding-bottom: calc(1rem + 1px);
+      padding-left: calc(1.5rem + 1px);
+    }
   }
 }

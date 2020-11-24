@@ -1,8 +1,22 @@
 .main-slider {
   width: 100%;
-  background-color: grey;
 
   &__list {
+    position: relative;
     .list();
+  }
+}
+
+.main-slider__list.owl-theme  {
+  & .owl-dots {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+
+    & .owl-dot.active span,
+    & .owl-dot:hover span {
+      background-color: @main-color;
+    }
   }
 }
