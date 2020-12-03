@@ -1,69 +1,33 @@
 .site-nav {
-  position: relative;
-  .list();
-  display: flex;
-  flex-direction: column;
-  border-bottom: 1px solid #3D465B;
-  z-index: 100;
+  grid-area: menu;
 
-  @media(min-width: @lg-width) {
+  &__menu {
+    .list();
+    .text-font(1.4rem);
+    color: @dark;
+    display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    border-bottom: none;
-    padding-top: 15px;
+    flex-wrap: wrap;
   }
 
-  &__item {
-    position: relative;
-    display: flex;
-    flex-wrap: wrap;
-
-    @media(min-width: @lg-width) {
-      width: 100px;
-      flex-grow: 1;
-
-    }
+  &__menu-item {
+    width: 100px;
+    flex-grow: 1;
+    margin-right: 10px;
+    margin-bottom: 10px;
 
     & > a {
-      font-size: 1.4rem;
-      color: inherit;
+      display: inline-block;
+      padding: 10px 15px;
       text-decoration: none;
-      padding: 10px 10px;
-      text-align: left;
-      flex-grow: 1;
+      color: inherit;
       transition: @transition;
 
-
-      @media(min-width: @md-width) {
-        text-align: center;
-
-      }
-
-      @media(min-width: @lg-width) {
-        padding: 15px 15px;
-        border-bottom: 1px solid #3D465B;
-      }
-
       &:hover,
       &:focus,
       &:active {
-        color: blue;
-        border-bottom: 1px solid blue;
-      }
-    }
-  }
-
-  &__item--spec {
-    & > a {
-      color: yellow;
-
-      &:hover,
-      &:focus,
-      &:active {
-        color: yellow;
-        border-bottom: 1px solid yellow;
+        color: @company-color;
       }
     }
   }
 }
-

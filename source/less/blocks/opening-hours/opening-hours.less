@@ -1,0 +1,33 @@
+.opening-hours {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  .mp();
+  .header-font(1rem);
+  text-transform: uppercase;
+  color: @company-color;
+  padding-left: 42px;
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 0;
+    width: 30px;
+    height: 30px;
+    background: url("../img/opening-hours/time.svg") no-repeat center;
+    background-size: contain;
+    transform: translateY(-50%);
+  }
+
+  & > span {
+    display: block;
+    color: @dark;
+  }
+}
+
+.main-nav .opening-hours {
+  grid-area: opening-hours;
+}
+

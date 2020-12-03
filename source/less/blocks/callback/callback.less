@@ -1,0 +1,31 @@
+.callback {
+  grid-area: callback;
+  display: flex;
+  flex-direction: column;
+
+  &__phone-link {
+    .title-font(1.6rem);
+    color: @dark;
+    text-decoration: none;
+    transition: @transition;
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: @company-color;
+    }
+  }
+
+  &__text-link {
+    .header-font(1rem);
+    color: @company-color;
+    text-transform: uppercase;
+    text-decoration: none;
+
+    &:hover,
+    &:focus,
+    &:active {
+      text-decoration: underline;
+    }
+  }
+}
