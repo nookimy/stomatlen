@@ -1,3 +1,118 @@
 .visually-impaired {
+  margin: 0 auto;
   grid-area: visually-impaired;
+
+  &__btn {
+    .btn-font(1rem);
+    font-weight: normal;
+    border: 1px solid;
+    background-color: @dark-grey;
+    border-color: @dark-grey;
+    color: @light;
+    transition: @transition;
+    width: 290px;
+    padding: 1.2rem 4rem;
+    justify-content: space-between;
+
+
+    & .btn__icon {
+      fill: @light;
+      transition: @transition;
+
+      &--eye {
+        display: block;
+      }
+
+      &--eye-crossed {
+        display: none;
+      }
+    }
+
+    &:hover,
+    &:focus {
+      border-color: @dark;
+      color: @light;
+      background-color: @dark;
+
+      & .btn__icon {
+        fill: @light;
+      }
+    }
+
+    &:active {
+      border-color: @dark-grey;
+      color: @dark-grey;
+      background-color: transparent;
+
+      .btn__icon {
+        &--eye {
+          display: none;
+        }
+
+        &--eye-crossed {
+          display: block;
+        }
+      }
+    }
+
+    & .visually-impaired__btn-text {
+      &--eye {
+        display: block;
+      }
+
+      &--eye-crossed {
+        display: none;
+      }
+    }
+
+    &--eye-crossed {
+      background-color: transparent;
+      border-color: @dark-grey;
+      color: @dark-grey;
+      transition: @transition;
+
+      & .btn__icon {
+        &--eye {
+          display: none;
+        }
+
+        &--eye-crossed {
+          display: block;
+        }
+      }
+
+      &:hover,
+      &:focus {
+        background-color: transparent;
+        border-color: @dark;
+        color: @dark;
+      }
+
+      &:active {
+        border-color: @dark-grey;
+        color: @light;
+        background-color: @dark-grey;
+
+        .btn__icon {
+          &--eye {
+            display: block;
+          }
+
+          &--eye-crossed {
+            display: none;
+          }
+        }
+      }
+
+      & .visually-impaired__btn-text {
+        &--eye {
+          display: none;
+        }
+
+        &--eye-crossed {
+          display: block;
+        }
+      }
+    }
+  }
 }
