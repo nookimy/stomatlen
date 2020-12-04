@@ -86,7 +86,6 @@
       & .btn__icon {
         fill: @light;
       }
-
     }
 
     &:active {
@@ -98,7 +97,32 @@
       & .btn__icon {
         fill: @light;
       }
+    }
+  }
 
+  &--additional {
+    border: 1px solid;
+    padding: 1.2rem 3rem;
+    background-color: @dark-grey;
+    border-color: @dark-grey;
+    color: @light;
+    transition: @transition;
+
+    & .btn__icon {
+      fill: @light;
+      transition: @transition;
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+      border-color: @dark-grey;
+      color: @dark-grey;
+      background-color: @light;
+
+      & .btn__icon {
+        fill: @light;
+      }
     }
   }
 }

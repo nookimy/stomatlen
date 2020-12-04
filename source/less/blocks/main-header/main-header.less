@@ -4,16 +4,25 @@
   background: url("../img/main-header/lines-main.svg") no-repeat right top -5vw;
   background-size: 130vw;
 
+  @media (min-width: @lg-width) {
+    position: relative;
+    height: auto;
+  }
+
   &__wrap {
-    .container();
-    padding-top: 15px;
-    padding-bottom: 15px;
+    padding-right: 40px;
+
+    @media (min-width: @lg-width) {
+      .container();
+    }
   }
 
   &__title-list {
     .list();
     display: flex;
-    margin-right: 40px;
+    .container();
+    padding-top: 15px;
+    padding-bottom: 15px;
   }
 
   &__title-item {
