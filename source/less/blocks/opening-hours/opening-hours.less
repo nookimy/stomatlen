@@ -9,6 +9,8 @@
   color: @company-color;
   padding-left: 42px;
 
+
+
   &::before {
     position: absolute;
     content: "";
@@ -31,5 +33,9 @@
   grid-area: opening-hours;
   margin-left: auto;
   margin-right: 45px;
+
+  @media (min-width: @lg-width) {
+    margin-right: 0;
+  }
 }
 

@@ -2,6 +2,11 @@
   margin: 0 auto;
   grid-area: visually-impaired;
 
+  @media (min-width: @lg-width) {
+    margin: 0;
+  }
+
+
   &__btn {
     .btn-font(1rem);
     font-weight: normal;
@@ -13,6 +18,11 @@
     width: 290px;
     padding: 1.2rem 4rem;
     justify-content: space-between;
+
+    @media (min-width: @lg-width) {
+      width: 245px;
+      padding: 1.2rem 2rem;
+    }
 
 
     & .btn__icon {

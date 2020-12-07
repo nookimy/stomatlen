@@ -3,19 +3,29 @@
   margin-right: 30px;
 
   @media (min-width: @lg-width) {
+    grid-area: unset;
     position: absolute;
-    top: 0;
+    bottom: 0;
     right: 0;
-    grid-area: auto;
+    left: 0;
+    transform: translateY(100%);
+    margin-right: 0;
+    z-index: 10;
+    background: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(50px);
   }
+
 
   &__menu {
     .list();
-    .text-font(1.4rem);
     color: @dark;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+
+    @media (min-width: @lg-width) {
+      .container();
+    }
   }
 
   &__menu-item {
@@ -23,13 +33,26 @@
     margin-right: 20px;
     margin-bottom: 10px;
 
+    @media (min-width: @lg-width) {
+      flex-grow: unset;
+      margin-right: 80px;
+      margin-bottom: 0;
+
+    }
+
     & > a {
+      .text-font(1.4rem);
       display: inline-block;
       padding: 10px 15px;
       min-width: 60px;
       text-decoration: none;
       color: inherit;
       transition: @transition;
+
+      @media (min-width: @lg-width) {
+        font-size: 1.8rem;
+        padding: 15px 20px;
+      }
 
       &:hover,
       &:focus,
@@ -80,6 +103,15 @@
     z-index: 10;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 
+    @media (min-width: @lg-width) {
+      visibility: hidden;
+      opacity: 0;
+      transform: translateX(0);
+      position: absolute;
+      top: 52px;
+      max-height: 380px;
+    }
+
     &--opened {
       transform: translateX(0);
     }
@@ -94,6 +126,10 @@
     padding: 10px 15px;
     text-decoration: none;
     transition: @transition;
+
+    @media (min-width: @lg-width) {
+      display: none;
+    }
 
     &::before {
       position: absolute;
@@ -116,6 +152,24 @@
 
       &::before {
         border-color: @company-color;
+      }
+    }
+  }
+
+  &__submenu-content {
+    @media (min-width: @lg-width) {
+      .container();
+    }
+  }
+
+  &__menu-item--from-submenu {
+    @media (min-width: @lg-width) {
+
+      &:hover {
+        & > .site-nav__submenu {
+          visibility: visible;
+          opacity: 1;
+        }
       }
     }
   }

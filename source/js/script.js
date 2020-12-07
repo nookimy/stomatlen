@@ -9,7 +9,7 @@ toggle.onclick = function () {
   nav.classList.toggle("main-nav__wrap--opened");
 };
 
-// Аккордеон в подменю Услуги
+// Аккордеон в подменю Услуги должен работать только до десктопной версии
 $(document).ready(function () {
   $('.services-menu__folder-heading').click(function () {
     $(this).toggleClass('services-menu__folder-heading--in').next().slideToggle();
