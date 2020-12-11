@@ -1,7 +1,6 @@
-let toggle = document.querySelector(".main-nav__toggle");
-let nav = document.querySelector(".main-nav__wrap");
-let submenu = document.querySelector(".site-nav__submenu");
-let visuallyImpairedBtn = document.querySelector(".visually-impaired__btn");
+const toggle = document.querySelector(".main-nav__toggle");
+const nav = document.querySelector(".main-nav__wrap");
+const visuallyImpairedBtn = document.querySelector(".visually-impaired__btn");
 
 /*Основное меню*/
 toggle.onclick = function () {
@@ -9,13 +8,21 @@ toggle.onclick = function () {
   nav.classList.toggle("main-nav__wrap--opened");
 };
 
+const servicesMenuElements = document.querySelectorAll(".services-menu__list"); // Списки в подменю Услуги, для которых должен работать аккордеон
+const currentWidth = document.documentElement.clientWidth; // Текущая ширина окна браузера
+const DESKTOP_WIDTH = 992; // Ширина, с которой начинается десктопная версия
+
 // Аккордеон в подменю Услуги должен работать только до десктопной версии
-$(document).ready(function () {
-  $('.services-menu__folder-heading').click(function () {
-    $(this).toggleClass('services-menu__folder-heading--in').next().slideToggle();
-    $('.services-menu__folder-heading').not(this).removeClass('services-menu__folder-heading--in').next().slideUp();
+if(currentWidth < DESKTOP_WIDTH) {
+  servicesMenuElements.forEach((servicesMenuElement) => servicesMenuElement.style.display = "none");
+
+  $(document).ready(function () {
+    $('.services-menu__folder-heading').click(function () {
+      $(this).toggleClass('services-menu__folder-heading--in').next().slideToggle();
+      $('.services-menu__folder-heading').not(this).removeClass('services-menu__folder-heading--in').next().slideUp();
+    });
   });
-});
+}
 
 /*Кнопка переключения версии для слабовидящих*/
 visuallyImpairedBtn.onclick = function () {

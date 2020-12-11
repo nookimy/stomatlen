@@ -1,17 +1,33 @@
 .services-menu {
   &__folder-wrap {
+    @media (min-width: @lg-width) {
+      display: flex;
+    }
   }
-
   &__folder {
     margin-bottom: 20px;
 
     &:last-child {
       margin-bottom: 0;
     }
+
+    @media (min-width: @lg-width) {
+      margin-bottom: 0;
+      margin-right: 50px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
   }
   &__folder-heading {
-    .title-font(1.6rem);
+    .h3(1.6rem);
     color: @dark;
+
+    @media (min-width: @lg-width) {
+      font-size: 2.4rem;
+      margin-bottom: 20px;
+    }
 
     & > a {
       display: inline-block;
@@ -20,6 +36,10 @@
       text-decoration: none;
       color: inherit;
       transition: @transition;
+
+      @media (min-width: @lg-width) {
+        padding-right: 0;
+      }
 
       &:before {
         position: absolute;
@@ -33,12 +53,21 @@
         border-right: 1px solid;
         border-color: @dark;
         transition: @transition;
+
+        @media (min-width: @lg-width) {
+          display: none;
+        }
       }
 
       &:hover,
       &:focus,
       &:active {
         color: @company-color;
+
+        @media (min-width: @lg-width) {
+          cursor: default;
+          color: inherit;
+        }
 
         &:before {
           border-color: @company-color;
@@ -60,10 +89,20 @@
     display: flex;
     flex-direction: column;
     padding: 10px 0;
+
+    @media (min-width: @lg-width) {
+      flex-wrap: wrap;
+      padding: 0;
+      height: 230px;
+    }
   }
 
   &__list > li {
+    @media (min-width: @lg-width) {
+      min-width: 250px;
+    }
     a {
+      .text-light(1.6rem);
       display: inline-block;
       padding: 5px 0;
       text-decoration: none;
@@ -74,6 +113,10 @@
       &:focus,
       &:active {
         color: @company-color;
+      }
+
+      @media (min-width: @lg-width) {
+        font-size: 1.8rem;
       }
     }
   }

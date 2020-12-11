@@ -9,7 +9,7 @@
     grid-gap: 10px;
 
     @media(min-width: @md-width) {
-      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
     }
 
     @media(min-width: @lg-width) {
@@ -17,6 +17,7 @@
       grid-gap: 20px;
     }
   }
+
 
   &__link {
     display: flex;
@@ -35,47 +36,112 @@
       color: @main-color;
       border-color: transparent;
 
-      & .main-services__icon {
-        fill: @main-color;
+      & .main-services__icon-wrap {
+        &--cross {
+          background-image: url("../img//main-services/cross-color.svg");
+        }
+
+        &--crown {
+          background-image: url("../img/main-services/crown-color.svg");
+        }
+
+        &--pliers {
+          background-image: url("../img//main-services/pliers-color.svg");
+        }
+
+        &--dental-implant {
+          background-image: url("../img//main-services/dental-implant-color.svg");
+        }
+
+        &--braces {
+          background-image: url("../img//main-services/braces-color.svg");
+        }
+
+        &--care {
+          background-image: url("../img//main-services/care-color.svg");
+        }
+
+        &--x-ray {
+          background-image: url("../img//main-services/x-ray-color.svg");
+        }
+
+        &--tools {
+          background-image: url("../img//main-services/tools-color.svg");
+        }
       }
     }
 
     @media(min-width: @md-width) {
-      flex-direction: column;
       height: 100%;
     }
 
     @media(min-width: @lg-width) {
+      flex-wrap: wrap;
       padding: 50px 30px 40px;
+    }
+  }
+
+  &__icon-wrap {
+    width: 60px;
+    height: 60px;
+    margin-right: 20px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    transition: background 0.5s ease;
+
+    &--cross {
+      background-image: url("../img//main-services/cross-gray.svg");
+    }
+
+    &--crown {
+      background-image: url("../img//main-services/crown-gray.svg");
+    }
+
+    &--pliers {
+      background-image: url("../img//main-services/pliers-gray.svg");
+    }
+
+    &--dental-implant {
+      background-image: url("../img//main-services/dental-implant-gray.svg");
+    }
+
+    &--braces {
+      background-image: url("../img//main-services/braces-gray.svg");
+    }
+
+    &--care {
+      background-image: url("../img//main-services/care-gray.svg");
+    }
+
+    &--x-ray {
+      background-image: url("../img//main-services/x-ray-gray.svg");
+    }
+
+    &--tools {
+      background-image: url("../img//main-services/tools-gray.svg");
+    }
+
+    @media(min-width: @lg-width) {
+      flex-grow: 1;
+      width: 100%;
+      height: 100px;
+      margin-right: 0;
+      margin-bottom: 15px;
     }
   }
 
   &__title {
     flex-grow: 1;
     .mp();
-    .normal-font(1.6rem);
-
-    @media(min-width: @md-width) {
-      width: 100%;
-    }
-  }
-
-  &__icon {
-    fill: @dark-grey;
-    width: 60px;
-    height: 60px;
-    margin-right: 15px;
-    transition: @transition;
-
-    @media(min-width: @md-width) {
-      width: 100px;
-      height: 100px;
-      margin-right: 0;
-      margin-bottom: 15px;
-    }
+    .text-block(1.6rem);
+    width: 170px;
+    word-wrap: break-word;
 
     @media(min-width: @lg-width) {
-
+      font-size: 2rem;
+      width: 130px;
+      flex-grow: 1;
     }
   }
 }
