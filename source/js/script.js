@@ -45,3 +45,23 @@ $(document).ready(function () {
     }
   });
 });
+
+$(document).ready(function () {
+  $(".specialists .owl-carousel").owlCarousel({
+    dots: true,
+    nav: false,
+    margin: 10,
+    responsive: {
+      0: {
+        items: 1
+      },
+      768: {
+        items: 2
+      },
+      992: {
+        margin: 20,
+        items: 3
+      }
+    }
+  });
+});

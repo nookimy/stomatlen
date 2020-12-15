@@ -5,16 +5,23 @@
       <div class="form__text">
         <p>Оставьте заявку и мы подберем для вас удобное время для приема у специалиста</p>
       </div>
-      <p class="form__field">
-        <label for="user-name" class="col-form-label">Имя</label>
-        <input type="text" name="user-name" id="user-name">
-      </p>
-      <p class="form__field">
-        <label for="user-name" class="col-form-label">Телефон</label>
-        <input type="text" name="user-name" id="user-name">
-      </p>
-      <button class="btn btn--color">Записаться</button>
-      <p class="form__note">Нажимая на кнопку, я даю согласие на обработку персональных данных</p>
+      <div class="form__wrap">
+        <p class="form__field">
+          <label for="user-name" class="col-form-label">Имя</label>
+          <input type="text" id="user-name">
+        </p>
+        <p class="form__field">
+          <label for="user-name" class="col-form-label">Телефон</label>
+          <input type="text" name="user-name" id="user-name">
+        </p>
+        <button class="btn btn--color form__btn">
+          <svg class="btn__icon" width="25px" height="25px">
+            <use xlink:href="#icon-appointment"></use>
+          </svg>
+          Записаться
+        </button>
+        <p class="form__note">Нажимая на кнопку, я даю согласие на обработку персональных данных</p>
+      </div>
     </form>
   </div>
 </section>
