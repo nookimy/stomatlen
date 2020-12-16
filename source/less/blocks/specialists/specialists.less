@@ -1,7 +1,62 @@
 .specialists {
+  position: relative;
+  overflow: hidden;
   width: 100%;
   padding-top: 25px;
   padding-bottom: 25px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 475px;
+    height: 620px;
+    top: 260px;
+    left: 50%;
+    z-index: -1;
+    background: url("../img/specialists/lines-light.svg") no-repeat center;
+    background-size: contain;
+    transform: translateX(-60%) rotate(57deg);
+    opacity: 0.3;
+
+    @media (min-width: @lg-width) {
+      top: 90px;
+      left: 50%;
+      transform: translateX(-155%) rotate(57deg);
+    }
+  }
+
+  &__filters {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    margin-right: -15px;
+  }
+
+  &__filter {
+    .text-light(1.4rem);
+    color: @dark-grey;
+    border: 1px solid transparent;
+    background-color: transparent;
+    margin: 0;
+    padding: 5px 10px;
+    margin-bottom: 15px;
+
+    @media (min-width: @lg-width) {
+      font-size: 18px;
+    }
+
+
+    & option {
+      .text-light(1.4rem);
+      color: @dark-grey;
+
+      @media (min-width: @lg-width) {
+        font-size: 18px;
+      }
+    }
+  }
 
   &__list {
     .list();
@@ -19,6 +74,17 @@
           display: block;
         }
       }
+    }
+  }
+}
+
+
+.specialists .owl-theme  {
+  & .owl-dots {
+    @media (min-width: @lg-width) {
+      position: absolute;
+      top: -50px;
+      right: 0;
     }
   }
 }

@@ -43,7 +43,7 @@
 
     @media (min-width: @lg-width) {
       grid-template-columns: 480px auto;
-      grid-column-gap: 120px;
+      grid-column-gap: 80px;
     }
   }
 
@@ -64,6 +64,25 @@
   &__wrap {
     @media (min-width: @lg-width) {
       padding: 0;
+    }
+  }
+}
+
+.page .owl-theme  {
+  & .owl-dots {
+    & .owl-dot span {
+      background: @gray;
+      transition: @transition;
+    }
+
+    & .owl-dot.active span,
+    & .owl-dot:hover span {
+      background-color: @main-color;
+    }
+
+    & .owl-dot.active span {
+      width: 20px;
+      height: 10px;
     }
   }
 }

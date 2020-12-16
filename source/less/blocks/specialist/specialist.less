@@ -55,6 +55,11 @@
     color: @dark;
     margin-bottom: 10px;
 
+    -webkit-line-clamp: 2; /* Число отображаемых строк */
+    display: -webkit-box; /* Включаем флексбоксы */
+    -webkit-box-orient: vertical; /* Вертикальная ориентация */
+    overflow: hidden; /* Обрезаем всё за пределами блока */
+
     @media (min-width: @lg-width) {
       font-size: 24px;
     }
@@ -64,6 +69,11 @@
     .text-light(1.4rem);
     color: @dark-grey;
     margin-bottom: 10px;
+
+    -webkit-line-clamp: 2; /* Число отображаемых строк */
+    display: -webkit-box; /* Включаем флексбоксы */
+    -webkit-box-orient: vertical; /* Вертикальная ориентация */
+    overflow: hidden; /* Обрезаем всё за пределами блока */
 
     @media (min-width: @lg-width) {
       font-size: 1.8rem;
@@ -78,8 +88,14 @@
     color: @dark-grey;
     margin-bottom: 10px;
 
+    -webkit-line-clamp: 2; /* Число отображаемых строк */
+    display: -webkit-box; /* Включаем флексбоксы */
+    -webkit-box-orient: vertical; /* Вертикальная ориентация */
+    overflow: hidden; /* Обрезаем всё за пределами блока */
+
     @media (min-width: @lg-width) {
       font-size: 1.8rem;
+      margin-bottom: 30px;
     }
 
 
