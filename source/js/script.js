@@ -65,3 +65,27 @@ $(document).ready(function () {
     }
   });
 });
+
+$(document).ready(function () {
+  $(".gallery .owl-carousel").owlCarousel({
+    stagePadding: 50,
+    dots: true,
+    nav: false,
+    loop:true,
+    margin: 0,
+    responsive: {
+      0: {
+        items: 1
+      },
+      768: {
+        items: 2
+      },
+      1200: {
+        items: 2
+      },
+      1400: {
+        items: 4
+      }
+    }
+  });
+});
