@@ -1,4 +1,4 @@
-.site-nav {
+.main-nav .site-nav {
   grid-area: menu;
   margin-right: 30px;
 
@@ -192,4 +192,45 @@
       }
     }
   }
+}
+
+.main-footer .site-nav {
+  & a {
+    display: inline-block;
+    text-decoration: none;
+    color: inherit;
+    transition: @transition;
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: @company-color;
+    }
+  }
+
+  &__menu {
+    .list();
+  }
+
+  &__menu-item {
+    margin-bottom: 50px;
+
+    & > a {
+      .text-medium(1.8rem);
+      margin-bottom: 10px;
+    }
+  }
+
+  &__submenu {
+    .list();
+  }
+
+  &__submenu-item {
+    & > a {
+      .text-light(1.8rem);
+      margin-bottom: 10px;
+    }
+  }
+
+
 }

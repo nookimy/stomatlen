@@ -1,86 +1,41 @@
 .social {
   .list();
   display: flex;
-  flex-direction: row;
+  align-items: center;
+
+  &__item {
+    margin-right: 15px;
+
+    @media (min-width: @lg-width) {
+      margin-right: 25px;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
 
   &__item-link {
     display: flex;
     justify-content: center;
     background-color: transparent;
     align-items: center;
-    border-radius: 50%;
-    border: 1px solid;
     transition: @transition;
 
     & svg {
+      width: 25px;
+      height: 25px;
       transition: @transition;
-    }
-  }
-}
-
-.page--index .social {
-  margin-left: 50px;
-  margin-bottom: 85px;
-
-  &__item {
-    margin-right: 15px;
-
-    &:last-child {
-      margin-right: 0;
-    }
-  }
-
-  &__item-link {
-    width: 50px;
-    height: 50px;
-    border-color: rgba(#7a7a7a-dark, 0.5);
-
-    & svg {
-      fill: rgba(@light, 0.5);
+      fill: @gray;
     }
 
     &:hover,
+    &:active,
     &:focus {
-      background-color: rgba(#7a7a7a-dark, 0.5);
-      border-color: transparent;
-
       & svg {
-        fill: rgba(@light, 1);
+        fill: @company-color;
       }
     }
   }
 }
 
-.page--inner .social {
-  margin-top: 15px;
-  margin-bottom: 15px;
-
-  &__item {
-    margin-right: 7px;
-
-    &:last-child {
-      margin-right: 0;
-    }
-  }
-
-  &__item-link {
-    width: 24px;
-    height: 24px;
-    border-color: rgba(#7a7a7a, 0.5);
-
-    & svg {
-      height: 9px;
-      fill: rgba(@light, 0.5);
-    }
-
-    &:hover,
-    &:focus {
-      background-color: rgba(#7a7a7a, 0.5);
-      border-color: transparent;
-
-      & svg {
-        fill: rgba(@light, 1);
-      }
-    }
-  }
-}
