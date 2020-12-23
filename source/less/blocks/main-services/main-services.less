@@ -24,6 +24,7 @@
     display: flex;
     flex-wrap: nowrap;
     align-items: center;
+    min-height: 100px;
     padding: 20px;
     border: 0.5px solid @gray;
     border-radius: 5px;
@@ -37,36 +38,36 @@
       color: @main-color;
       border-color: transparent;
 
-      & .main-services__icon-wrap {
-        &--cross {
+      & .main-services__title {
+        &--cross::before {
           background-image: url("../img//main-services/cross-color.svg");
         }
 
-        &--crown {
+        &--crown::before {
           background-image: url("../img/main-services/crown-color.svg");
         }
 
-        &--pliers {
+        &--pliers::before {
           background-image: url("../img//main-services/pliers-color.svg");
         }
 
-        &--dental-implant {
+        &--dental-implant::before {
           background-image: url("../img//main-services/dental-implant-color.svg");
         }
 
-        &--braces {
+        &--braces::before {
           background-image: url("../img//main-services/braces-color.svg");
         }
 
-        &--care {
+        &--care::before {
           background-image: url("../img//main-services/care-color.svg");
         }
 
-        &--x-ray {
+        &--x-ray::before {
           background-image: url("../img//main-services/x-ray-color.svg");
         }
 
-        &--tools {
+        &--tools::before {
           background-image: url("../img//main-services/tools-color.svg");
         }
       }
@@ -77,72 +78,81 @@
     }
 
     @media(min-width: @lg-width) {
+      min-height: unset;
       flex-wrap: wrap;
       padding: 50px 30px 40px;
     }
   }
 
-  &__icon-wrap {
-    width: 60px;
-    height: 60px;
-    margin-right: 20px;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-    transition: background 0.5s ease;
-
-    &--cross {
-      background-image: url("../img//main-services/cross-gray.svg");
-    }
-
-    &--crown {
-      background-image: url("../img//main-services/crown-gray.svg");
-    }
-
-    &--pliers {
-      background-image: url("../img//main-services/pliers-gray.svg");
-    }
-
-    &--dental-implant {
-      background-image: url("../img//main-services/dental-implant-gray.svg");
-    }
-
-    &--braces {
-      background-image: url("../img//main-services/braces-gray.svg");
-    }
-
-    &--care {
-      background-image: url("../img//main-services/care-gray.svg");
-    }
-
-    &--x-ray {
-      background-image: url("../img//main-services/x-ray-gray.svg");
-    }
-
-    &--tools {
-      background-image: url("../img//main-services/tools-gray.svg");
-    }
-
-    @media(min-width: @lg-width) {
-      flex-grow: 1;
-      width: 100%;
-      height: 100px;
-      margin-right: 0;
-      margin-bottom: 15px;
-    }
-  }
-
   &__title {
+    position: relative;
     flex-grow: 1;
     .mp();
     .text-block(1.6rem);
     width: 170px;
     word-wrap: break-word;
+    padding-left: 80px;
 
     @media(min-width: @lg-width) {
       font-size: 2rem;
       width: 130px;
       flex-grow: 1;
+      padding-left: 0;
+      padding-top: 150px;
+    }
+
+    &--cross::before {
+      background-image: url("../img//main-services/cross-gray.svg");
+    }
+
+    &--crown::before {
+      background-image: url("../img//main-services/crown-gray.svg");
+    }
+
+    &--pliers::before {
+      background-image: url("../img//main-services/pliers-gray.svg");
+    }
+
+    &--dental-implant::before {
+      background-image: url("../img//main-services/dental-implant-gray.svg");
+    }
+
+    &--braces::before {
+      background-image: url("../img//main-services/braces-gray.svg");
+    }
+
+    &--care::before {
+      background-image: url("../img//main-services/care-gray.svg");
+    }
+
+    &--x-ray::before {
+      background-image: url("../img//main-services/x-ray-gray.svg");
+    }
+
+    &--tools::before {
+      background-image: url("../img//main-services/tools-gray.svg");
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 0;
+      width: 60px;
+      height: 60px;
+      transform: translateY(-50%);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      transition: background 0.5s ease;
+
+      @media(min-width: @lg-width) {
+        top: 0;
+        left: 50%;
+        width: 100px;
+        height: 100px;
+        transform: translateY(0) translateX(-50%);
+      }
     }
   }
 }
