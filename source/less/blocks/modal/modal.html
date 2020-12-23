@@ -1,19 +1,23 @@
 <!--Форма обратного звонка-->
 <div id="request-callback" class="modal">
-  <div class="form plans__form">
-    <h2 class="form__title">Заполните форму</h2>
-    <p class="form__text">Наш менеджер свяжется с вами по вариантам планировок</p>
-    <form>
-      <div class="form__field form__field--user-name">
-        <input type="text" name="user_name" value="" placeholder="Ваше имя" required>
-        <label>Ваше имя</label>
-      </div>
-      <div class="form__field form__field--user-tel">
-        <input type="tel" name="user_phone" value="" placeholder="+7" required>
-        <label >Телефон</label>
-      </div>
-      <input type="submit" value="Отправить заявку" class="btn btn--red form__btn">
-    </form>
-    <p class="form__note">Нажимая на кнопку, вы соглашаетесь с<br><a href="#">условиями обработки данных</a></p>
-  </div>
+  <form class="form">
+    <h2 class="form__title">Заявка на обратный звонок</h2>
+    <p class="form__text">Оставьте ваши данные, наш менеджер свяжется с вами в ближайшее время</p>
+    <p class="form__field">
+      <input type="text" name="user_name" required>
+      <label>Имя</label>
+    </p>
+    <p class="form__field">
+      <input type="tel" name="user_phone" required>
+      <label>Телефон</label>
+    </p>
+    <button class="btn btn--color form__btn">
+      <svg class="btn__icon" width="25px" height="25px">
+        <use xlink:href="#icon-appointment"></use>
+      </svg>
+      Отправить
+    </button>
+    <p class="form__note">Нажимая на кнопку, я даю согласие на обработку персональных данных</p>
+  </form>
+
 </div>

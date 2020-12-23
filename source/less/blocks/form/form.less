@@ -1,5 +1,50 @@
 .form {
-  & input[type="text"] {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+
+  &__title {
+    .mp();
+    .h2(2rem);
+    margin-bottom: 20px;
+    width: 100%;
+    flex-grow: 1;
+
+    @media(min-width: @lg-width) {
+      font-size: 3rem;
+    }
+  }
+
+  &__text {
+    .mp();
+    .text-light(1.4rem);
+    margin-bottom: 10px;
+    width: 100%;
+    flex-grow: 1;
+  }
+
+  &__field {
+    display: flex;
+    flex-direction: column;
+    .mp();
+    margin-bottom: 20px;
+    width: 250px;
+    flex-grow: 1;
+    margin-right: 20px;
+  }
+
+  & label {
+    .text-medium(1.4rem);
+    margin-bottom: 10px;
+    order: 1;
+
+    @media(min-width: @lg-width) {
+      font-size: 1.8rem;
+    }
+  }
+
+  & input[type="text"],
+  & input[type="tel"] {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -7,30 +52,77 @@
     color: @dark-grey;
     padding: 10px 15px;
     border-radius: 5px;
-    border: 1px solid transparent;
+    border: 1px solid #B1B2B3;
+    order: 2;
+    transition: @transition;
+
+    &:hover,
+    &:focus,
+    &:active {
+      outline: none;
+      border-color: @company-color;
+    }
+
+    @media(min-width: @lg-width) {
+      height: 50px;
+      font-size: 1.6rem;
+    }
+  }
+
+  &__btn {
+    width: 250px;
+    flex-grow: 1;
+    margin-right: 20px;
+    margin-bottom: 20px;
+
+    @media(min-width: @lg-width) {
+      height: 50px;
+    }
+  }
+
+  &__note {
+    position: relative;
+    opacity: 0.5;
+    .mp();
+    .text-small(1.2rem);
+    padding-left: 25px;
+    width: 250px;
+    flex-grow: 1;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    align-self: flex-start;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 10px;
+      left: 0;
+      transform: translateY(-50%);
+      width: 16px;
+      height: 16px;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+    }
   }
 }
 
 .consultation .form {
-  padding-left: 25px;
-  padding-right: 25px;
-
   @media(min-width: @lg-width) {
-    padding: 60px 0 30px;
-    display: flex;
-    flex-direction: row;
     flex-wrap: nowrap;
+    align-items: flex-start;
+    padding: 60px 0 30px;
   }
 
   &__title {
     @media(min-width: @lg-width) {
+      width: 30vw;
+      max-width: 345px;
       margin-right: 30px;
     }
   }
 
   &__text {
-    .text-light();
-
     @media(min-width: @lg-width) {
       display: none;
     }
@@ -39,78 +131,45 @@
   &__wrap {
     display: flex;
     flex-wrap: wrap;
-    flex-direction: column;
-    align-items: center;
+    align-items: flex-end;
+    margin-right: -20px;
 
     @media(min-width: @lg-width) {
-      width: 740px;
-      flex-direction: row;
-      align-items: flex-end;
+      flex-grow: 1;
+      width: 60vw;
     }
-  }
-
-  &__field {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 20px;
-    width: 100%;
-    max-width: 320px;
-
-    @media(min-width: @lg-width) {
-      max-width: 250px;
-      margin-right: 10px;
-    }
-  }
-
-  & label {
-    .text-medium(1.4rem);
-    margin-bottom: 10px;
-
   }
 
   & input[type="text"],
   & input[type="tel"] {
-    @media(min-width: @lg-width) {
-      height: 50px;
-      font-size: 1.6rem;
-    }
-  }
+    outline: unset;
+    border-color: transparent;
 
-  &__btn {
-    filter: drop-shadow(0px 4px 15px rgba(207, 32, 35, 0.45));
-    margin-bottom: 25px;
-    width: 100%;
-    max-width: 320px;
-
-    @media(min-width: @lg-width) {
-      flex-grow: 1;
-      max-width: 250px;
-      width: auto;
-      min-height: 50px;
-      margin-bottom: 20px;
+    &:hover,
+    &:focus,
+    &:active {
+      border-color: transparent;
     }
   }
 
   &__note {
-    position: relative;
-    .text-small(1.2rem);
-    color: rgba(@light, 0.5);
-    padding-left: 25px;
-
     &::before {
-      content: "";
-      position: absolute;
-      top: 2px;
-      left: 0;
-      width: 16px;
-      height: 16px;
-      background: url("../img/consultation/check-mark.svg") no-repeat center;
-      background-size: contain;
+      background-image: url("../img/form/check-mark-light.svg");
     }
+  }
+}
 
-    @media(min-width: @lg-width) {
-      width: 100%;
-      flex-grow: 1;
+.modal .form {
+  margin-right: -20px;
+  color: @dark-grey;
+
+  &__title {
+    margin-right: 55px;
+  }
+
+  &__note {
+    &::before {
+      background-image: url("../img/form/check-mark-gray.svg");
     }
   }
 }
