@@ -1,6 +1,206 @@
 <section class="price">
   <div class="page__wrap">
-    <p class="page__slogan">прайс-лист клиники</p>
+    <p class="page__slogan">Прайс-лист клиники</p>
     <h2 class="page__subtitle">Цены на услуги и материалы</h2>
+    <div class="price__filters">
+      <!--При ширине от 992px select должен превращаться в список, который находится ниже.
+      Сейчас в стилях от 992px select скрывается display:none;, а ul появляется display: flex;,
+      в идеале все должно работать с помощью скрипта, пример https://stackoverrun.com/ru/q/1062723
+      Скрипт нужно переписать-->
+      <select class="price__filter">
+        <option>Все услуги</option>
+        <option value="price-hygiene">Гигиена полости рта</option>
+        <option value="price-orthopedy" selected>Ортопедия</option>
+        <option value="price-periodontics">Пародонтология</option>
+        <option value="price-implantation">Имплантация</option>
+        <option value="price-prosthetics-on-implants">Протезирование на имплантах</option>
+        <option value="price-anesthesia">Анестезия</option>
+        <option value="price-childrens-dentistry">Детская стоматология</option>
+        <option value="price-expertise">Стоматологическое обследование</option>
+        <option value="price-endodontics">Эндодонтия (лечение каналов)</option>
+        <option value="price-surgery">Хирургия</option>
+        <option value="price-dentistry-is-therapeutic">Стоматология терапевтическая</option>
+        <option value="price-x-ray">Рентгенодиагностические исследования</option>
+      </select>
+      <ul class="price__filter">
+        <li><a>Гигиена полости рта</a></li>
+        <li><a class="selected">Ортопедия</a></li>
+        <li><a>Пародонтология</a></li>
+        <li><a>Имплантация</a></li>
+        <li><a>Протезирование на имплантах</a></li>
+        <li><a>Анестезия</a></li>
+        <li><a>Детская стоматология</a></li>
+        <li><a>Стоматологическое обследование</a></li>
+        <li><a>Эндодонтия (лечение каналов)</a></li>
+        <li><a>Хирургия</a></li>
+        <li><a>Стоматология терапевтическая</a></li>
+        <li><a>Рентгенодиагностические исследования</a></li>
+      </ul>
+    </div>
+    <div class="price__content">
+      <div class="price__tabs">
+        <!--Элементы должны показываться в зависимости от выбранного раздела в price__filters,
+        в данном случае показываются пункты для Ортопедии, остальные должны скрываться-->
+        <input type="radio" name="tab-btn" id="сrowns" value="" checked>
+        <label for="сrowns">Коронки</label>
+        <div class="price__tabs-content" id="сrowns">
+          <table class="price__table">
+            <caption class="visually-hidden">Прайс-лист</caption>
+            <tr class="price__table-header visually-hidden">
+              <th>Услуга</th>
+              <th>Цена</th>
+            </tr>
+            <tr class="price__table-row">
+              <td class="price__table-service">Коронка штампованная</td>
+              <td class="price__table-value">2 130  ₽</td>
+            </tr>
+            <tr class="price__table-row">
+              <td class="price__table-service">Коронка литая на сплаве ni-cr (Россия) без учета литья</td>
+              <td class="price__table-value">2 265  ₽</td>
+            </tr>
+            <tr class="price__table-row">
+              <td class="price__table-service">Коронка штампованная с облицовкой</td>
+              <td class="price__table-value">3 060  ₽</td>
+            </tr>
+            <tr class="price__table-row">
+              <td class="price__table-service">Коронка\зуб цельнолитые (ед) на сплаве co-cr (Германия) без учета литья</td>
+              <td class="price__table-value">3090  ₽</td>
+            </tr>
+            <tr class="price__table-row">
+              <td class="price__table-service">Безметалловая керамическая коронка</td>
+              <td class="price__table-value">10 890  ₽</td>
+            </tr>
+            <tr class="price__table-row">
+              <td class="price__table-service">Безметалловая керамика на основе оксида циркония,ед без стоимости каркасов</td>
+              <td class="price__table-value">11 253  ₽</td>
+            </tr>
+          </table>
+        </div>
+
+        <input type="radio" name="tab-btn" id="prostheses" value="">
+        <label for="prostheses">Протезы</label>
+        <div class="price__tabs-content" id="prostheses">
+          <table class="price__table">
+            <caption class="visually-hidden">Прайс-лист</caption>
+            <tr class="price__table-header visually-hidden">
+              <th>Услуга</th>
+              <th>Цена</th>
+            </tr>
+            <tr class="price__table-row">
+              <td class="price__table-service">Коронка литая на сплаве ni-cr (Россия) без учета литья</td>
+              <td class="price__table-value">2 265  ₽</td>
+            </tr>
+            <tr class="price__table-row">
+              <td class="price__table-service">Коронка штампованная с облицовкой</td>
+              <td class="price__table-value">3 060  ₽</td>
+            </tr>
+            <tr class="price__table-row">
+              <td class="price__table-service">Коронка\зуб цельнолитые (ед) на сплаве co-cr (Германия) без учета литья</td>
+              <td class="price__table-value">3090  ₽</td>
+            </tr>
+            <tr class="price__table-row">
+              <td class="price__table-service">Безметалловая керамическая коронка</td>
+              <td class="price__table-value">10 890  ₽</td>
+            </tr>
+            <tr class="price__table-row">
+              <td class="price__table-service">Безметалловая керамика на основе оксида циркония,ед без стоимости каркасов</td>
+              <td class="price__table-value">11 253  ₽</td>
+            </tr>
+          </table>
+        </div>
+
+        <input type="radio" name="tab-btn" id="tabs" value="">
+        <label for="tabs">Вкладки</label>
+        <div class="price__tabs-content" id="tabs">
+          <table class="price__table">
+            <caption class="visually-hidden">Прайс-лист</caption>
+            <tr class="price__table-header visually-hidden">
+              <th>Услуга</th>
+              <th>Цена</th>
+            </tr>
+            <tr class="price__table-row">
+              <td class="price__table-service">Безметалловая керамическая коронка</td>
+              <td class="price__table-value">10 890  ₽</td>
+            </tr>
+            <tr class="price__table-row">
+              <td class="price__table-service">Безметалловая керамика на основе оксида циркония,ед без стоимости каркасов</td>
+              <td class="price__table-value">11 253  ₽</td>
+            </tr>
+          </table>
+        </div>
+
+        <input type="radio" name="tab-btn" id="veneers" value="">
+        <label for="veneers">Виниры</label>
+        <div class="price__tabs-content" id="veneers">
+          <table class="price__table">
+            <caption class="visually-hidden">Прайс-лист</caption>
+            <tr class="price__table-header visually-hidden">
+              <th>Услуга</th>
+              <th>Цена</th>
+            </tr>
+            <tr class="price__table-row">
+              <td class="price__table-service">Коронка штампованная</td>
+              <td class="price__table-value">2 130  ₽</td>
+            </tr>
+            <tr class="price__table-row">
+              <td class="price__table-service">Коронка литая на сплаве ni-cr (Россия) без учета литья</td>
+              <td class="price__table-value">2 265  ₽</td>
+            </tr>
+            <tr class="price__table-row">
+              <td class="price__table-service">Коронка штампованная с облицовкой</td>
+              <td class="price__table-value">3 060  ₽</td>
+            </tr>
+            <tr class="price__table-row">
+              <td class="price__table-service">Коронка\зуб цельнолитые (ед) на сплаве co-cr (Германия) без учета литья</td>
+              <td class="price__table-value">3090  ₽</td>
+            </tr>
+          </table>
+        </div>
+
+        <input type="radio" name="tab-btn" id="ceramet" value="">
+        <label for="ceramet">Металлокерамика</label>
+        <div class="price__tabs-content" id="ceramet">
+          <table class="price__table">
+            <caption class="visually-hidden">Прайс-лист</caption>
+            <tr class="price__table-header visually-hidden">
+              <th>Услуга</th>
+              <th>Цена</th>
+            </tr>
+            <tr class="price__table-row">
+              <td class="price__table-service">Коронка штампованная</td>
+              <td class="price__table-value">2 130  ₽</td>
+            </tr>
+            <tr class="price__table-row">
+              <td class="price__table-service">Коронка\зуб цельнолитые (ед) на сплаве co-cr (Германия) без учета литья</td>
+              <td class="price__table-value">3090  ₽</td>
+            </tr>
+            <tr class="price__table-row">
+              <td class="price__table-service">Безметалловая керамическая коронка</td>
+              <td class="price__table-value">10 890  ₽</td>
+            </tr>
+            <tr class="price__table-row">
+              <td class="price__table-service">Безметалловая керамика на основе оксида циркония,ед без стоимости каркасов</td>
+              <td class="price__table-value">11 253  ₽</td>
+            </tr>
+          </table>
+        </div>
+
+        <input type="radio" name="tab-btn" id="work" value="">
+        <label for="work">Работы</label>
+        <div class="price__tabs-content" id="work">
+          <table class="price__table">
+            <caption class="visually-hidden">Прайс-лист</caption>
+            <tr class="price__table-header visually-hidden">
+              <th>Услуга</th>
+              <th>Цена</th>
+            </tr>
+            <tr class="price__table-row">
+              <td class="price__table-service">Коронка штампованная</td>
+              <td class="price__table-value">2 130  ₽</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
   </div>
 </section>

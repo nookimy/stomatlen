@@ -29,7 +29,6 @@ visuallyImpairedBtn.onclick = function () {
   visuallyImpairedBtn.classList.toggle("visually-impaired__btn--eye-crossed");
 };
 
-
 /* Карусели */
 $(document).ready(function () {
   $(".main-slider .owl-carousel").owlCarousel({

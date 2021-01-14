@@ -2,4 +2,257 @@
   width: 100%;
   padding-top: 25px;
   padding-bottom: 25px;
+
+  &__filters {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+
+    @media (min-width: @lg-width) {
+      padding-top: 30px;
+    }
+  }
+
+  & select.price__filter {
+    width: 100%;
+    max-width: 290px;
+    .text-light(1.4rem);
+    color: @dark-grey;
+    border: 1px solid transparent;
+    background: url("../img/price/arrow.svg") no-repeat right center;
+    background-size: 8px 8px;
+    margin: 0;
+    padding: 5px 0;
+    margin-bottom: 15px;
+    appearance: none;
+
+
+    @media (min-width: @md-width) {
+      max-width: unset;
+    }
+
+    @media (min-width: @lg-width) {
+      display: none;
+      font-size: 18px;
+    }
+
+
+    & option {
+      .text-light(1.4rem);
+      color: @dark-grey;
+
+      @media (min-width: @lg-width) {
+        font-size: 18px;
+      }
+    }
+  }
+
+  & ul.price__filter {
+    display: none;
+
+    @media (min-width: @lg-width) {
+      .list();
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    & > li {
+      margin-right: 50px;
+      margin-bottom: 30px;
+    }
+
+    & > li > a {
+      display: inline-block;
+      .text-button(1.4rem);
+      color: @gray;
+      text-decoration: none;
+      text-transform: uppercase;
+      transition: @transition;
+      cursor: pointer;
+
+      &:hover,
+      &:focus,
+      &:active,
+      &.selected {
+        color: @company-color;
+      }
+    }
+  }
+
+  &__tabs-content {
+    width: 90vw;
+    order: 10;
+    max-height: 0;
+    transition: all 0.5s ease-out;
+    overflow: hidden;
+
+    @media(min-width: @lg-width) {
+      width: auto;
+      max-height: 0;
+      max-width: 0;
+      order: unset;
+    }
+  }
+
+  &__tabs {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+
+    @media(min-width: @lg-width) {
+      flex-wrap: nowrap;
+    }
+
+    & input {
+      display: none;
+    }
+
+
+    & label {
+      /* стили вкладок (табов) */
+      .text-title(2rem);
+      color: @gray;
+      text-transform: uppercase;
+      transition: @gray;
+      margin-right: 20px;
+      margin-bottom: 10px;
+      cursor: pointer;
+
+      @media(min-width: @lg-width) {
+        background-color: @light;
+        box-shadow: 0px 4px 50px rgba(196, 196, 196, 0.35);
+        border-radius: 0px 5px 0px 0px;
+        text-align: right;
+        font-size: 5rem;
+        writing-mode: tb-rl;
+        transform:rotate(180deg);
+        padding: 20px;
+        margin-bottom: 0;
+      }
+
+      /* изменения стиля заголовков вкладок при наведении */
+      &:hover,
+      &:focus,
+      &:active {
+        color: @company-color;
+      }
+    }
+
+    /* стили для активной вкладки */
+    & input:checked + label {
+      color: @company-color;
+      cursor: default;
+
+      @media(min-width: @lg-width) {
+        margin-right: 0;
+        background-color: @light;
+        box-shadow: 0px 4px 50px rgba(196, 196, 196, 0.35);
+        border-radius: 0px 5px 0px 0px;
+      }
+    }
+
+    /* активация секций с помощью переключателя :checked */
+    #сrowns:checked ~ .price__tabs-content#сrowns,
+    #prostheses:checked ~ .price__tabs-content#prostheses,
+    #tabs:checked ~ .price__tabs-content#tabs,
+    #veneers:checked ~ .price__tabs-content#veneers,
+    #ceramet:checked ~ .price__tabs-content#ceramet,
+    #work:checked ~ .price__tabs-content#work {
+      max-height: 100vh;
+      transition: all 0.5s ease-in;
+
+      @media(min-width: @lg-width) {
+        background-color: @light;
+        box-shadow: 0px 4px 50px rgba(196, 196, 196, 0.35);
+        border-radius: 0px 5px 0px 0px;
+        flex-grow: 1;
+        max-width: 1000px;
+        max-height: unset;
+        padding: 20px;
+        margin-right: 20px;
+      }
+    }
+  }
+
+
+
+
+
+
+
+  &__folder-heading a {
+    position: relative;
+    display: flex;
+    .text-title(2rem);
+    color: @company-color;
+    padding: 0.3em 0 0.5em;
+    text-transform: uppercase;
+    text-decoration: none;
+    cursor: pointer;
+
+    &::before {
+      position: absolute;
+      top: 50%;
+      right: 0;
+      transform: translateY(-50%) rotate(135deg);
+      content: "";
+      width: 7px;
+      height: 7px;
+      border-top: 1px solid;
+      border-right: 1px solid;
+      border-color: @dark;
+      transition: @transition;
+    }
+  }
+
+  &__folder-heading--in a {
+    &::before {
+      border-color: @company-color;
+      transform: translateY(-50%) rotate(-45deg);
+    }
+  }
+
+  &__folder-content {
+    display: none;
+  }
+
+  &__table {
+    width: 100%;
+    border-collapse: collapse;
+    .text-medium(1.4rem);
+  }
+
+  &__table-row {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+    border-bottom: 1px solid @gray;
+  }
+
+  &__table-service {
+    width: 70%;
+  }
+
+  &__table-value {
+    width: 25%;
+    text-align: right;
+  }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+

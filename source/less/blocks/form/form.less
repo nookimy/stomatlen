@@ -59,7 +59,6 @@
     &:hover,
     &:focus,
     &:active {
-      outline: none;
       border-color: @company-color;
     }
 
@@ -142,7 +141,6 @@
 
   & input[type="text"],
   & input[type="tel"] {
-    outline: unset;
     border-color: transparent;
 
     &:hover,
@@ -165,6 +163,16 @@
 
   &__title {
     margin-right: 55px;
+  }
+
+  & input[type="text"],
+  & input[type="tel"] {
+    &:hover,
+    &:focus,
+    &:active {
+      outline: none;
+      border-color: @company-color;
+    }
   }
 
   &__note {
