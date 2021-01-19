@@ -88,3 +88,11 @@ $(document).ready(function () {
     }
   });
 });
+
+// faq
+$(document).ready(function () {
+  $('.service__faq-question').click(function () {
+    $(this).toggleClass('service__faq-question--in').next().slideToggle();
+    $('.service__faq-question').not(this).removeClass('service__faq-question--in').next().slideUp();
+  });
+});

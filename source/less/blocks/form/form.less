@@ -106,7 +106,7 @@
   }
 }
 
-.consultation .form {
+.main-consultation .form {
   @media(min-width: @lg-width) {
     flex-wrap: nowrap;
     align-items: flex-start;
@@ -153,6 +153,33 @@
   &__note {
     &::before {
       background-image: url("../img/form/check-mark-light.svg");
+    }
+  }
+}
+
+.consultation .form {
+  background-color: @light;
+  padding: 20px;
+  border-radius: 5px;
+
+  @media(min-width: @lg-width) {
+    position: absolute;
+    top: -35px;
+    right: 15px;
+    padding: 50px 40px;
+    width: 600px;
+  }
+
+  &__wrap {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    margin-right: -20px;
+  }
+
+  &__note {
+    &::before {
+      background-image: url("../img/form/check-mark-dark.svg");
     }
   }
 }
