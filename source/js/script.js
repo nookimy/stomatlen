@@ -96,3 +96,10 @@ $(document).ready(function () {
     $('.service__faq-question').not(this).removeClass('service__faq-question--in').next().slideUp();
   });
 });
+
+// Свернуть-развернуть полное описание
+$('.specialist__info').readmore({ //вызов плагина
+  speed: 500, //скорость раскрытия скрытого текста (в миллисекундах)
+  moreLink: '<a class="readmore-js-toggle" href="#">Развернуть полное описание</a>', //ссылка "Читать далее", можно переименовать
+  lessLink: '<a class="readmore-js-toggle readmore-js-toggle--opened" href="#">Свернуть полное описание</a>' //ссылка "Скрыть", можно переименовать
+});

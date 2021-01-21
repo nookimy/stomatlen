@@ -1,12 +1,65 @@
-<section class="specialists">
+<div class="page__header">
+  <div class="page__img-box">
+    <figure class="page__img-content">
+      <picture>
+        <source type="image/webp" media="(min-width: 1200px)" srcset="img/specialists/specialists-main-2000@3x.webp 3x,
+                                                                          img/specialists/specialists-main-2000@2x.webp 2x,
+                                                                          img/specialists/specialists-main-2000.webp">
+        <source type="image/webp" media="(min-width: 992px)" srcset="img/specialists/specialists-main-1199@3x.webp 3x,
+                                                                         img/specialists/specialists-main-1199@2x.webp 2x,
+                                                                         img/specialists/specialists-main-1199.webp">
+        <source type="image/webp" media="(min-width: 768px)" srcset="img/specialists/specialists-main-991@3x.webp 3x,
+                                                                         img/specialists/specialists-main-991@2x.webp 2x,
+                                                                         img/specialists/specialists-main-991.webp">
+        <source type="image/webp" srcset="img/specialists/specialists-main-767@3x.webp 3x,
+                                              img/specialists/specialists-main-767@2x.webp 2x,
+                                              img/specialists/specialists-main-767.webp">
+        <source media="(min-width: 1200px)" srcset="img/specialists/specialists-main-2000@3x.jpeg 3x,
+                                                        img/specialists/specialists-main-2000@2x.jpeg 2x,
+                                                        img/specialists/specialists-main-2000.jpeg">
+        <source media="(min-width: 992px)" srcset="img/specialists/specialists-main-1199@3x.jpeg 3x,
+                                                        img/specialists/specialists-main-1199@2x.jpeg 2x,
+                                                        img/specialists/specialists-main-1199.jpeg">
+        <source media="(min-width: 768px)" srcset="img/specialists/specialists-main-991@3x.jpeg 3x,
+                                                       img/specialists/specialists-main-991@2x.jpeg 2x,
+                                                       img/specialists/specialists-main-991.jpeg">
+        <img class="slide__img" src="img/specialists/specialists-main-767.jpeg"
+             srcset="img/specialists/specialists-main-767@3x.jpeg 3x,
+                                                     img/specialists/specialists-main-767@2x.jpeg 2x,
+                                                     img/specialists/specialists-main-767.jpeg"
+             alt="Ортопедия">
+      </picture>
+    </figure>
+    <div class="page__back-link-wrap">
+      <a class="page__back-link" href="#">Назад</a>
+    </div>
+  </div>
+  <div class="page__header-content">
+    <div class="page__header-content-wrap">
+      <ul class="page__breadcrumbs">
+        <li>
+          <a href="/">Главная</a>
+        </li>
+        <li>
+          <a href="/">О нас</a>
+        </li>
+        <li>Специалисты</li>
+      </ul>
+      <h1 class="page__title">Специалисты</h1>
+      <div class="page__header-text">
+        <p>С вами будут работать лучшие специалисты своего дела.</p>
+      </div>
+    </div>
+  </div>
+</div>
+<section class="page__content specialists">
   <div class="page__wrap">
-    <p class="page__slogan">Всегда вам рады</p>
-    <h2 class="page__subtitle">Наши врачи</h2>
     <div class="specialists__filters">
       <select class="specialists__filter">
+        <option selected>Специалист</option>
         <option>Стоматолог</option>
         <option>Стоматолог-хирург</option>
-        <option selected>Стоматолог-ортопед</option>
+        <option>Стоматолог-ортопед</option>
         <option>Стоматолог-терапевт</option>
         <option>Имплантолог</option>
       </select>
@@ -15,135 +68,131 @@
         <option>Медцентр на Советской, 173</option>
       </select>
     </div>
-    <ul class="specialists__list owl-carousel owl-theme">
+    <ul class="specialists__list">
       <li class="specialists__item specialist">
+        <p class="specialist__direction">Имплантолог, стоматолог-ортопед, стоматолог-хирург</p>
+        <h2 class="page__subtitle specialist__name">Черняев Роман Михайлович</h2>
         <div class="specialist__img-box">
           <figure class="specialist__img-content">
             <img src="img/specialists/chernyaev.jpg">
           </figure>
+          <a class="btn btn--color pecialist__btn specialist__btn--appointment" href="#">
+            <svg class="btn__icon" width="25px" height="25px">
+              <use xlink:href="#icon-appointment"></use>
+            </svg>
+            Записаться на прием
+          </a>
+          <div class="specialist__short-info">
+            <p class="specialist__address">Медцентр на Советской, 173</p>
+            <p class="specialist__experience">Стаж 8 лет</p>
+          </div>
         </div>
-        <div class="specialist__info">
-          <h3 class="specialist__name">Черняев Роман Михайлович</h3>
-          <p class="specialist__direction">Имплантолог, стоматолог-ортопед, стоматолог-хирург </p>
-          <p class="specialist__address">Медцентр на Советской, 173</p>
-          <p class="specialist__experience">Стаж 8 лет</p>
+        <dl class="specialist__info">
+          <div class="specialist__info-wrap">
+            <dt>Информация</dt>
+            <dd>Амбулаторно- поликлиническая специализированная медицинская помощь по стоматологии ортопедической, стоматологии хирургической</dd>
+          </div>
+          <div class="specialist__info-wrap">
+            <dt>Специализация</dt>
+            <dd>Амбулаторная хирургия, имплантология, лоскутные операции в стоматологии, ортопедическая стоматология, пластика мягких тканей полости рта, синус-лифтинг, установка имплантов, хирургическая пародонтология, хирургическая стоматология, эстетическая пародонтология	</dd>
+          </div>
+          <div class="specialist__info-wrap">
+            <dt>Образование</dt>
+            <dd>
+              2012 г. - ФГБОУ ВПО «Чувашский государственный университет имени И.Н.Ульянова». «Стоматология»<br>
+              2016 г. - ГБОУ ВПО «Самарский государственный медицинский университет» Минздрава России. «Стоматология ортопедическая»<br>
+              2017 г. - ФГБОУ ВПО «Чувашский государственный университет имени И.Н.Ульянова» (ординатура)<br>
 
-        </div>
-        <a class="btn btn--color specialist__link" href="#">
-          <svg class="btn__icon" width="18px" height="18px">
-            <use xlink:href="#icon-arrowright"></use>
-          </svg>
-          <span>Подробнее</span>
-        </a>
+              <span>Сертификаты</span>
+              2016 г. - ГБОУ ВПО СамГМУ Минздрава России. «Стоматология ортопедическая»<br>
+              2017 г. - АУ Чувашии «Институт усовершенствования врачей» Минздравсоцразвития Чувашии. «Стоматология хирургическая»
+            </dd>
+          </div>
+        </dl>
       </li>
       <li class="specialists__item specialist">
-        <div class="specialist__img-box">
-          <figure class="specialist__img-content">
-            <img src="img/specialists/chernov.jpg">
-          </figure>
-        </div>
-        <div class="specialist__info">
-          <h3 class="specialist__name">Чернов Анатолий Викторович</h3>
-          <p class="specialist__direction">Стоматолог, стоматолог-ортопед, стоматолог-хирург</p>
-          <p class="specialist__address">
-            Медцентр на Советской, 173
-          </p>
-          <p class="specialist__experience">Стаж 8 лет</p>
-
-        </div>
-        <a class="btn btn--color specialist__link" href="#">
-          <svg class="btn__icon" width="18px" height="18px">
-            <use xlink:href="#icon-arrowright"></use>
-          </svg>
-          <span>Подробнее</span>
-        </a>
-      </li>
-      <li class="specialists__item specialist">
-        <div class="specialist__img-box">
-          <figure class="specialist__img-content">
-            <img src="img/specialists/galkina.jpg">
-          </figure>
-        </div>
-        <div class="specialist__info">
-          <h3 class="specialist__name">Галкина Полина Викторовна</h3>
-          <p class="specialist__direction">cтоматолог, стоматолог-ортопед, стоматолог-терапевт</p>
-          <p class="specialist__address">
-            Медцентр на Советской, 173
-          </p>
-          <p class="specialist__experience">Стаж 10 лет</p>
-
-        </div>
-        <a class="btn btn--color specialist__link" href="#">
-          <svg class="btn__icon" width="18px" height="18px">
-            <use xlink:href="#icon-arrowright"></use>
-          </svg>
-          <span>Подробнее</span>
-        </a>
-      </li>
-      <li class="specialists__item specialist">
-        <div class="specialist__img-box">
-          <figure class="specialist__img-content">
-            <img src="img/specialists/chernyaev.jpg">
-          </figure>
-        </div>
-        <div class="specialist__info">
-          <h3 class="specialist__name">Черняев Роман Михайлович</h3>
-          <p class="specialist__direction">Имплантолог, стоматолог-ортопед, стоматолог-хирург </p>
-          <p class="specialist__address">Медцентр на Советской, 173</p>
-          <p class="specialist__experience">Стаж 8 лет</p>
-
-        </div>
-        <a class="btn btn--color specialist__link" href="#">
-          <svg class="btn__icon" width="18px" height="18px">
-            <use xlink:href="#icon-arrowright"></use>
-          </svg>
-          <span>Подробнее</span>
-        </a>
-      </li>
-      <li class="specialists__item specialist">
-        <div class="specialist__img-box">
-          <figure class="specialist__img-content">
-            <img src="img/specialists/chernov.jpg">
-          </figure>
-        </div>
-        <div class="specialist__info">
-          <h3 class="specialist__name">Чернов Анатолий Викторович</h3>
-          <p class="specialist__direction">Стоматолог, стоматолог-ортопед, стоматолог-хирург</p>
-          <p class="specialist__address">
-            Медцентр на Советской, 173
-          </p>
-          <p class="specialist__experience">Стаж 8 лет</p>
-
-        </div>
-        <a class="btn btn--color specialist__link" href="#">
-          <svg class="btn__icon" width="18px" height="18px">
-            <use xlink:href="#icon-arrowright"></use>
-          </svg>
-          <span>Подробнее</span>
-        </a>
-      </li>
-      <li class="specialists__item specialist">
+        <p class="specialist__direction">Стоматолог, стоматолог-ортопед, стоматолог-терапевт</p>
+        <h2 class="page__subtitle specialist__name">Галкина Полина Викторовна</h2>
         <div class="specialist__img-box">
           <figure class="specialist__img-content">
             <img src="img/specialists/galkina.jpg">
           </figure>
+          <a class="btn btn--color pecialist__btn specialist__btn--appointment" href="#">
+            <svg class="btn__icon" width="25px" height="25px">
+              <use xlink:href="#icon-appointment"></use>
+            </svg>
+            Записаться на прием
+          </a>
+          <div class="specialist__short-info">
+            <p class="specialist__address">Медцентр на Советской, 173</p>
+            <p class="specialist__experience">Стаж 10 лет</p>
+          </div>
         </div>
-        <div class="specialist__info">
-          <h3 class="specialist__name">Галкина Полина Викторовна</h3>
-          <p class="specialist__direction">cтоматолог, стоматолог-ортопед, стоматолог-терапевт</p>
-          <p class="specialist__address">
-            Медцентр на Советской, 173
-          </p>
-          <p class="specialist__experience">Стаж 10 лет</p>
+        <dl class="specialist__info">
+          <div class="specialist__info-wrap">
+            <dt>Информация</dt>
+            <dd><p>В своей работе использует современные материалы и технологии. Является специалистом в области эстетической стоматологии (Владение новейшей техникой эстетической реставрации, восстановление зубов прямыми винирами, микропротезирование.</p>
+              <p>В эндодонтическом лечении каналов применяет только современные ручные и машинные инструменты Pathfile, Protaper (Densplay, Швейцария,) и эндодонтического аппарата X-Smart для  разработки корневых каналов</p></dd>
+          </div>
+          <div class="specialist__info-wrap">
+            <dt>Специализация</dt>
+            <dd>Амбулаторная хирургия, имплантология, лоскутные операции в стоматологии, ортопедическая стоматология, пластика мягких тканей полости рта, синус-лифтинг, установка имплантов, хирургическая пародонтология, хирургическая стоматология, эстетическая пародонтология	</dd>
+          </div>
+          <div class="specialist__info-wrap">
+            <dt>Образование</dt>
+            <dd>
+              2012 г. - ФГБОУ ВПО «Чувашский государственный университет имени И.Н.Ульянова». «Стоматология»<br>
+              2016 г. - ГБОУ ВПО «Самарский государственный медицинский университет» Минздрава России. «Стоматология ортопедическая»<br>
+              2017 г. - ФГБОУ ВПО «Чувашский государственный университет имени И.Н.Ульянова» (ординатура)<br>
 
-        </div>
-        <a class="btn btn--color specialist__link" href="#">
-          <svg class="btn__icon" width="18px" height="18px">
-            <use xlink:href="#icon-arrowright"></use>
-          </svg>
-          <span>Подробнее</span>
-        </a>
+              <span>Сертификаты</span>
+              2016 г. - ГБОУ ВПО СамГМУ Минздрава России. «Стоматология ортопедическая»<br>
+              2017 г. - АУ Чувашии «Институт усовершенствования врачей» Минздравсоцразвития Чувашии. «Стоматология хирургическая»
+            </dd>
+          </div>
+        </dl>
       </li>
+      <li class="specialists__item specialist">
+      <p class="specialist__direction">Стоматолог, стоматолог-ортопед, стоматолог-хирург</p>
+      <h2 class="page__subtitle specialist__name">Чернов Анатолий Викторович</h2>
+      <div class="specialist__img-box">
+        <figure class="specialist__img-content">
+          <img src="img/specialists/chernov.jpg">
+        </figure>
+        <a class="btn btn--color pecialist__btn specialist__btn--appointment" href="#">
+          <svg class="btn__icon" width="25px" height="25px">
+            <use xlink:href="#icon-appointment"></use>
+          </svg>
+          Записаться на прием
+        </a>
+        <div class="specialist__short-info">
+          <p class="specialist__address">Медцентр на Советской, 173</p>
+          <p class="specialist__experience">Стаж 8 лет</p>
+        </div>
+      </div>
+      <dl class="specialist__info">
+        <div class="specialist__info-wrap">
+          <dt>Информация</dt>
+          <dd>Основным направлением деятельности Анатолия Викторовича является ортопедическая стоматология. Как врач-стоматолог он ведет еще хирургический прием. В компетенцию врача входит диагностика состояния зубов,протезирование зубов, восстановление целостности зубного ряда и другие процедуры </dd>
+        </div>
+        <div class="specialist__info-wrap">
+          <dt>Специализация</dt>
+          <dd>Амбулаторная хирургия, имплантология, лоскутные операции в стоматологии, ортопедическая стоматология, пластика мягких тканей полости рта,  </dd>
+        </div>
+        <div class="specialist__info-wrap">
+          <dt>Образование</dt>
+          <dd>
+            2012 г. - ФГБОУ ВПО «Чувашский государственный университет имени И.Н.Ульянова». «Стоматология»<br>
+            2016 г. - ГБОУ ВПО «Самарский государственный медицинский университет» Минздрава России. «Стоматология ортопедическая»<br>
+            2017 г. - ФГБОУ ВПО «Чувашский государственный университет имени И.Н.Ульянова» (ординатура)<br>
+
+            <span>Сертификаты</span>
+            2016 г. - ГБОУ ВПО СамГМУ Минздрава России. «Стоматология ортопедическая»<br>
+            2017 г. - АУ Чувашии «Институт усовершенствования врачей» Минздравсоцразвития Чувашии. «Стоматология хирургическая»
+          </dd>
+        </div>
+      </dl>
+    </li>
     </ul>
   </div>
 </section>
