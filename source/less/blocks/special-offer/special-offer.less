@@ -1,0 +1,110 @@
+.special-offers__list .special-offer {
+  padding: 30px 23px 35px;
+  background-repeat: no-repeat;
+  background-position: center left;
+  background-size: cover;
+
+  @media (min-width: @md-width) {
+    background-position: center center;
+    justify-content: flex-start;
+  }
+
+  @media (min-width: @lg-width) {
+    padding: 50px;
+  }
+
+  &--implantation {
+    background-image: url("../img/special-offer/implantation.jpg");
+  }
+
+  &--hygiene {
+    background-image: url("../img/special-offer/hygiene.jpg");
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+
+    @media (min-width: @md-width) {
+      width: 50%;
+      align-items: flex-start;
+    }
+
+    @media (min-width: @lg-width) {
+      width: 500px;
+    }
+  }
+
+  &__type {
+    .mp();
+    .text-button(1.4rem);
+    text-transform: uppercase;
+    padding: 13px 35px;
+    background-color: rgba(@light, 0.5);
+    border-radius: 5px;
+    text-align: center;
+    margin-bottom: 30px;
+
+    @media (min-width: @lg-width) {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__subtitle {
+    .mp();
+    .h3(2rem);
+    margin-bottom: 25px;
+
+    @media (min-width: @lg-width) {
+      font-size: 3rem;
+      margin-bottom: 30px;
+      margin-right: 180px;
+    }
+  }
+
+  &__text {
+    .mp();
+    .text-light();
+    margin-bottom: 20px;
+
+    @media (min-width: @lg-width) {
+      margin-right: 15px;
+      font-size: 1.8rem;
+      margin-bottom: 30px;
+    }
+  }
+
+  &__btn-wrap {
+    margin-bottom: 5px;
+    display: flex;
+    flex-direction: column;
+
+    @media (min-width: @lg-width) {
+      flex-direction: row;
+    }
+  }
+
+  &__btn {
+    margin-bottom: 15px;
+
+    @media (min-width: @lg-width) {
+      margin-right: 20px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+
+  &__note {
+    .mp();
+    .text-light();
+    font-size: 1.2rem;
+    color: @dark-grey;
+
+    @media (min-width: @lg-width) {
+      font-size: 1.5rem;
+    }
+  }
+
+}

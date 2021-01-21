@@ -1,0 +1,31 @@
+.page__content.special-offers {
+  @media (min-width: @md-width) {
+    padding-top: 50px;
+  }
+
+  @media (min-width: @lg-width) {
+    padding-top: 75px;
+  }
+
+  .special-offers {
+    &__list {
+      .list();
+    }
+
+    &__item {
+      margin-bottom: 20px;
+      border-radius: 5px;
+      overflow: hidden;
+      background-color: #74a5a2;
+      min-height: 150px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      @media (min-width: @lg-width) {
+        margin-bottom: 72px;
+      }
+    }
+  }
+}
