@@ -248,7 +248,12 @@
     }
 
     &__content {
+      .text-light(1.4rem);
       padding-bottom: 130px;
+
+      @media (min-width: @lg-width) {
+        font-size: 1.8rem;
+      }
     }
 
     &__wrap {

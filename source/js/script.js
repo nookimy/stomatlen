@@ -91,9 +91,9 @@ $(document).ready(function () {
 
 // faq
 $(document).ready(function () {
-  $('.service__faq-question').click(function () {
-    $(this).toggleClass('service__faq-question--in').next().slideToggle();
-    $('.service__faq-question').not(this).removeClass('service__faq-question--in').next().slideUp();
+  $('.faq__question').click(function () {
+    $(this).toggleClass('faq__question--in').next().slideToggle();
+    $('.faq__question').not(this).removeClass('faq__question--in').next().slideUp();
   });
 });
 
