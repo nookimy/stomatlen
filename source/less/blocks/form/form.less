@@ -5,19 +5,14 @@
 
   &__title {
     .mp();
-    .h2(2rem);
+    .h2();
     margin-bottom: 20px;
     width: 100%;
     flex-grow: 1;
-
-    @media(min-width: @lg-width) {
-      font-size: 3rem;
-    }
   }
 
   &__text {
     .mp();
-    .text-light(1.4rem);
     margin-bottom: 10px;
     width: 100%;
     flex-grow: 1;
@@ -34,13 +29,9 @@
   }
 
   & label {
-    .text-medium(1.4rem);
+    .text-medium();
     margin-bottom: 10px;
     order: 1;
-
-    @media(min-width: @lg-width) {
-      font-size: 1.8rem;
-    }
   }
 
   & input[type="text"],
@@ -48,8 +39,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    .text-small(1.2rem);
-    color: @dark-grey;
+    .text-small();
+    color: @secondary;
     padding: 10px 15px;
     border-radius: 5px;
     border: 1px solid #B1B2B3;
@@ -59,12 +50,11 @@
     &:hover,
     &:focus,
     &:active {
-      border-color: @company-color;
+      border-color: @main-color;
     }
 
     @media(min-width: @lg-width) {
       height: 50px;
-      font-size: 1.6rem;
     }
   }
 
@@ -83,7 +73,7 @@
     position: relative;
     opacity: 0.5;
     .mp();
-    .text-small(1.2rem);
+    .text-small();
     padding-left: 25px;
     width: 250px;
     flex-grow: 1;
@@ -159,15 +149,24 @@
 
 .consultation .form {
   background-color: @light;
+  .shadow();
   padding: 20px;
   border-radius: 5px;
 
-  @media(min-width: @lg-width) {
-    position: absolute;
-    top: -35px;
-    right: 15px;
+
+  @media(min-width: @md-width) {
     padding: 50px 40px;
-    width: 600px;
+    margin-left: auto;
+
+    @media (min-width: @md-width) {
+      width: calc(50vw - 15px);
+      transform: translateY(-35px);
+    }
+
+    @media (min-width: @lg-width) {
+      width: 600px;
+      max-width: unset;
+    }
   }
 
   &__wrap {
@@ -186,7 +185,7 @@
 
 .modal .form {
   margin-right: -20px;
-  color: @dark-grey;
+  color: @secondary;
 
   &__title {
     margin-right: 55px;
@@ -198,7 +197,7 @@
     &:focus,
     &:active {
       outline: none;
-      border-color: @company-color;
+      border-color: @main-color;
     }
   }
 

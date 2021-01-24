@@ -18,8 +18,7 @@
   & select.price__filter {
     width: 100%;
     max-width: 290px;
-    .text-light(1.4rem);
-    color: @dark-grey;
+    color: @secondary;
     border: 1px solid transparent;
     background: url("../img/price/arrow.svg") no-repeat right center;
     background-size: 8px 8px;
@@ -35,17 +34,6 @@
 
     @media (min-width: @lg-width) {
       display: none;
-      font-size: 18px;
-    }
-
-
-    & option {
-      .text-light(1.4rem);
-      color: @dark-grey;
-
-      @media (min-width: @lg-width) {
-        font-size: 18px;
-      }
     }
   }
 
@@ -65,18 +53,12 @@
 
     & > li > a {
       display: inline-block;
-      .text-button(1.4rem);
+      .text-button();
       color: @gray;
-      text-decoration: none;
-      text-transform: uppercase;
-      transition: @transition;
       cursor: pointer;
 
-      &:hover,
-      &:focus,
-      &:active,
       &.selected {
-        color: @company-color;
+        color: @main-color;
       }
     }
   }
@@ -137,13 +119,13 @@
       &:hover,
       &:focus,
       &:active {
-        color: @company-color;
+        color: @main-color;
       }
     }
 
     /* стили для активной вкладки */
     & input:checked + label {
-      color: @company-color;
+      color: @main-color;
       cursor: default;
 
       @media(min-width: @lg-width) {
@@ -187,7 +169,7 @@
     position: relative;
     display: flex;
     .text-title(2rem);
-    color: @company-color;
+    color: @main-color;
     padding: 0.3em 0 0.5em;
     text-transform: uppercase;
     text-decoration: none;
@@ -210,7 +192,7 @@
 
   &__folder-heading--in a {
     &::before {
-      border-color: @company-color;
+      border-color: @main-color;
       transform: translateY(-50%) rotate(-45deg);
     }
   }

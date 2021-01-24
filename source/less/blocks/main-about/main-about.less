@@ -42,13 +42,7 @@
   }
 
   &__text {
-    .text-light();
-    color: @dark-grey;
     margin-bottom: 20px;
-
-    @media (min-width: @lg-width) {
-      font-size: 1.8rem;
-    }
 
     & p {
       .mp();
@@ -74,13 +68,11 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    .text-light();
-    font-size: 1.2rem;
-    color: @dark-grey;
+    .text-small();
+
 
     @media (min-width: @lg-width) {
       max-height: 180px;
-      font-size: 1.4rem;
       flex-direction: column;
       align-items: flex-start;
       margin-right: 20px;

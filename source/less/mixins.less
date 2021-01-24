@@ -1,87 +1,124 @@
-.h1 (@normal-font-size: 2.5rem; @normal-font-height: 1.25; @normal-font-weight: 700; @normal-font-family: "BerlingskeSansCn", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu,
+.h1 (@mobile-font-size: 2.5rem; @normal-font-size: 5rem; @normal-font-height: 1.25; @normal-font-weight: 700; @normal-font-family: "BerlingskeSansCn", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu,
     Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif) {
-  font-size: @normal-font-size;
+  font-size: @mobile-font-size;
   line-height: @normal-font-height;
   font-weight: @normal-font-weight;
   font-family: @normal-font-family;
   font-style: italic;
+
+  @media (min-width: @lg-width) {
+    font-size: @normal-font-size;
+  }
 }
 
-
-.h2 (@normal-font-size: 2rem; @normal-font-height: 1.25; @normal-font-weight: 700; @normal-font-family: "BerlingskeSansCn", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu,
+.h2 (@mobile-font-size: 2rem; @normal-font-size: 3rem; @normal-font-height: 1.25; @normal-font-weight: 700; @normal-font-family: "BerlingskeSansCn", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu,
     Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif) {
-  font-size: @normal-font-size;
+  font-size: @mobile-font-size;
   line-height: @normal-font-height;
   font-weight: @normal-font-weight;
   font-family: @normal-font-family;
   font-style: italic;
+
+  @media (min-width: @lg-width) {
+    font-size: @normal-font-size;
+  }
 }
 
-.h3 (@normal-font-size: 1.4rem; @normal-font-height: 1.25; @normal-font-weight: 700; @normal-font-family: "BerlingskeSansCn", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu,
+.h3 (@mobile-font-size: 1.6rem; @normal-font-size: 2.4rem; @normal-font-height: 1.25; @normal-font-weight: 700; @normal-font-family: "BerlingskeSansCn", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu,
     Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif) {
-  font-size: @normal-font-size;
+  font-size: @mobile-font-size;
   line-height: @normal-font-height;
   font-weight: @normal-font-weight;
   font-family: @normal-font-family;
   font-style: italic;
+  color: @dark;
+
+  @media (min-width: @lg-width) {
+    font-size: @normal-font-size;
+  }
 }
 
-.text-small (@normal-font-size: 1.2rem; @normal-font-height: 1.25; @normal-font-weight: 300; @normal-font-family: "Rubik", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu,
+.text-light (@mobile-font-size: 1.4rem; @normal-font-size: 1.8rem; @normal-font-height: 1.25; @normal-font-weight: 300; @normal-font-family: "Rubik", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu,
     Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif) {
-  font-size: @normal-font-size;
+  font-size: @mobile-font-size;
   line-height: @normal-font-height;
   font-weight: @normal-font-weight;
   font-family: @normal-font-family;
   font-style: normal;
+
+  @media (min-width: @lg-width) {
+    font-size: @normal-font-size;
+  }
 }
 
-.text-light (@normal-font-size: 1.4rem; @normal-font-height: 1.25; @normal-font-weight: 300; @normal-font-family: "Rubik", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu,
+.text-medium (@mobile-font-size: 1.4rem; @normal-font-size: 1.8rem; @normal-font-height: 1.25; @normal-font-weight: 500; @normal-font-family: "Rubik", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu,
     Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif) {
-  font-size: @normal-font-size;
+  font-size: @mobile-font-size;
   line-height: @normal-font-height;
   font-weight: @normal-font-weight;
   font-family: @normal-font-family;
   font-style: normal;
+
+  @media (min-width: @lg-width) {
+    font-size: @normal-font-size;
+  }
 }
 
-.text-medium (@normal-font-size: 1.4rem; @normal-font-height: 1.25; @normal-font-weight: 500; @normal-font-family: "Rubik", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu,
+.text-block (@mobile-font-size: 1.6rem; @normal-font-size: 2rem; @normal-font-height: 1.25; @normal-font-weight: 400; @normal-font-family: "Rubik", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu,
     Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif) {
-  font-size: @normal-font-size;
+  font-size: @mobile-font-size;
   line-height: @normal-font-height;
   font-weight: @normal-font-weight;
   font-family: @normal-font-family;
   font-style: normal;
+
+  @media (min-width: @lg-width) {
+    font-size: @normal-font-size;
+  }
 }
 
-.text-block (@normal-font-size: 1.4rem; @normal-font-height: 1.25; @normal-font-weight: 400; @normal-font-family: "Rubik", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu,
-    Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif) {
-  font-size: @normal-font-size;
-  line-height: @normal-font-height;
-  font-weight: @normal-font-weight;
-  font-family: @normal-font-family;
-  font-style: normal;
-}
-
-.text-tiny (@normal-font-size: 1.4rem; @normal-font-height: 1.25; @normal-font-weight: 400; @normal-font-family: "Roboto Slab", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu,
-    Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif) {
-  font-size: @normal-font-size;
-  line-height: @normal-font-height;
-  font-weight: @normal-font-weight;
-  font-family: @normal-font-family;
-  font-style: normal;
-}
-
-.text-title (@normal-font-size: 1.4rem; @normal-font-height: 1.25; @normal-font-weight: 300; @normal-font-family: "Roboto Slab", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu,
+.text-sub (@mobile-font-size: 1.2rem; @normal-font-size: 1.4rem; @normal-font-height: 1.25; @normal-font-weight: 300; @normal-font-family: "Roboto Slab", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu,
     Cantarell, "Helvetica Neue", Helvetica, Arial, serif) {
-  font-size: @normal-font-size;
+  font-size: @mobile-font-size;
   line-height: @normal-font-height;
   font-weight: @normal-font-weight;
   font-family: @normal-font-family;
   font-style: normal;
+  text-transform: uppercase;
+
+  @media (min-width: @lg-width) {
+    font-size: @normal-font-size;
+  }
 }
 
-.text-sub (@normal-font-size: 1.4rem; @normal-font-height: 1.25; @normal-font-weight: 300; @normal-font-family: "Roboto Slab", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu,
+.text-small (@mobile-font-size: 1.2rem; @normal-font-size: 1.4rem; @normal-font-height: 1.25; @normal-font-weight: 300; @normal-font-family: "Rubik", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu,
+    Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif) {
+  font-size: @mobile-font-size;
+  line-height: @normal-font-height;
+  font-weight: @normal-font-weight;
+  font-family: @normal-font-family;
+  font-style: normal;
+
+  @media (min-width: @lg-width) {
+    font-size: @normal-font-size;
+  }
+}
+
+.text-title (@mobile-font-size: 2rem; @normal-font-size: 5rem; @normal-font-height: 1.25; @normal-font-weight: 300; @normal-font-family: "Roboto Slab", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu,
     Cantarell, "Helvetica Neue", Helvetica, Arial, serif) {
+  font-size: @mobile-font-size;
+  line-height: @normal-font-height;
+  font-weight: @normal-font-weight;
+  font-family: @normal-font-family;
+  font-style: normal;
+
+  @media (min-width: @lg-width) {
+    font-size: @normal-font-size;
+  }
+}
+
+.text-tiny (@normal-font-size: 1rem; @normal-font-height: 1.25; @normal-font-weight: 400; @normal-font-family: "Roboto Slab", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu,
+    Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif) {
   font-size: @normal-font-size;
   line-height: @normal-font-height;
   font-weight: @normal-font-weight;
@@ -96,6 +133,36 @@
   font-weight: @normal-font-weight;
   font-family: @normal-font-family;
   font-style: normal;
+  text-transform: uppercase;
+}
+
+.main-gradient {
+  background: linear-gradient(255.69deg, #9A0037 31.83%, #CF2023 60.16%);
+}
+
+.back-gradient {
+  background: linear-gradient(270deg, rgba(207, 32, 35, 0.2) 0%, #F7F9FC 99.93%);
+}
+
+.text-hide {
+  background: linear-gradient(180deg, #B1B2B3 0%, rgba(177, 178, 179, 0) 66.67%);
+}
+
+.blur {
+  background: #C4C4C4;
+  backdrop-filter: blur(50px);
+}
+
+.shadow {
+  box-shadow: 0px 4px 50px rgba(196, 196, 196, 0.35);
+}
+
+.shadow-red {
+  box-shadow: 0px 4px 15px rgba(207, 32, 35, 0.45);
+}
+
+.main-dark {
+  background: #9A0037;
 }
 
 .container {

@@ -1,6 +1,6 @@
 html {
   box-sizing: border-box;
-  .text-light(62.5%);
+  font-size: 62.5%;
 }
 
 *,
@@ -12,8 +12,8 @@ html {
 body {
   min-width: @sm-width;
   .mp();
-  font-size: 1.4rem;
-  color: @dark-grey;
+  .text-light();
+  color: @secondary;
   background-color: @light;
   overflow: inherit!important;
 }
@@ -21,6 +21,35 @@ body {
 img {
   max-width: 100%;
   height: auto;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: @transition;
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: @main-color;
+  }
+}
+
+p,
+h1,
+h2,
+h3 {
+  .mp();
+}
+
+h1,
+h2,
+h3 {
+  margin-bottom: 0.83em;
+}
+
+p {
+  margin-bottom: 1em;
 }
 
 .visually-hidden:not(:focus):not(:active) {

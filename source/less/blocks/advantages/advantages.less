@@ -16,7 +16,7 @@
     width: 100%;
     padding-bottom: 25px;
     background-color: transparent;
-    color: @dark-grey;
+    color: @secondary;
   }
 
   &__header {
@@ -126,20 +126,18 @@
   }
 
   &__item-text {
-    .text-light(1.4rem);
     width: calc(100% - 100px);
     flex-grow: 1;
 
     @media (min-width: @lg-width) {
       width: auto;
-      font-size: 1.8rem;
     }
   }
 
   &__item-link {
     position: relative;
     .text-button(1.4rem);
-    color: @company-color;
+    color: @main-color;
     text-decoration: none;
     text-transform: uppercase;
     margin-left: 75px;

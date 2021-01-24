@@ -5,8 +5,14 @@
   padding-top: 145px;
   padding-bottom: 20px;
 
-  @media(min-width: @lg-width) {
+  @media(min-width: @md-width) {
     padding-top: 0;
+    padding-bottom: 0;
     background-size: cover;
+  }
+
+  & .page__wrap {
+    min-height: 550px;
+    padding-top: 0;
   }
 }

@@ -3,7 +3,8 @@
 
   &__input {
     .mp();
-    .text-light();
+    font: inherit;
+    font-size: 1.4rem;
     height: 40px;
     padding-right: 40px;
     border: none;
@@ -14,7 +15,7 @@
     &:hover,
     &:focus,
     &:active {
-      border-color: @company-color;
+      border-color: @main-color;
     }
   }
 
@@ -37,7 +38,7 @@
     &:focus,
     &:active {
       & .search__btn-icon {
-        fill: @company-color;
+        fill: @main-color;
       }
     }
   }

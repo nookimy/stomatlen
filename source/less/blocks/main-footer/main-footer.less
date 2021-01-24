@@ -3,14 +3,14 @@
   min-height: 150px;
   padding-top: 25px;
   padding-bottom: 25px;
-  background: @dark-grey url("../img/main-footer/lines-bottom.svg") no-repeat center bottom -10px;
+  background: @secondary url("../img/main-footer/lines-bottom.svg") no-repeat center bottom -10px;
   background-size: 149vw 70px;
   color: @gray;
 
   @media (min-width: @lg-width) {
     padding-top: 45px;
     padding-bottom: 100px;
-    background: @dark-grey url("../img/main-footer/lines-bottom.svg") no-repeat center bottom -25px;
+    background: @secondary url("../img/main-footer/lines-bottom.svg") no-repeat center bottom -25px;
     background-size: 164vw 260px;
   }
 
@@ -74,14 +74,12 @@
 
   &__copyright {
     .mp();
-    .text-light(1.4rem);
     text-align: center;
     grid-column-start: 1;
     grid-column-end: -1;
 
     @media (min-width: @lg-width) {
       order: 2;
-      font-size: 1.8rem;
       text-align: unset;
       grid-column-start: unset;
       grid-column-end: unset;

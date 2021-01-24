@@ -37,18 +37,15 @@
     & > a {
       display: inline-block;
       position: relative;
-      text-decoration: none;
-      color: inherit;
-      .text-medium(1.4rem);
+      .text-medium();
       padding-left: 35px;
       cursor: pointer;
-      transition: @transition;
 
       &::before,
       &::after {
         position: absolute;
         content: "";
-        background-color: @dark-grey;
+        background-color: @secondary;
       }
 
       &::before {
@@ -70,18 +67,24 @@
         transform: rotate(-90deg);
       }
 
-      @media (min-width: @lg-width) {
-        font-size: 1.8rem;
+      &:hover,
+      &:focus,
+      &:active {
+        &::before,
+        &::after {
+          transition: @transition;
+          background-color: @main-color;
+        }
       }
     }
 
     &--in {
       & > a {
-        color: @company-color;
+        color: @main-color;
 
         &::before,
         &::after {
-          background-color: @company-color;
+          background-color: @main-color;
         }
 
         &::before {
