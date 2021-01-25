@@ -45,10 +45,20 @@
       <div class="main-footer__callback callback">
         <div class="callback__img-box">
           <figure class="callback__img-content">
-            <img src="img/main-footer/photo.jpg">
+            <picture>
+              <source type="image/webp" srcset="
+              img/main-footer/photo-50@1x.webp 1x,
+              img/main-footer/photo-50@2x.webp 2x,
+              img/main-footer/photo-50@3x.webp 3x">
+              <img src="
+              img/main-footer/photo-50@1x.jpg 1x" srcset="
+              img/main-footer/photo-50@2x.jpg 2x,
+              img/main-footer/photo-50@3x.jpg 3x"
+                   alt="Консультант">
+            </picture>
           </figure>
         </div>
-        <h2 class="callback__title">Телефон для связи : <a class="callback__phone-link" href="tel:+78362347110">8 (836) 234-71-10</a></h2>
+        <h2 class="callback__title">Телефон для связи: <a class="callback__phone-link" href="tel:+78362347110">8 (836) 234-71-10</a></h2>
         <a class="callback__text-link" href="#request-callback" rel="modal:open">Вам перезвонить?</a>
       </div>
       <p class="main-footer__copyright">2015 - 2020 гг.  © ООО «Салус»</p>

@@ -17,19 +17,16 @@
 
   & select.price__filter {
     width: 100%;
-    max-width: 290px;
     color: @secondary;
     border: 1px solid transparent;
-    background: url("../img/price/arrow.svg") no-repeat right center;
     background-size: 8px 8px;
     margin: 0;
-    padding: 5px 0;
+    padding: 1.6rem 1.6rem 1.6rem 0 ;
     margin-bottom: 15px;
-    appearance: none;
 
 
     @media (min-width: @md-width) {
-      max-width: unset;
+      width: auto;
     }
 
     @media (min-width: @lg-width) {
@@ -47,13 +44,14 @@
     }
 
     & > li {
-      margin-right: 50px;
-      margin-bottom: 30px;
+      margin-right: 5px;
+      margin-bottom: 5px;
     }
 
     & > li > a {
       display: inline-block;
       .text-button();
+      padding: 1.6rem;
       color: @gray;
       cursor: pointer;
 
@@ -94,21 +92,19 @@
 
 
     & label {
-      /* стили вкладок (табов) */
-      .text-title(2rem);
+      .text-title();
       color: @gray;
       text-transform: uppercase;
-      transition: @gray;
+      transition: @transition;
       margin-right: 20px;
       margin-bottom: 10px;
       cursor: pointer;
 
       @media(min-width: @lg-width) {
         background-color: @light;
-        box-shadow: 0px 4px 50px rgba(196, 196, 196, 0.35);
+        .shadow();
         border-radius: 0px 5px 0px 0px;
         text-align: right;
-        font-size: 5rem;
         writing-mode: tb-rl;
         transform:rotate(180deg);
         padding: 20px;
@@ -131,8 +127,6 @@
       @media(min-width: @lg-width) {
         margin-right: 0;
         background-color: @light;
-        box-shadow: 0px 4px 50px rgba(196, 196, 196, 0.35);
-        border-radius: 0px 5px 0px 0px;
       }
     }
 
@@ -148,7 +142,7 @@
 
       @media(min-width: @lg-width) {
         background-color: @light;
-        box-shadow: 0px 4px 50px rgba(196, 196, 196, 0.35);
+        .shadow();
         border-radius: 0px 5px 0px 0px;
         flex-grow: 1;
         max-width: 1000px;

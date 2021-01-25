@@ -4,16 +4,17 @@
   align-items: flex-end;
 
   &__title {
-    .mp();
-    .h2();
-    margin-bottom: 20px;
     width: 100%;
     flex-grow: 1;
   }
 
   &__text {
-    .mp();
     margin-bottom: 10px;
+    width: 100%;
+    flex-grow: 1;
+  }
+
+  &__wrap {
     width: 100%;
     flex-grow: 1;
   }
@@ -40,8 +41,7 @@
     justify-content: center;
     align-items: center;
     .text-small();
-    color: @secondary;
-    padding: 10px 15px;
+    padding: 1.6rem 3rem;
     border-radius: 5px;
     border: 1px solid #B1B2B3;
     order: 2;
@@ -69,10 +69,9 @@
     }
   }
 
-  &__note {
+  &__privacy-policy {
     position: relative;
     opacity: 0.5;
-    .mp();
     .text-small();
     padding-left: 25px;
     width: 250px;
@@ -140,7 +139,7 @@
     }
   }
 
-  &__note {
+  &__privacy-policy {
     &::before {
       background-image: url("../img/form/check-mark-light.svg");
     }
@@ -157,16 +156,13 @@
   @media(min-width: @md-width) {
     padding: 50px 40px;
     margin-left: auto;
+    width: calc(50vw - 15px);
+    transform: translateY(-35px);
+  }
 
-    @media (min-width: @md-width) {
-      width: calc(50vw - 15px);
-      transform: translateY(-35px);
-    }
-
-    @media (min-width: @lg-width) {
-      width: 600px;
-      max-width: unset;
-    }
+  @media (min-width: @lg-width) {
+    width: 600px;
+    max-width: unset;
   }
 
   &__wrap {
@@ -176,7 +172,7 @@
     margin-right: -20px;
   }
 
-  &__note {
+  &__privacy-policy {
     &::before {
       background-image: url("../img/form/check-mark-dark.svg");
     }
@@ -201,7 +197,7 @@
     }
   }
 
-  &__note {
+  &__privacy-policy {
     &::before {
       background-image: url("../img/form/check-mark-gray.svg");
     }

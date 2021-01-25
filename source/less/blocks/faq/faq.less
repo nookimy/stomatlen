@@ -1,9 +1,5 @@
 .faq {
   @media (min-width: @md-width) {
-    padding-bottom: 50px;
-  }
-
-  @media (min-width: @lg-width) {
     padding-bottom: 100px;
   }
 
@@ -44,27 +40,27 @@
       &::before,
       &::after {
         position: absolute;
+        top: 50%;
         content: "";
         background-color: @secondary;
+
       }
 
       &::before {
-        top: 12px;
         left: 0;
         width: 18px;
         height: 2px;
         transition: all 0.5s ease-in-out;
-        transform: rotate(-90deg);
+        transform: translateY(-50%) rotate(-90deg);
         opacity: 1;
       }
 
       &::after {
-        top: 4px;
         left: 8px;
         width: 2px;
         height: 18px;
         transition: all 0.5s ease-in-out;
-        transform: rotate(-90deg);
+        transform: translateY(-50%) rotate(-90deg);
       }
 
       &:hover,
@@ -89,13 +85,13 @@
 
         &::before {
           transition: all 0.5s ease-in-out;
-          transform: rotate(90deg);
+          transform:  translateY(-50%) rotate(90deg);
           opacity: 0;
         }
 
         &::after {
           transition: all 0.5s ease-in-out;
-          transform: rotate(90deg);
+          transform:  translateY(-50%) rotate(90deg);
         }
       }
     }
@@ -127,6 +123,7 @@
 
   &__img-content {
     display: none;
+
     @media (min-width: @md-width) {
       display: block;
       .mp();

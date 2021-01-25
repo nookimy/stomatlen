@@ -52,10 +52,21 @@
   &__sections-list > li {
     display: flex;
     align-items: center;
-    border: 0.5px solid #B1B2B3;
+    border: 0.5px solid;
+    border-color: #B1B2B3;
     border-radius: 5px;
-    padding: 15px 35px;
+    padding: 1.6rem 3rem;
     min-height: 95px;
+    transition: @transition;
+
+    @media (min-width: @md-width) {
+      min-height: 115px;
+    }
+
+    &:hover {
+      border-color: transparent;
+      .shadow();
+    }
   }
 }
 

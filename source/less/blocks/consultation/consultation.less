@@ -1,6 +1,6 @@
 .consultation {
   width: 100%;
-  background: url("../img/consultation/zhdun.jpeg") top center no-repeat;
+  background: url("../img/consultation/zhdun.jpg") top center no-repeat;
   background-size: 180vw;
   padding-top: 145px;
   padding-bottom: 20px;
@@ -14,5 +14,15 @@
   & .page__wrap {
     min-height: 550px;
     padding-top: 0;
+  }
+
+  & .btn {
+    &__icon {
+      display: none;
+
+      @media(min-width: @lg-width) {
+        display: block;
+      }
+    }
   }
 }

@@ -74,12 +74,27 @@
     }
   }
 
-  &__branch-img-content > img {
+  &__branch-img-content img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     object-position: center;
     transition: @transition;
+  }
+
+  & .btn {
+    &--main {
+      padding-top: calc(1rem + 1px);
+      padding-right: calc(1.5rem + 1px);
+      padding-bottom: calc(1rem + 1px);
+      padding-left: calc(1.5rem + 1px);
+    }
+
+    &__icon {
+      width: 17px;
+      height: 17px;
+      margin-right: 0;
+    }
   }
 
   &__branch-btn {

@@ -11,6 +11,13 @@
   text-transform: uppercase;
   transition: @transition;
 
+  &__icon {
+    width: 25px;
+    height: 25px;
+    margin-right: 20px;
+    transition: @transition;
+  }
+
   &--main {
     position: relative;
     .main-gradient();
@@ -118,37 +125,6 @@
     }
   }
 
-  &__icon {
-    width: 25px;
-    height: 25px;
-    margin-right: 20px;
-    transition: @transition;
-  }
+
 }
-
-.about-menu .btn {
-  &--main {
-    padding-top: calc(1rem + 1px);
-    padding-right: calc(1.5rem + 1px);
-    padding-bottom: calc(1rem + 1px);
-    padding-left: calc(1.5rem + 1px);
-  }
-
-  &__icon {
-    width: 18px;
-    height: 18px;
-    margin-right: 0;
-  }
-}
-
-.consultation .btn {
-  &__icon {
-    display: none;
-
-    @media(min-width: @lg-width) {
-      display: block;
-    }
-  }
-}
-
 
