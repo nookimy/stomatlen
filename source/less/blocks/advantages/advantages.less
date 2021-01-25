@@ -3,10 +3,11 @@
     width: 100%;
     padding-top: 25px;
     padding-bottom: 25px;
-    background: linear-gradient(255.69deg, #9A0037 31.83%, #CF2023 60.16%);
+    .main-gradient();
     color: @light;
 
     @media (min-width: @lg-width) {
+      padding-top: 55px;
       padding-bottom: 70px;
     }
   }
@@ -16,7 +17,6 @@
     width: 100%;
     padding-bottom: 25px;
     background-color: transparent;
-    color: @secondary;
   }
 
   &__header {
@@ -36,7 +36,6 @@
       margin-top: -90px;
       margin-left: auto;
       margin-bottom: 30px;
-      font-size: 1.8rem;
     }
   }
 
@@ -100,7 +99,7 @@
     &--light {
       align-items: flex-start;
       background: @light;
-      box-shadow: 0px 4px 50px rgba(196, 196, 196, 0.35);
+      .shadow();
 
       @media (min-width: @lg-width) {
         & .advantages__item-text {
@@ -135,24 +134,21 @@
   }
 
   &__item-link {
-    position: relative;
-    .text-button(1.4rem);
+    display: flex;
+    align-items: center;
+    .text-button();
     color: @main-color;
     text-decoration: none;
     text-transform: uppercase;
     margin-left: 75px;
     padding-right: 30px;
 
-    &::before {
-      content: "";
-      position: absolute;
-      top: 50%;
-      right: 0;
+    & .icon {
+      min-width: 17px;
       width: 17px;
       height: 17px;
-      transform: translateY(-50%);
-      background: url("../img/advantages/arrow-right.svg") no-repeat center;
-      background-size: contain;
+      fill: @main-color;
+      margin-left: 10px;
     }
   }
 }

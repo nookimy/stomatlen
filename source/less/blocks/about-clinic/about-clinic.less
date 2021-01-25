@@ -1,5 +1,17 @@
 .about-clinic {
-  & .page__btn-wrap .btn {
-    min-width: 225px;
+  & .page__btn-wrap {
+    margin-top: 20px;
+
+    @media (min-width: @lg-width) {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+  }
+
+  & .btn {
+    @media (min-width: @lg-width) {
+      width: 230px;
+    }
   }
 }

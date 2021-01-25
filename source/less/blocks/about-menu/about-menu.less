@@ -2,6 +2,7 @@
   @media (min-width: @lg-width) {
     display: flex;
   }
+
   &__branch-list {
     .list();
     margin-bottom: 15px;
@@ -36,14 +37,15 @@
 
   &__branch-link {
     display: inline-block;
-    .h3(1.6rem);
+    .h3();
     padding: 5px 0;
-    text-decoration: none;
-    color: inherit;
-    transition: @transition;
 
-    @media (min-width: @lg-width) {
-      font-size: 2.4rem;
+    &:hover,
+    &:focus,
+    &:active {
+      & .about-menu__branch-img-content > img {
+        transform: scale(1.1);
+      }
     }
   }
 
@@ -87,28 +89,14 @@
     transform: translateY(-50%);
   }
 
-  &__branch-link {
-    &:hover,
-    &:focus,
-    &:active {
-      color: @main-color;
-
-      & .about-menu__branch-img-content > img {
-        transform: scale(1.1);
-      }
-    }
-  }
-
   &__other-list {
     .list();
+    display: flex;
+    flex-direction: column;
 
     @media (min-width: @lg-width) {
       padding-left: 60px;
     }
-  }
-
-  &__other-item {
-
   }
 
   &__other-item a {
