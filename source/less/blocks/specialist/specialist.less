@@ -1,169 +1,3 @@
-.specialist {
-
-}
-
-.specialists--block .specialist {
-  display: grid;
-  grid-template-columns:  100px auto;
-  margin-bottom: 25px;
-
-
-  @media (min-width: @lg-width) {
-    grid-template-columns: 1fr;
-  }
-
-  &__img-box {
-    display: block;
-    position: relative;
-    min-height: 200px;
-
-    @media (min-width: @lg-width) {
-      width: 100%;
-      padding-top: 100%;
-      min-height: unset;
-    }
-  }
-
-  &__img-content {
-    .mp();
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    overflow: hidden;
-  }
-
-  &__img-content > img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-  }
-
-  &__short-info {
-    padding: 10px 20px 20px;
-
-    @media (min-width: @lg-width) {
-      padding: 30px 30px 50px;
-      display: flex;
-      flex-direction: column;
-    }
-  }
-
-  &__name {
-    .mp();
-    .h3(1.6rem);
-    color: @dark;
-    margin-bottom: 10px;
-
-    -webkit-line-clamp: 2; /* Число отображаемых строк */
-    display: -webkit-box; /* Включаем флексбоксы */
-    -webkit-box-orient: vertical; /* Вертикальная ориентация */
-    overflow: hidden; /* Обрезаем всё за пределами блока */
-
-    @media (min-width: @lg-width) {
-      font-size: 24px;
-    }
-  }
-
-  &__direction {
-    margin-bottom: 10px;
-
-    -webkit-line-clamp: 2; /* Число отображаемых строк */
-    display: -webkit-box; /* Включаем флексбоксы */
-    -webkit-box-orient: vertical; /* Вертикальная ориентация */
-    overflow: hidden; /* Обрезаем всё за пределами блока */
-  }
-
-  &__address {
-    position: relative;
-    .mp();
-    padding-left: 20px;
-    margin-bottom: 10px;
-
-    -webkit-line-clamp: 2; /* Число отображаемых строк */
-    display: -webkit-box; /* Включаем флексбоксы */
-    -webkit-box-orient: vertical; /* Вертикальная ориентация */
-    overflow: hidden; /* Обрезаем всё за пределами блока */
-
-    @media (min-width: @lg-width) {
-      margin-bottom: 30px;
-    }
-
-
-    &::before {
-      content: "";
-      position: absolute;
-      top: 2px;
-      left: 0;
-      width: 10px;
-      height: 10px;
-      background: url("../img/specialists/location.svg") no-repeat center;
-      background-size: contain;
-
-      @media (min-width: @lg-width) {
-        width: 18px;
-        height: 18px;
-        top: 50%;
-        transform: translateY(-50%);
-      }
-    }
-  }
-
-  &__experience {
-    .mp();
-    .text-medium(1.4rem);
-    color: @secondary;
-
-    @media (min-width: @lg-width) {
-      font-size: 18px;
-    }
-  }
-
-  &__link {
-    .mp();
-    width: 50px;
-    height: 28px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: unset;
-    position: absolute;
-    bottom: 10px;
-    right: 20px;
-
-    @media (min-width: @lg-width) {
-      display: none;
-      width: auto;
-      height: auto;
-      padding: 15px 30px;
-      bottom: 30px;
-      right: 30px;
-    }
-
-    & .btn__icon {
-      width: 17px;
-      height: 17px;
-      margin-right: 0;
-
-      @media (min-width: @lg-width) {
-        display: none;
-      }
-    }
-
-    & span {
-      display: none;
-
-
-      @media (min-width: @lg-width) {
-        display: block;
-        font-size: 1.4rem;
-      }
-    }
-  }
-}
-
 .page__content.specialists .specialist {
   overflow: hidden;
 
@@ -242,7 +76,7 @@
     overflow: hidden;
   }
 
-  &__img-content > img {
+  &__img-content img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -295,18 +129,18 @@
     &::before {
       content: "";
       position: absolute;
-      top: 2px;
+      top: 50%;
       left: 0;
       width: 10px;
       height: 10px;
-      background: url("../img/specialists/location.svg") no-repeat center;
+      background: url("../img/page/pin-black.svg") no-repeat center;
       background-size: contain;
+      transform: translateY(-50%);
 
       @media (min-width: @lg-width) {
         width: 18px;
         height: 18px;
-        top: 50%;
-        transform: translateY(-50%);
+
       }
     }
   }
@@ -389,6 +223,16 @@
     border-top: 1px solid rgba(@secondary, 0.5);
     box-shadow: 0px 3px 38px 31px rgba(255,255,255,1);
 
+    &:hover,
+    &:focus,
+    &:active {
+      color: @main-color;
+
+      &:before {
+        border-color: @main-color;
+      }
+    }
+
     @media (min-width: @md-width) {
       grid-area: readmore;
       height: 38px;
@@ -401,8 +245,9 @@
       left: 10px;
       width: 7px;
       height: 7px;
-      border-top: 2px solid @secondary;
-      border-right: 2px solid @secondary;
+      border-top: 2px solid;
+      border-right: 2px solid;
+      border-color: @secondary;
       transition: @transition;
       transform: translateY(-80%) rotate(135deg);
 

@@ -3,32 +3,7 @@
   padding-top: 25px;
   padding-bottom: 25px;
 
-  &__filters {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    align-items: center;
-
-    @media (min-width: @lg-width) {
-      padding-top: 30px;
-    }
-  }
-
-  & select.price__filter {
-    width: 100%;
-    color: @secondary;
-    border: 1px solid transparent;
-    background-size: 8px 8px;
-    margin: 0;
-    padding: 1.6rem 1.6rem 1.6rem 0 ;
-    margin-bottom: 15px;
-
-
-    @media (min-width: @md-width) {
-      width: auto;
-    }
-
+  & select {
     @media (min-width: @lg-width) {
       display: none;
     }
@@ -101,6 +76,7 @@
       cursor: pointer;
 
       @media(min-width: @lg-width) {
+        font-size: 2rem;
         background-color: @light;
         .shadow();
         border-radius: 0px 5px 0px 0px;
@@ -109,6 +85,10 @@
         transform:rotate(180deg);
         padding: 20px;
         margin-bottom: 0;
+      }
+
+      @media(min-width: @xl-width) {
+        font-size: 5rem;
       }
 
       /* изменения стиля заголовков вкладок при наведении */
@@ -152,12 +132,6 @@
       }
     }
   }
-
-
-
-
-
-
 
   &__folder-heading a {
     position: relative;

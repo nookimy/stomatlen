@@ -37,7 +37,7 @@
     </picture>
   </figure>
   <div class="page__back-link-wrap">
-    <a class="page__back-link" href="#">Назад</a>
+    <a class="page__back-link" href="../">Назад</a>
   </div>
 </div>
 <div class="page__header">
@@ -59,14 +59,14 @@
 </div>
 <div class="page__content about-clinic">
   <div class="page__wrap page__wrap--btn-appointment">
-    <a class="btn btn--main btn--appointment" href="#">
+    <a class="btn btn--main btn--appointment" href="#modal-appointment" rel="modal:open">
       <svg class="btn__icon" width="25px" height="25px">
         <use xlink:href="#icon-appointment"></use>
       </svg>
       Записаться на прием
     </a>
   </div>
-  <section class="page__wrap page__wrap--columns">
+  <section class="page__wrap page__wrap--columns" id="medicalcenter">
     <p class="page__text-sub">полный комплекс качественых услуг</p>
     <h2 class="page__subtitle">Медцентр на Советской, 173</h2>
     <div class="page__column page__column--fix page__column--margin-left">
@@ -86,12 +86,12 @@
         </figure>
       </div>
       <div class="page__btn-wrap">
-        <a class="btn btn--main">
+        <a class="btn btn--main" href="documents.html">
           <svg class="btn__icon" width="25px" height="25px">
             <use xlink:href="#icon-docs"></use>
           </svg>
           Документы</a>
-        <a class="btn btn--secondary">
+        <a class="btn btn--secondary" href="contacts.html#medicalcenter">
           <svg class="btn__icon" width="25px" height="25px">
             <use xlink:href="#icon-pin"></use>
           </svg>Как добраться</a>
@@ -104,7 +104,7 @@
     </div>
   </section>
   <include src="./source/less/blocks/main-consultation/main-consultation.html"></include>
-  <section class="page__wrap page__wrap--columns">
+  <section class="page__wrap page__wrap--columns" id="stomatology">
     <p class="page__text-sub">Высокий уровень сервиса</p>
     <h2 class="page__subtitle">Зубной на Ленинском, 71</h2>
     <div class="page__column page__column--fix page__column--margin-left">
@@ -124,12 +124,12 @@
         </figure>
       </div>
       <div class="page__btn-wrap">
-        <a class="btn btn--main">
+        <a class="btn btn--main" href="documents.html">
           <svg class="btn__icon" width="25px" height="25px">
             <use xlink:href="#icon-docs"></use>
           </svg>
           Документы</a>
-        <a class="btn btn--secondary">
+        <a class="btn btn--secondary" href="contacts.html#stomatology">
           <svg class="btn__icon" width="25px" height="25px">
             <use xlink:href="#icon-pin"></use>
           </svg>Как добраться</a>
@@ -141,7 +141,7 @@
       <p>В Медцентре используются инновационные пломбировочные материалы, композиты для эстетической реставрации различных оттенков, металлокерамические ортопедические конструкции, имплантаты и брекет-системы от лучших компаний- производителей. Применение современной анестезии гарантирует безболезненность всех манипуляций.</p>
     </div>
   </section>
-  <include src="./source/less/blocks/specialists-block/specialists-block.html"></include>
+  <include src="./source/less/blocks/specialists-slider/specialists-slider.html"></include>
   <include src="./source/less/blocks/consultation/consultation.html"></include>
   <include src="./source/less/blocks/price/price.html"></include>
 </div>

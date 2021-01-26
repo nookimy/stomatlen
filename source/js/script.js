@@ -2,11 +2,33 @@ const toggle = document.querySelector(".main-nav__toggle");
 const nav = document.querySelector(".main-nav__wrap");
 const visuallyImpairedBtn = document.querySelector(".visually-impaired__btn");
 
-/*Основное меню*/
+// Основное меню
 toggle.onclick = function () {
   toggle.classList.toggle("main-nav__toggle--close");
   nav.classList.toggle("main-nav__wrap--opened");
 };
+
+// Подменю
+let submenuService = document.querySelector('.site-nav__submenu--service');
+let menuLinkService = document.querySelector('.site-nav__menu-link--service');
+let menuBackService = document.querySelector('.site-nav__submenu-back-link--service');
+let submenuAbout = document.querySelector('.site-nav__submenu--about');
+let menuLinkAbout = document.querySelector('.site-nav__menu-link--about');
+let menuBackAbout = document.querySelector('.site-nav__submenu-back-link--about');
+
+menuLinkService.onclick = function() {
+  submenuService.classList.add('site-nav__submenu--opened');
+};
+menuBackService.onclick = function() {
+  submenuService.classList.remove('site-nav__submenu--opened');
+};
+menuLinkAbout.onclick = function() {
+  submenuAbout.classList.add('site-nav__submenu--opened');
+};
+menuBackAbout.onclick = function() {
+  submenuAbout.classList.remove('site-nav__submenu--opened');
+};
+
 
 const servicesMenuElements = document.querySelectorAll(".services-menu__list"); // Списки в подменю Услуги, для которых должен работать аккордеон
 const currentWidth = document.documentElement.clientWidth; // Текущая ширина окна браузера
@@ -97,9 +119,3 @@ $(document).ready(function () {
   });
 });
 
-// Свернуть-развернуть полное описание
-$('.specialist__info').readmore({ //вызов плагина
-  speed: 500, //скорость раскрытия скрытого текста (в миллисекундах)
-  moreLink: '<a class="readmore-js-toggle" href="#">Развернуть полное описание</a>', //ссылка "Читать далее", можно переименовать
-  lessLink: '<a class="readmore-js-toggle readmore-js-toggle--opened" href="#">Свернуть полное описание</a>' //ссылка "Скрыть", можно переименовать
-});

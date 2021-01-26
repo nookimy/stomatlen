@@ -1,54 +1,5 @@
 .main-about {
   width: 100%;
-  padding-top: 25px;
-  padding-bottom: 25px;
-
-  &__img-box {
-    display: block;
-    position: relative;
-    width: 100%;
-    padding-top: 75%;
-    margin-bottom: 20px;
-
-    @media (min-width: @md-width) {
-      margin-bottom: 0;
-      grid-area: img;
-    }
-  }
-
-  &__img-content {
-    .mp();
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    border-radius: 5px;
-    overflow: hidden;
-  }
-
-  &__img-content > img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-    transition: @transition;
-  }
-
-  &__text-content {
-    @media (min-width: @md-width) {
-      grid-area: text-content;
-    }
-  }
-
-  &__text {
-    margin-bottom: 20px;
-
-    & p {
-      .mp();
-      margin-bottom: 0.5em;
-    }
-  }
 
   &__statistics-list {
     .list();

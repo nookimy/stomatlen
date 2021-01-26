@@ -15,7 +15,7 @@
   }
 
   &__wrap {
-    padding-right: 40px;
+    padding-right: 30px;
 
     @media (min-width: @lg-width) {
       .container();
@@ -35,9 +35,12 @@
     padding-top: 15px;
     padding-bottom: 15px;
 
+    @media (min-width: @md-width) {
+      justify-content: center;
+    }
+
     @media (min-width: @lg-width) {
       .mp();
-      width: auto;
       max-width: none;
       align-self: flex-end;
       margin-bottom: 12px;
@@ -46,15 +49,18 @@
 
   &__title-item {
     position: relative;
-    width: 100px;
-    flex-grow: 1;
-    padding-left: 32px;
+    padding-left: 30px;
     margin-right: 10px;
+
+    @media (min-width: @md-width) {
+      margin-right: 30px
+    }
+
 
     @media (min-width: @lg-width) {
       position: relative;
-      width: auto;
       margin-right: 30px;
+      padding-left: 45px;
     }
 
     &:last-child {
@@ -64,11 +70,19 @@
     &::before {
       position: absolute;
       content: "";
-      width: 26px;
-      height: 24px;
-      top: 0;
+      width: 25px;
+      height: 25px;
+      top: 50%;
       left: 0;
       background-size: contain;
+      transform: translateY(-50%);
+
+      @media (min-width: @lg-width) {
+        width: 32px;
+        height: 32px;
+        top: 0;
+        transform: none;
+      }
     }
 
     &--stomat {
@@ -85,17 +99,15 @@
   }
 
   &__title {
-    .mp();
-    .h3(1.4rem);
+    .h3();
+    margin-bottom: 0;
 
     @media (min-width: @lg-width) {
-      font-size: 2.4rem;
+      margin-bottom: 5px;
     }
 
     & > span {
       display: none;
-      .text-tiny(1rem);
-      color: @main-color;
 
       @media (min-width: @lg-width) {
         display: inline-block;
@@ -103,8 +115,9 @@
         left: 0;
         right: 0;
         bottom: 0;
+        .text-tiny();
+        color: @main-color;
         transform: translateY(100%);
-        text-align: center;
       }
     }
   }

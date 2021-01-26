@@ -1,4 +1,5 @@
 .main-nav {
+
   &__wrap {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -7,7 +8,7 @@
       "opening-hours callback"
       "search search"
       "visually-impaired visually-impaired";
-    grid-gap: 15px;
+    gap: 15px;
     position: fixed;
     top: 0;
     left: 0;
@@ -23,6 +24,8 @@
 
     @media (min-width: @lg-width) {
       .mp();
+      column-gap: 15px;
+      row-gap: 35px;
       width: auto;
       min-height: unset;
       position: static;

@@ -1,36 +1,43 @@
 <div class="page__banner-wrap">
   <figure class="page__banner">
     <picture>
-      <source type="image/webp" media="(min-width: 1200px)" srcset="img/specialists/specialists-main-2000@3x.webp 3x,
-                                                                        img/specialists/specialists-main-2000@2x.webp 2x,
-                                                                        img/specialists/specialists-main-2000.webp">
-      <source type="image/webp" media="(min-width: 992px)" srcset="img/specialists/specialists-main-1199@3x.webp 3x,
-                                                                       img/specialists/specialists-main-1199@2x.webp 2x,
-                                                                       img/specialists/specialists-main-1199.webp">
-      <source type="image/webp" media="(min-width: 768px)" srcset="img/specialists/specialists-main-991@3x.webp 3x,
-                                                                       img/specialists/specialists-main-991@2x.webp 2x,
-                                                                       img/specialists/specialists-main-991.webp">
-      <source type="image/webp" srcset="img/specialists/specialists-main-767@3x.webp 3x,
-                                            img/specialists/specialists-main-767@2x.webp 2x,
-                                            img/specialists/specialists-main-767.webp">
-      <source media="(min-width: 1200px)" srcset="img/specialists/specialists-main-2000@3x.jpeg 3x,
-                                                      img/specialists/specialists-main-2000@2x.jpeg 2x,
-                                                      img/specialists/specialists-main-2000.jpeg">
-      <source media="(min-width: 992px)" srcset="img/specialists/specialists-main-1199@3x.jpeg 3x,
-                                                      img/specialists/specialists-main-1199@2x.jpeg 2x,
-                                                      img/specialists/specialists-main-1199.jpeg">
-      <source media="(min-width: 768px)" srcset="img/specialists/specialists-main-991@3x.jpeg 3x,
-                                                     img/specialists/specialists-main-991@2x.jpeg 2x,
-                                                     img/specialists/specialists-main-991.jpeg">
-      <img src="img/specialists/specialists-main-767.jpeg"
-           srcset="img/specialists/specialists-main-767@3x.jpeg 3x,
-                                                   img/specialists/specialists-main-767@2x.jpeg 2x,
-                                                   img/specialists/specialists-main-767.jpeg"
-           alt="Ортопедия">
+      <source type="image/webp" media="(min-width: 1200px)" srcset="
+        img/specialists/specialists-banner-2000.webp,
+        img/specialists/specialists-banner-2000@2x.webp 2x,
+        img/specialists/specialists-banner-2000@3x.webp 3x">
+      <source type="image/webp" media="(min-width: 992px)" srcset="
+        img/specialists/specialists-banner-1199.webp,
+        img/specialists/specialists-banner-1199@2x.webp 2x,
+        img/specialists/specialists-banner-1199@3x.webp 3x">
+      <source type="image/webp" media="(min-width: 768px)" srcset="
+        img/specialists/specialists-banner-991.webp,
+        img/specialists/specialists-banner-991@2x.webp 2x,
+        img/specialists/specialists-banner-991@3x.webp 3x">
+      <source type="image/webp" srcset="
+        img/specialists/specialists-banner-767.webp,
+        img/specialists/specialists-banner-767@2x.webp 2x,
+        img/specialists/specialists-banner-767@3x.webp 3x">
+      <source media="(min-width: 1200px)" srcset="
+        img/specialists/specialists-banner-2000.jpg,
+        img/specialists/specialists-banner-2000@2x.jpg 2x,
+        img/specialists/specialists-banner-2000@3x.jpg 3x">
+      <source media="(min-width: 992px)" srcset="
+        img/specialists/specialists-banner-1199@3x.jpg 3x,
+        img/specialists/specialists-banner-1199@2x.jpg 2x,
+        img/specialists/specialists-banner-1199.jpg">
+      <source media="(min-width: 768px)" srcset="
+        img/specialists/specialists-banner-991.jpg 1x,
+        img/specialists/specialists-banner-991@2x.jpg 2x,
+        img/specialists/specialists-banner-991@3x.jpg 3x">
+      <img src="
+        img/specialists/specialists-banner-767.jpg 1x" srcset="
+        img/specialists/specialists-banner-767@2x.jpg 2x,
+        img/specialists/specialists-banner-767@3x.jpg 3x"
+           alt="Специалисты">
     </picture>
   </figure>
   <div class="page__back-link-wrap">
-    <a class="page__back-link" href="#">Назад</a>
+    <a class="page__back-link" href="../">Назад</a>
   </div>
 </div>
 <div class="page__header">
@@ -52,8 +59,8 @@
 </div>
 <section class="page__content specialists">
   <div class="page__wrap">
-    <div class="specialists__filters">
-      <select class="specialists__filter">
+    <div class="page__filters">
+      <select>
         <option selected>Специалист</option>
         <option>Стоматолог</option>
         <option>Стоматолог-хирург</option>
@@ -61,7 +68,7 @@
         <option>Стоматолог-терапевт</option>
         <option>Имплантолог</option>
       </select>
-      <select class="specialists__filter" name="branch">
+      <select>
         <option>Стоматология на Ленинском, 71</option>
         <option>Медцентр на Советской, 173</option>
       </select>
@@ -72,9 +79,19 @@
         <h2 class="page__subtitle specialist__name">Черняев Роман Михайлович</h2>
         <div class="specialist__img-box">
           <figure class="specialist__img-content">
-            <img src="img/specialists/chernyaev.jpg">
+            <picture>
+              <source type="image/webp" srcset="
+              img/specialists/chernyaev-737@1x.webp 1x,
+              img/specialists/chernyaev-737@2x.webp 2x,
+              img/specialists/chernyaev-737@3x.webp 3x">
+              <img src="
+              img/specialists/chernyaev-737@1x.jpg 1x" srcset="
+              img/specialists/chernyaev-737@2x.jpg 2x,
+              img/specialists/chernyaev-737@3x.jpg 3x"
+                   alt="Черняев Роман Михайлович">
+            </picture>
           </figure>
-          <a class="btn btn--main pecialist__btn specialist__btn--appointment" href="#">
+          <a class="btn btn--main pecialist__btn specialist__btn--appointment" href="#modal-appointment" rel="modal:open">
             <svg class="btn__icon" width="25px" height="25px">
               <use xlink:href="#icon-appointment"></use>
             </svg>
@@ -113,9 +130,19 @@
         <h2 class="page__subtitle specialist__name">Галкина Полина Викторовна</h2>
         <div class="specialist__img-box">
           <figure class="specialist__img-content">
-            <img src="img/specialists/galkina.jpg">
+            <picture>
+              <source type="image/webp" srcset="
+              img/specialists/galkina-737@1x.webp 1x,
+              img/specialists/galkina-737@2x.webp 2x,
+              img/specialists/galkina-737@3x.webp 3x">
+              <img src="
+              img/specialists/galkina-737@1x.jpg 1x" srcset="
+              img/specialists/galkina-737@2x.jpg 2x,
+              img/specialists/galkina-737@3x.jpg 3x"
+                   alt="Галкина Полина Викторовна">
+            </picture>
           </figure>
-          <a class="btn btn--main pecialist__btn specialist__btn--appointment" href="#">
+          <a class="btn btn--main pecialist__btn specialist__btn--appointment" href="#modal-appointment" rel="modal:open">
             <svg class="btn__icon" width="25px" height="25px">
               <use xlink:href="#icon-appointment"></use>
             </svg>
@@ -155,9 +182,19 @@
       <h2 class="page__subtitle specialist__name">Чернов Анатолий Викторович</h2>
       <div class="specialist__img-box">
         <figure class="specialist__img-content">
-          <img src="img/specialists/chernov.jpg">
+          <picture>
+            <source type="image/webp" srcset="
+              img/specialists/chernov-737@1x.webp 1x,
+              img/specialists/chernov-737@2x.webp 2x,
+              img/specialists/chernov-737@3x.webp 3x">
+            <img src="
+              img/specialists/chernov-737@1x.jpg 1x" srcset="
+              img/specialists/chernov-737@2x.jpg 2x,
+              img/specialists/chernov-737@3x.jpg 3x"
+                 alt="Чернов Анатолий Викторович">
+          </picture>
         </figure>
-        <a class="btn btn--main pecialist__btn specialist__btn--appointment" href="#">
+        <a class="btn btn--main pecialist__btn specialist__btn--appointment" href="#modal-appointment" rel="modal:open">
           <svg class="btn__icon" width="25px" height="25px">
             <use xlink:href="#icon-appointment"></use>
           </svg>

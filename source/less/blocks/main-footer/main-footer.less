@@ -1,4 +1,5 @@
 .main-footer {
+  position: relative;
   width: 100%;
   min-height: 150px;
   padding-top: 25px;
@@ -13,6 +14,43 @@
     background: @secondary url("../img/main-footer/lines-bottom.svg") no-repeat center bottom -25px;
     background-size: 164vw 260px;
   }
+
+  &__btn--up {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+
+    & .btn__icon {
+      margin-right: 0;
+
+      @media (min-width: @md-width) {
+        margin-right: 20px;
+      }
+    }
+
+    & span {
+      display: none;
+
+      @media (min-width: @md-width) {
+        display: block;
+      }
+    }
+  }
+
+  & .page__wrap {
+    position: relative;
+
+    @media (min-width: @lg-width) {
+      column-count: 3;
+    }
+
+    @media (min-width: @xl-width) {
+      column-count: 4;
+    }
+  }
+
+
 
   &__menu {
     display: none;

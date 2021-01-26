@@ -1,0 +1,187 @@
+.specialists--slider {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  padding-top: 25px;
+  padding-bottom: 25px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 475px;
+    height: 620px;
+    top: 260px;
+    left: 50%;
+    z-index: -1;
+    background: url("../img/specialists/lines-light.svg") no-repeat center;
+    background-size: contain;
+    transform: translateX(-60%) rotate(57deg);
+    opacity: 0.3;
+
+    @media (min-width: @lg-width) {
+      top: 90px;
+      left: 50%;
+      transform: translateX(-155%) rotate(57deg);
+    }
+  }
+
+  & .specialists {
+
+    &__item {
+      position: relative;
+      border-radius: 5px;
+
+      @media (min-width: @lg-width) {
+        &:hover {
+          & .specialist__btn--detail {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+
+  & .specialist {
+    display: grid;
+    grid-template-columns:  100px auto;
+
+    @media (min-width: @lg-width) {
+      grid-template-columns: 1fr;
+    }
+
+    &__img-box {
+      display: block;
+      position: relative;
+      min-height: 200px;
+
+      @media (min-width: @lg-width) {
+        width: 100%;
+        padding-top: 100%;
+        min-height: unset;
+      }
+    }
+
+    &__img-content {
+      .mp();
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      overflow: hidden;
+    }
+
+    &__img-content img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    &__short-info {
+      color: @dark;
+      padding: 10px 20px 20px;
+
+      @media (min-width: @lg-width) {
+        padding: 30px 30px 50px;
+        display: flex;
+        flex-direction: column;
+      }
+    }
+
+    &__name {
+      .h3();
+
+      -webkit-line-clamp: 2; /* Число отображаемых строк */
+      display: -webkit-box; /* Включаем флексбоксы */
+      -webkit-box-orient: vertical; /* Вертикальная ориентация */
+      overflow: hidden; /* Обрезаем всё за пределами блока */
+    }
+
+    &__direction {
+      -webkit-line-clamp: 2; /* Число отображаемых строк */
+      display: -webkit-box; /* Включаем флексбоксы */
+      -webkit-box-orient: vertical; /* Вертикальная ориентация */
+      overflow: hidden; /* Обрезаем всё за пределами блока */
+    }
+
+    &__address {
+      position: relative;
+      padding-left: 20px;
+
+      -webkit-line-clamp: 2; /* Число отображаемых строк */
+      display: -webkit-box; /* Включаем флексбоксы */
+      -webkit-box-orient: vertical; /* Вертикальная ориентация */
+      overflow: hidden; /* Обрезаем всё за пределами блока */
+
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 10px;
+        height: 10px;
+        background: url("../img/page/pin-black.svg") no-repeat center;
+        background-size: contain;
+        transform: translateY(-50%);
+
+        @media (min-width: @lg-width) {
+          width: 18px;
+          height: 18px;
+          top: 50%;
+
+        }
+      }
+    }
+
+    &__experience {
+      .text-medium();
+    }
+
+    &__btn--detail {
+      padding-top: calc(1rem + 1px);
+      padding-right: calc(1.5rem + 1px);
+      padding-bottom: calc(1rem + 1px);
+      padding-left: calc(1.5rem + 1px);
+      position: absolute;
+      bottom: 10px;
+      right: 20px;
+
+      @media (min-width: @lg-width) {
+        display: none;
+        height: auto;
+        bottom: 30px;
+        right: 30px;
+      }
+
+      & .btn__icon {
+        width: 17px;
+        height: 17px;
+        margin-right: 0;
+
+        @media (min-width: @lg-width) {
+          display: none;
+        }
+      }
+
+      & span {
+        display: none;
+
+        @media (min-width: @lg-width) {
+          display: block;
+          font-size: 1.4rem;
+        }
+      }
+    }
+  }
+  & .owl-theme {
+    & .owl-dots {
+      @media (min-width: @lg-width) {
+        position: absolute;
+        top: -50px;
+        right: 0;
+      }
+    }
+  }
+}

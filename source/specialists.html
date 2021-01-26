@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="css/owl.theme.default.css">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 </head>
-  <body class="page page--inner">
+  <body class="page page--inner" id="start">
     <div style="display:none">
       <include src="source/img/sprite.svg"></include>
     </div>
@@ -24,5 +24,14 @@
     <script src="js/jquery.modal.min.js"></script>
     <script src="js/readmore.js"></script>
     <script src="js/script.js"></script>
+    <script>
+      // Свернуть-развернуть полное описание
+      $('.specialist__info').readmore({ //вызов плагина
+        speed: 500, //скорость раскрытия скрытого текста (в миллисекундах)
+        moreLink: '<a class="readmore-js-toggle" href="#">Развернуть полное описание</a>', //ссылка "Читать далее", можно переименовать
+        lessLink: '<a class="readmore-js-toggle readmore-js-toggle--opened" href="#">Свернуть полное описание</a>' //ссылка "Скрыть", можно переименовать
+      });
+    </script>
+
   </body>
 </html>
