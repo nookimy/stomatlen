@@ -1,0 +1,77 @@
+.regulations {
+  &__list {
+    .list();
+
+
+    @media (min-width: @lg-width) {
+      column-count: 2;
+    }
+  }
+
+  &__item {
+    margin-bottom: 10px;
+
+    @media (min-width: @lg-width) {
+      margin-right: 120px;
+    }
+  }
+
+  &__item a {
+    display: inline-block;
+    .text-medium();
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(@gray, 0.5);
+  }
+
+  & .readmore-js-toggle {
+    display: block;
+    position: relative;
+    width: 100%;
+    .text-button(1.4rem);
+    color: @secondary;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 30px;
+    border-top: 1px solid rgba(@secondary, 0.5);
+    box-shadow: 0px 3px 38px 31px rgba(255,255,255,1);
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: @main-color;
+
+      &:before {
+        border-color: @main-color;
+      }
+    }
+
+    @media (min-width: @md-width) {
+      grid-area: readmore;
+      height: 38px;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 10px;
+      width: 7px;
+      height: 7px;
+      border-top: 2px solid;
+      border-right: 2px solid;
+      border-color: @secondary;
+      transition: @transition;
+      transform: translateY(-80%) rotate(135deg);
+
+    }
+
+    &--opened {
+      box-shadow: none;
+      &::before {
+        transform: translateY(-20%) rotate(-45deg);
+      }
+    }
+  }
+}

@@ -1,0 +1,30 @@
+.testimony {
+  &__list {
+    .list();
+  }
+
+  &__img-box {
+    display: block;
+    position: relative;
+    width: 100%;
+    padding-top: 141%;
+  }
+
+  &__img-content {
+    .mp();
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    overflow: hidden;
+    background-color: #74a5a2;
+  }
+
+  &__img-content img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+}

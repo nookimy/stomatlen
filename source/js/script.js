@@ -111,6 +111,54 @@ $(document).ready(function () {
   });
 });
 
+$(document).ready(function () {
+  $(".testimony .owl-carousel").owlCarousel({
+    dots: true,
+    nav: false,
+    margin: 20,
+    responsive: {
+      0: {
+        items: 1
+      },
+      768: {
+        items: 3
+      }
+    }
+  });
+});
+
+$(document).ready(function () {
+  $(".licenses .owl-carousel").owlCarousel({
+    dots: true,
+    nav: false,
+    margin: 20,
+    responsive: {
+      0: {
+        items: 1
+      },
+      768: {
+        items: 3
+      }
+    }
+  });
+});
+
+$(document).ready(function () {
+  $(".sanepid-conclusion .owl-carousel").owlCarousel({
+    dots: true,
+    nav: false,
+    margin: 20,
+    responsive: {
+      0: {
+        items: 1
+      },
+      768: {
+        items: 3
+      }
+    }
+  });
+});
+
 // faq
 $(document).ready(function () {
   $('.faq__question').click(function () {
