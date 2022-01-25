@@ -325,7 +325,6 @@
   }
 }
 
-
 .page .owl-theme  {
   & .owl-dots {
     & .owl-dot span {
@@ -365,6 +364,17 @@
     &:focus,
     &:active {
       background-image: url("../img/modal/close-color.svg");
+    }
+  }
+}
+
+.articles .page {
+  &__wrap {
+    padding-top: 30px;
+    padding-bottom: 35px;
+
+    @media (min-width: @lg-width) {
+      padding-bottom: 75px;
     }
   }
 }
