@@ -1,0 +1,134 @@
+.radiology {
+  &__service-list {
+    .list();
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+
+    @media (min-width: @md-width) {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__service-list li {
+    display: grid;
+    grid-template-columns: 2fr 0.8fr;
+    gap: 15px;
+    grid-template-areas:
+      "example scheme"
+      "text text";
+    padding: 15px;
+    border: 0.5px solid @gray;
+
+    @media (min-width: @md-width) {
+      gap: 30px;
+      grid-template-columns: 4fr 1.75fr 4.4fr;
+      grid-template-areas:
+        "example scheme text"
+        ". . text";
+      padding: 30px;
+    }
+
+    @media (min-width: @xl-width) {
+      grid-template-columns: 400px 175px auto;
+    }
+  }
+
+  &__example-img {
+    display: block;
+    position: relative;
+    width: 100%;
+    padding-top: 50%;
+    grid-area: example;
+
+    @media (min-width: @lg-width) {
+      padding-top: 211px;
+    }
+
+    & img {
+      position: absolute;
+      top:0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+
+  &__scheme-img {
+    display: block;
+    position: relative;
+    width: 100%;
+    padding-top: 100%;
+    grid-area: scheme;
+
+    @media (min-width: @lg-width) {
+      padding-top: 211px;
+    }
+
+    & img {
+      position: absolute;
+      top:0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      object-position: center;
+
+      @media (min-width: @lg-width) {
+        object-fit: cover;
+      }
+    }
+  }
+
+  &__text-wrap {
+    min-height: 5px;
+    grid-area: text;
+  }
+
+  &__service-subtitle {
+    .mp();
+    .h3();
+    margin-bottom: 0.5em;
+  }
+
+  &__accent-text {
+    .mp();
+    .text-block();
+    font-weight: normal;
+    color: @main-dark-color;
+    margin-bottom: 0.5em;
+  }
+
+  &__text {
+    .mp();
+  }
+
+  &__note {
+    position: relative;
+    border-radius: 5px;
+    overflow: hidden;
+    padding: 30px 23px 35px;
+    background-color: #D6DDE3;
+    min-height: 150px;
+    @media (min-width: @md-width) {
+      background-image: url("../img/radiology/doctor.png");
+      background-position: center right;
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+
+
+    @media (min-width: @lg-width) {
+      padding: 50px;
+    }
+  }
+
+  &__note-content {
+    @media (min-width: @md-width) {
+      width: 47%;
+    }
+  }
+}
