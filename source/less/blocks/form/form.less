@@ -37,7 +37,8 @@
   }
 
   & input[type="text"],
-  & input[type="tel"] {
+  & input[type="tel"],
+  & input[type="email"] {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -143,6 +144,120 @@
   &__privacy-policy {
     &::before {
       background-image: url("../img/form/check-mark-light.svg");
+    }
+  }
+}
+
+.collaboration__form-wrap .form {
+  @media(min-width: @lg-width) {
+    flex-wrap: nowrap;
+    align-items: flex-start;
+    padding: 60px 0 30px;
+  }
+
+  &__title {
+    @media(min-width: @lg-width) {
+      width: 30vw;
+      max-width: 345px;
+      margin-right: 30px;
+    }
+  }
+
+  &__text {
+    @media(min-width: @lg-width) {
+      display: none;
+    }
+  }
+
+  &__wrap {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 500px;
+    gap: 20px;
+
+    @media(min-width: @lg-width) {
+      flex-grow: 1;
+      width: 60vw;
+      max-width: none;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-areas:
+        "name phone"
+        "email submit"
+        "privacy-policy privacy-policy";
+      grid-gap: 20px;
+      align-items: flex-end;
+    }
+
+    @media(min-width: @xl-width) {
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-areas:
+        "name phone email"
+        "privacy-policy privacy-policy submit";
+    }
+  }
+
+  &__field {
+    margin: 0;
+    width: 100%;
+
+    &--name {
+      @media(min-width: @lg-width) {
+        grid-area: name;
+      }
+    }
+
+    &--phone {
+      @media(min-width: @lg-width) {
+        grid-area: phone;
+      }
+    }
+
+    &--email {
+      @media(min-width: @lg-width) {
+        grid-area: email;
+      }
+    }
+  }
+
+  &__btn {
+    margin: 0;
+    width: 100%;
+
+    @media(min-width: @lg-width) {
+      grid-area: submit;
+    }
+  }
+
+  & input[type="text"],
+  & input[type="tel"],
+  & input[type="email"] {
+    border-color: transparent;
+
+    &:hover,
+    &:focus,
+    &:active {
+      border-color: transparent;
+    }
+  }
+
+  &__privacy-policy {
+    margin: 0;
+    width: 100%;
+
+    &::before {
+      top: 50%;
+      background-image: url("../img/form/check-mark-light.svg");
+    }
+
+    @media(min-width: @lg-width) {
+      grid-area: privacy-policy;
+    }
+
+    @media(min-width: @xl-width) {
+      align-self: center;
     }
   }
 }
