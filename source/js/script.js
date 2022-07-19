@@ -2,6 +2,14 @@ const toggle = document.querySelector(".main-nav__toggle");
 const nav = document.querySelector(".main-nav__wrap");
 const visuallyImpairedBtn = document.querySelector(".visually-impaired__btn");
 
+const balunLink = document.querySelector(".form__balun-link");
+const balunInfo = document.querySelector(".form__label-info");
+
+// Уточняющяя инфорация у Label в форме
+balunLink.onclick = function () {
+  balunInfo.classList.toggle("form__label-info--opened");
+};
+
 // Основное меню
 toggle.onclick = function () {
   toggle.classList.toggle("main-nav__toggle--close");
@@ -50,6 +58,8 @@ if(currentWidth < DESKTOP_WIDTH) {
 visuallyImpairedBtn.onclick = function () {
   visuallyImpairedBtn.classList.toggle("visually-impaired__btn--eye-crossed");
 };
+
+
 
 /* Карусели */
 $(document).ready(function () {

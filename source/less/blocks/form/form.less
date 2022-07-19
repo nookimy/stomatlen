@@ -243,6 +243,74 @@
     }
   }
 
+  &__balun-link {
+    display: inline-flex;
+    align-items: center;
+  }
+
+  & .form__label-info--opened {
+    &::before,
+    &::after {
+      display: block;
+    }
+  }
+
+  &__label-info {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    align-self: flex-start;
+
+
+    &::before {
+      display: none;
+      position: absolute;
+      content: "Наименование ЮЛ/ФИО пользователя (руководителя для клиники)";
+      bottom: -5px;
+      right: -15px;
+      width: 200px;
+      padding: 10px;
+      .shadow();
+      border-radius: 5px;
+      background-color: @light;
+      .text-small();
+      color: @gray;
+      transform: translateX(100%);
+
+      @media(min-width: @lg-width) {
+
+        width: 235px;
+        bottom: unset;
+        right: unset;
+        top: -15px;
+        left: 55px;
+        transform: translateX(-50%) translateY(-100%);
+      }
+    }
+
+    &::after {
+      display: none;
+      position: absolute;
+      content: "";
+      bottom: 3px;
+      right: -16px;
+      border: 10px solid transparent;
+      border-right: 10px solid @light;
+      .shadow();
+
+      @media(min-width: @lg-width) {
+        bottom: unset;
+        right: unset;
+        top: 4px;
+        left: 51px;
+        border: 10px solid transparent;
+        border-top: 10px solid @light;
+        transform: translateX(-50%) translateY(-100%);
+      }
+    }
+  }
+
   &__privacy-policy {
     margin: 0;
     width: 100%;

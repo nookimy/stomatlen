@@ -29,7 +29,7 @@
             </svg>
           </div>
           <p class="collaboration__step-text">Подать заявку онлайн
-            <a href="#">
+            <a href="#collaboration-form">
               по форме
               <svg class="icon" width="17px" height="17px">
                 <use xlink:href="#icon-arrow"></use>
@@ -72,13 +72,21 @@
       </ul>
     </div>
   </div>
-  <section class="collaboration__form-wrap">
+  <section class="collaboration__form-wrap" id="collaboration-form">
     <div class="page__wrap">
       <form class="form">
         <h2 class="form__title">Заполните заявку на сотрудничество</h2>
         <div class="form__wrap">
           <p class="form__field form__field--name">
-            <label for="user-name">Имя</label>
+            <label class="form__label-info" for="user-name">
+              Имя
+              <a class="form__balun-link">
+                <svg width="16px" height="16px">
+                  <use xlink:href="#icon-info"></use>
+                </svg>
+              </a>
+
+            </label>
             <input id="user-name" type="text" >
           </p>
           <p class="form__field form__field--phone">
