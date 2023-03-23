@@ -95,4 +95,12 @@ $(document).ready(function () {
     }
   });
 
+  $(".special-offers__list--slider").owlCarousel({
+    dots: true,
+    nav: false,
+    margin: 20,
+    autoplay: false,
+    loop:true,
+    items: 1,
+  });
 });
