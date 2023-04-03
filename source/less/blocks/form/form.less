@@ -18,6 +18,8 @@
   &__wrap {
     width: 100%;
     flex-grow: 1;
+    display: flex;
+    flex-wrap: wrap;
   }
 
   &__field {
@@ -27,17 +29,66 @@
     margin-bottom: 20px;
     width: 250px;
     flex-grow: 1;
-    margin-right: 20px;
+  }
+
+  & .form__field--download-file {
+    width: 100%;
+    position: relative;
+    text-align: center;
+
+    & input[type="file"] {
+      position: absolute;
+      overflow: hidden;
+      clip: rect(0 0 0 0);
+      margin: -1px;
+      padding: 0;
+      width: 1px;
+      height: 1px;
+      border: 0;
+      white-space: nowrap;
+      clip-path: inset(100%);
+
+
+      &:focus + label,
+      &:hover + label {
+        cursor: pointer;
+        color: rgba(@light, 1);
+        &::before {
+          opacity: 1;
+        }
+      }
+    }
+
+    & label {
+      .text-button();
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      padding: 1.6rem 3rem;
+      text-transform: uppercase;
+      border: 1px solid;
+      border-radius: 5px;
+      position: relative;
+      color: rgba(@light, 1);
+      padding-left: 30px;
+      transition: @transition;
+
+      @media (min-width: @lg-width) {
+        padding-top: 0;
+        padding-bottom: 0;
+      }
+    }
   }
 
   & label {
     .text-medium();
-    margin-bottom: 10px;
     order: 1;
   }
 
   & input[type="text"],
   & input[type="tel"],
+  & input[type="password"],
   & input[type="email"] {
     display: flex;
     justify-content: center;
@@ -58,6 +109,21 @@
     @media(min-width: @lg-width) {
       height: 50px;
     }
+  }
+
+  & input[type="file"] {
+    order: 2;
+  }
+
+  & textarea {
+    width: 100%;
+    resize: vertical;
+    .text-small();
+    padding: 1.6rem 3rem;
+    border-radius: 5px;
+    border: 1px solid #B1B2B3;
+    order: 2;
+    transition: @transition;
   }
 
   &__btn {
@@ -122,7 +188,7 @@
     display: flex;
     flex-wrap: wrap;
     align-items: flex-end;
-    margin-right: -20px;
+    gap: 20px;
 
     @media(min-width: @lg-width) {
       flex-grow: 1;
@@ -131,6 +197,7 @@
   }
 
   & input[type="text"],
+  & input[type="password"],
   & input[type="tel"] {
     border-color: transparent;
 
@@ -233,6 +300,7 @@
 
   & input[type="text"],
   & input[type="tel"],
+  & input[type="password"],
   & input[type="email"] {
     border-color: transparent;
 
@@ -372,6 +440,7 @@
   }
 
   & input[type="text"],
+  & input[type="password"],
   & input[type="tel"] {
     &:hover,
     &:focus,
@@ -385,5 +454,129 @@
     &::before {
       background-image: url("../img/form/check-mark-gray.svg");
     }
+  }
+}
+
+.send-resume {
+  & .form {
+    gap: 20px;
+
+    @media (min-width: @xl-width) {
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+
+
+
+    &__wrap {
+      gap: 10px;
+      flex-direction: column;
+
+      @media (min-width: @md-width) {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "name phone" "about resume" "privacy-policy send";
+      }
+
+      @media (min-width: @lg-width) {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas: "name phone resume" "about about send" "privacy-policy privacy-policy .";
+        gap: 20px;
+      }
+
+      @media (min-width: @xl-width) {
+        flex-grow: unset;
+        width: 780px;
+      }
+    }
+
+    &__title,
+    &__field,
+    &__btn,
+    &__privacy-policy {
+      width: 100%;
+      max-width: 500px;
+      margin: 0 auto;
+
+      @media (min-width: @md-width) {
+        margin: 0;
+        max-width: unset;
+      }
+    }
+
+    &__title {
+      @media (min-width: @xl-width) {
+        flex-grow: unset;
+        width: 342px;
+      }
+    }
+
+    &__field {
+      gap: 10px;
+      @media (min-width: @md-width) {
+        &--name {
+          grid-area: name;
+        }
+
+        &--phone {
+          grid-area: phone;
+        }
+
+        &--download-file {
+          grid-area: resume;
+          align-self: flex-end;
+        }
+
+        &--about {
+          grid-area: about;
+
+          & textarea {
+            height: 50px;
+          }
+
+        }
+
+      }
+    }
+
+    & input[type="text"],
+    & input[type="tel"],
+    & input[type="password"],
+    & input[type="email"],
+    & .input__file-button,
+    &__btn {
+      height: 50px;
+    }
+
+    &__btn {
+      margin-top: 10px;
+
+      @media (min-width: @md-width) {
+        margin-top: 50px;
+        grid-area: send;
+        padding: 1rem 3rem;
+      }
+
+      @media (min-width: @lg-width) {
+        margin-top: 0;
+        align-self: flex-end;
+      }
+
+    }
+
+    &__privacy-policy {
+      @media (min-width: @md-width) {
+        margin-top: 50px;
+        grid-area: privacy-policy;
+      }
+
+      @media (min-width: @lg-width) {
+        margin-top: 0;
+      }
+    }
+
+
+
+
   }
 }
