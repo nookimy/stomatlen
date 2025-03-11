@@ -6373,6 +6373,7 @@ p {
           justify-content: center;
 }
 .checkbox-privacy {
+  position: relative;
   padding-left: 26px;
 }
 .checkbox-privacy input[type="checkbox"] {
@@ -6383,10 +6384,18 @@ p {
   border: 0;
   padding: 0;
   white-space: nowrap;
-  -webkit-clip-path: inset(100%);
-          clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
+}
+.checkbox-privacy input[type="checkbox"]::before {
+  content: '';
+  position: absolute;
+  top: 4px;
+  left: -26px;
+  width: 16px;
+  height: 16px;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  cursor: pointer;
 }
 .checkbox-privacy label {
   font-size: 1.2rem;
@@ -6401,43 +6410,33 @@ p {
     font-size: 1.4rem;
   }
 }
-.checkbox-privacy label > a {
+.checkbox-privacy label a {
   text-decoration: underline;
 }
-.checkbox-privacy label > a:hover,
-.checkbox-privacy label > a:focus {
+.checkbox-privacy label a:hover,
+.checkbox-privacy label a:focus {
   color: unset;
-}
-.checkbox-privacy label::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -26px;
-  width: 16px;
-  height: 16px;
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
-  cursor: pointer;
 }
 .main-consultation .form .checkbox-privacy,
 .send-resume .form .checkbox-privacy {
   opacity: 0.5;
 }
-.main-consultation .form .checkbox-privacy label::before,
-.send-resume .form .checkbox-privacy label::before {
+.main-consultation .form .checkbox-privacy input[type="checkbox"]::before,
+.send-resume .form .checkbox-privacy input[type="checkbox"]::before {
   background-image: url("../img/privacy/check-white-empty.svg");
 }
-.main-consultation .form .checkbox-privacy input:checked + label::before,
-.send-resume .form .checkbox-privacy input:checked + label::before {
+.main-consultation .form .checkbox-privacy input[type="checkbox"]:checked::before,
+.send-resume .form .checkbox-privacy input[type="checkbox"]:checked::before {
   background-image: url("../img/privacy/check-white.svg");
 }
-.modal .form .checkbox-privacy label::before,
-.consultation .form .checkbox-privacy label::before {
+.modal .form .checkbox-privacy input[type="checkbox"]::before,
+.consultation .form .checkbox-privacy input[type="checkbox"]::before,
+.request-callback .form .checkbox-privacy input[type="checkbox"]::before {
   background-image: url("../img/privacy/check-gray-empty.svg");
 }
-.modal .form .checkbox-privacy input:checked + label::before,
-.consultation .form .checkbox-privacy input:checked + label::before {
+.modal .form .checkbox-privacy input[type="checkbox"]:checked::before,
+.consultation .form .checkbox-privacy input[type="checkbox"]:checked::before,
+.request-callback .form .checkbox-privacy input[type="checkbox"]:checked::before {
   background-image: url("../img/privacy/check-gray.svg");
 }
 .tooltip {

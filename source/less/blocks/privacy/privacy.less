@@ -7,6 +7,7 @@
 }
 
 .checkbox-privacy {
+    position: relative;
     padding-left: 26px;
     
     
@@ -18,16 +19,26 @@
         border: 0;
         padding: 0;
         white-space: nowrap;
-        clip-path: inset(100%);
-        clip: rect(0 0 0 0);
-        overflow: hidden;
+    }
+
+    & input[type="checkbox"]::before {
+        content: '';
+        position: absolute;
+        top: 4px;
+        left: -26px;
+        width: 16px;
+        height: 16px;
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        cursor: pointer;           
     }
 
     & label {
         .text-small();
         position: relative;
 
-        & > a {
+        & a {
             text-decoration: underline;
 
             &:hover,
@@ -36,18 +47,7 @@
             }
         }
 
-        &::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -26px;
-            width: 16px;
-            height: 16px;
-            background-size: contain;
-            background-position: center;
-            background-repeat: no-repeat;
-            cursor: pointer;           
-        }
+        
     }    
 }
 
@@ -57,11 +57,11 @@
         & .checkbox-privacy {
             opacity: 0.5;
     
-            & label::before {
+            & input[type="checkbox"]::before {
                 background-image: url("../img/privacy/check-white-empty.svg");
             }
     
-            & input:checked + label::before {
+            & input[type="checkbox"]:checked::before {
                 background-image: url("../img/privacy/check-white.svg"); 
             }
         }
@@ -69,15 +69,16 @@
 }
 
 .modal,
-.consultation {
+.consultation,
+.request-callback {
     & .form {
         & .checkbox-privacy {
     
-            & label::before {
+            & input[type="checkbox"]::before {
                 background-image: url("../img/privacy/check-gray-empty.svg");
             }
     
-            & input:checked + label::before {
+            & input[type="checkbox"]:checked::before {
                 background-image: url("../img/privacy/check-gray.svg"); 
             }
         }
