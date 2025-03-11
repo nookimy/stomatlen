@@ -5,3 +5,81 @@
         justify-content: center;
     }
 }
+
+.checkbox-privacy {
+    padding-left: 26px;
+    
+    
+    & input[type="checkbox"] {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        margin: -1px;
+        border: 0;
+        padding: 0;
+        white-space: nowrap;
+        clip-path: inset(100%);
+        clip: rect(0 0 0 0);
+        overflow: hidden;
+    }
+
+    & label {
+        .text-small();
+        position: relative;
+
+        & > a {
+            text-decoration: underline;
+
+            &:hover,
+            &:focus {
+                color: unset;
+            }
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -26px;
+            width: 16px;
+            height: 16px;
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+            cursor: pointer;           
+        }
+    }    
+}
+
+.main-consultation,
+.send-resume {
+    & .form {
+        & .checkbox-privacy {
+            opacity: 0.5;
+    
+            & label::before {
+                background-image: url("../img/privacy/check-white-empty.svg");
+            }
+    
+            & input:checked + label::before {
+                background-image: url("../img/privacy/check-white.svg"); 
+            }
+        }
+    }
+}
+
+.modal,
+.consultation {
+    & .form {
+        & .checkbox-privacy {
+    
+            & label::before {
+                background-image: url("../img/privacy/check-gray-empty.svg");
+            }
+    
+            & input:checked + label::before {
+                background-image: url("../img/privacy/check-gray.svg"); 
+            }
+        }
+    }
+}

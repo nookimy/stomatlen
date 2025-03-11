@@ -480,7 +480,7 @@
 
       @media (min-width: @lg-width) {
         grid-template-columns: 1fr 1fr 1fr;
-        grid-template-areas: "name phone resume" "about about send" "privacy-policy privacy-policy .";
+        grid-template-areas: "name phone resume" "about about send" "privacy-policy privacy-policy privacy-policy";
         gap: 20px;
       }
 
@@ -493,7 +493,7 @@
     &__title,
     &__field,
     &__btn,
-    &__privacy-policy {
+    & .checkbox-privacy {
       width: 100%;
       max-width: 500px;
       margin: 0 auto;
@@ -564,7 +564,7 @@
 
     }
 
-    &__privacy-policy {
+    & .checkbox-privacy{
       @media (min-width: @md-width) {
         margin-top: 50px;
         grid-area: privacy-policy;

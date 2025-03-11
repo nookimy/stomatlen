@@ -1376,7 +1376,7 @@ p {
 @media (min-width: 992px) {
   .send-resume .form__wrap {
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-areas: "name phone resume" "about about send" "privacy-policy privacy-policy .";
+    grid-template-areas: "name phone resume" "about about send" "privacy-policy privacy-policy privacy-policy";
     gap: 20px;
   }
 }
@@ -1391,7 +1391,7 @@ p {
 .send-resume .form__title,
 .send-resume .form__field,
 .send-resume .form__btn,
-.send-resume .form__privacy-policy {
+.send-resume .form .checkbox-privacy {
   width: 100%;
   max-width: 500px;
   margin: 0 auto;
@@ -1400,7 +1400,7 @@ p {
   .send-resume .form__title,
   .send-resume .form__field,
   .send-resume .form__btn,
-  .send-resume .form__privacy-policy {
+  .send-resume .form .checkbox-privacy {
     margin: 0;
     max-width: unset;
   }
@@ -1460,13 +1460,13 @@ p {
   }
 }
 @media (min-width: 768px) {
-  .send-resume .form__privacy-policy {
+  .send-resume .form .checkbox-privacy {
     margin-top: 50px;
     grid-area: privacy-policy;
   }
 }
 @media (min-width: 992px) {
-  .send-resume .form__privacy-policy {
+  .send-resume .form .checkbox-privacy {
     margin-top: 0;
   }
 }
@@ -6371,6 +6371,74 @@ p {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+.checkbox-privacy {
+  padding-left: 26px;
+}
+.checkbox-privacy input[type="checkbox"] {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  -webkit-clip-path: inset(100%);
+          clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+.checkbox-privacy label {
+  font-size: 1.2rem;
+  line-height: 1.25;
+  font-weight: 300;
+  font-family: "Rubik", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-style: normal;
+  position: relative;
+}
+@media (min-width: 992px) {
+  .checkbox-privacy label {
+    font-size: 1.4rem;
+  }
+}
+.checkbox-privacy label > a {
+  text-decoration: underline;
+}
+.checkbox-privacy label > a:hover,
+.checkbox-privacy label > a:focus {
+  color: unset;
+}
+.checkbox-privacy label::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -26px;
+  width: 16px;
+  height: 16px;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+.main-consultation .form .checkbox-privacy,
+.send-resume .form .checkbox-privacy {
+  opacity: 0.5;
+}
+.main-consultation .form .checkbox-privacy label::before,
+.send-resume .form .checkbox-privacy label::before {
+  background-image: url("../img/privacy/check-white-empty.svg");
+}
+.main-consultation .form .checkbox-privacy input:checked + label::before,
+.send-resume .form .checkbox-privacy input:checked + label::before {
+  background-image: url("../img/privacy/check-white.svg");
+}
+.modal .form .checkbox-privacy label::before,
+.consultation .form .checkbox-privacy label::before {
+  background-image: url("../img/privacy/check-gray-empty.svg");
+}
+.modal .form .checkbox-privacy input:checked + label::before,
+.consultation .form .checkbox-privacy input:checked + label::before {
+  background-image: url("../img/privacy/check-gray.svg");
 }
 .tooltip {
   display: -webkit-inline-box;
