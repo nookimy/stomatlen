@@ -1,0 +1,216 @@
+.all-one-4-6 {
+  &__intro {
+
+    
+    & p {
+      .mp();
+    }
+    & figure {
+      .mp();
+      line-height: 0;      
+
+      & img {
+        width: 100%;
+        max-width: unset;
+
+        @media (min-width: @lg-width) {
+          max-width: 480px;
+        }
+      }
+    }
+
+    & .page__column--fix {
+      margin-bottom: 15px;
+
+      @media (min-width: @lg-width) {
+        position: relative;
+
+        &::before {
+          content: '';
+          position: absolute;
+          top: 60px;
+          right: -80px;
+          width: 40px;
+          height: 40px;
+          background: url("../img/all-one-4-6/asterisk.svg") no-repeat center;
+          background-size: contain;
+
+        }
+      }
+    }
+
+    & .page__column--stretch {
+      display: flex;
+      flex-direction: column;
+      row-gap: 20px;
+
+      @media (min-width: @md-width) {
+        & figure {
+          order: 2;
+        }
+
+        & p {
+          order: 1;
+        }
+      }
+    }
+  }
+
+  &__text-block1 {
+    & .page__img-box {
+      padding-top: 70%;
+    }
+  }
+  
+  &__service-list {
+    .list();
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  &__service-list li {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+    grid-template-areas:
+      "example scheme"
+      "text text";
+    padding: 15px;
+    border: 0.5px solid @gray;
+
+    &:last-child {
+      border: 0.5px solid #F8F8F8;
+      background-color: #F8F8F8;
+    }
+
+    @media (min-width: @md-width) {
+      gap: 30px;
+      grid-template-columns: 5.75fr 4.4fr;
+      grid-template-areas:
+        "example text";
+      padding: 30px;
+    }
+
+    @media (min-width: @lg-width) {
+      grid-template-columns: 449px auto;
+    }    
+  }
+
+  &__example-img {
+    display: block;
+    position: relative;
+    width: 100%;
+    padding-top: 31%;
+    grid-area: example;
+
+    @media (min-width: @md-width) {
+      padding-top: 211px;
+    }
+
+    & img {
+      position: absolute;
+      top:0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+
+  &__text-wrap {
+    min-height: 5px;
+    grid-area: text;
+  }
+
+  &__service-subtitle {
+    .mp();
+    .h3();
+    margin-bottom: 0.5em;
+  }
+
+  &__text {
+    .mp();
+  }
+
+  &__note {    
+    overflow-x: hidden;
+    padding-top: 27px;
+
+    @media (min-width: @lg-width) {
+      overflow: visible;
+      padding-top: unset;
+      margin-top: 100px;
+    }
+  }
+
+  &__note-wrap {
+    width: 100%;
+    background-color: #D6DDE3;
+    position: relative;
+
+    @media (min-width: @lg-width) {
+      min-height: 304px;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      aspect-ratio: 396 / 401;
+      height: calc(100% + 27px);
+      background: url("../img/all-one-4-6/stomatolog.png") no-repeat center;
+      background-size: contain;
+      transform: translateX(37%);
+
+      @media (min-width: @md-width) {
+        transform: translateX(-30%);
+      }
+
+      @media (min-width: @lg-width) {
+        right: 50%;
+        transform: translateX(430px);
+        height: auto;
+        width: 396px;
+      }
+    }
+
+  }
+
+  &__note-content {    
+    padding-right: 104px;
+    
+    @media (min-width: @md-width) {
+      padding-right: 15px;
+
+      & .page__text-sub,
+      & .page__subtitle,
+      & p {
+        width: 500px;
+      }
+    }
+
+    @media (min-width: @lg-width) {
+      padding: 50px 80px;
+    }
+  }
+
+  & .page__wrap--btn-appointment {
+    @media (min-width: @md-width) {
+      position: relative;
+
+      & .btn--appointment {
+        position: absolute;
+        top: calc(100% - 1em);
+      }
+    }
+  }
+}
+
+.page--inner .page__content.all-one-4-6 {
+  @media (min-width: 768px) {
+    padding-top: 0;
+  }
+}

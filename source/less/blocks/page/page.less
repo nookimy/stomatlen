@@ -240,7 +240,18 @@
         width: calc(50vw - 100px);
         margin-top: -200px;
         min-height: 225px;
+      }      
+    }
+
+    &__header--wide {
+      @media (min-width: @lg-width) {
+        width: calc(50vw + 210px);
+
+        & .page__header-wrap {
+          max-width: 810px;
+        }
       }
+      
     }
 
     &__header-wrap {
